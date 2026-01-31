@@ -1,0 +1,20 @@
+version: 1
+
+project:
+  title: Math Econ
+  authors:
+    - name: Yong Yoon
+
+  toc:
+    - file: intro.md
+    - file: linear-algebra-basic.md
+
+  exports:
+    - format: pdf
+      output: _build/exports/math-econ.pdf
+      articles:
+        - intro.md
+        - linear-algebra-basic.md
+
+site:
+  template: book-theme

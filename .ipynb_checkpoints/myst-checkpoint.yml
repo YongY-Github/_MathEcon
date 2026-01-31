@@ -1,0 +1,12 @@
+version: 1
+
+project:
+  title: Math Econ
+
+toc:
+  - file: intro.md
+
+site:
+  template: book-theme
+
+

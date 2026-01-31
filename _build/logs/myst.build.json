@@ -1,0 +1,44 @@
+{
+  "input": {
+    "files": [],
+    "opts": {
+      "execute": false,
+      "executeParallel": 13,
+      "pdf": true,
+      "tex": false,
+      "typst": false,
+      "docx": false,
+      "md": false,
+      "xml": false,
+      "meca": false,
+      "cff": false,
+      "site": false,
+      "html": false,
+      "all": false,
+      "doiBib": false,
+      "watch": false,
+      "force": false,
+      "checkLinks": false,
+      "strict": false,
+      "ci": false,
+      "maxSizeWebp": 1572864,
+      "keepHost": false
+    }
+  },
+  "exports": [
+    {
+      "format": "pdf",
+      "output": "C:\\GitHub\\_MathEcon\\_build\\exports\\math-econ.pdf",
+      "articles": [
+        {
+          "file": "C:\\GitHub\\_MathEcon\\intro.md"
+        },
+        {
+          "file": "C:\\GitHub\\_MathEcon\\linear-algebra-basic.md"
+        }
+      ],
+      "$file": "C:\\GitHub\\_MathEcon\\myst.yml",
+      "$project": "C:\\GitHub\\_MathEcon"
+    }
+  ]
+}
