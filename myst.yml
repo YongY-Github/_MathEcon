@@ -16,7 +16,7 @@ project:
       articles:
         - intro.md
         - linear-algebra-basic.md
-	- linear-algebra-special.md
+        - linear-algebra-special.md
 
 site:
   template: book-theme
