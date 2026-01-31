@@ -8,6 +8,7 @@ project:
   toc:
     - file: intro.md
     - file: linear-algebra-basic.md
+    - file: linear-algebra-special.md
 
   exports:
     - format: pdf
@@ -15,6 +16,7 @@ project:
       articles:
         - intro.md
         - linear-algebra-basic.md
+	- linear-algebra-special.md
 
 site:
   template: book-theme
