@@ -480,7 +480,7 @@ Since the principal minors alternate correctly in sign, the Hessian is **negativ
 For each equation below find (a) critical values, and (b) the nature of the critical values using the Hessian.
 
 (1) $f(x,y,z) = -5x^2 + 10x + xz -2y^2 _ 4y + 2yz - 4z^2$  
-(2) $f(x,y) = 3x^2 - 5x - xy + 6y^2 - 4y + 2yz + 4z^2 +2z - 3xz
+(2) $f(x,y,z) = 3x^2 - 5x - xy + 6y^2 - 4y + 2yz + 4z^2 +2z - 3xz$
 ::::
 
 ## The Bordered Hessian
