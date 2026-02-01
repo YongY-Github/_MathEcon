@@ -2,11 +2,21 @@ version: 1
 
 project:
   title: Math Econ
+  authors:
+    - name: YY
+   
+  toc:
+    - file: intro.md
+    - file: linear-algebra-basic.md
+    - file: linear-algebra-special.md
 
-toc:
-  - file: intro.md
+  exports:
+    - format: pdf
+      output: _build/exports/math-econ.pdf
+      articles:
+        - intro.md
+        - linear-algebra-basic.md
+        - linear-algebra-special.md
 
 site:
   template: book-theme
-
-

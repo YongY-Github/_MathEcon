@@ -3,8 +3,8 @@ version: 1
 project:
   title: Math Econ
   authors:
-    - name: Yong Yoon
-
+    - name: YY
+   
   toc:
     - file: intro.md
     - file: linear-algebra-basic.md
