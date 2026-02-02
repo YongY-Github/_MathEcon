@@ -1094,7 +1094,7 @@ B = \begin{bmatrix} 3 & 0 \\ 1 & 2 \end{bmatrix}
 :::{math}
 :enumerated: false
 C = \begin{bmatrix} 6 & 3 \\ 3 & -2 \end{bmatrix}, \quad
-C = \begin{bmatrix} 4 & 6 & 3 \\ 0 & 2 & 5 \\ 0 & 1 & 3 \end{bmatrix}
+D = \begin{bmatrix} 4 & 6 & 3 \\ 0 & 2 & 5 \\ 0 & 1 & 3 \end{bmatrix}
 :::
 
 Find:  
