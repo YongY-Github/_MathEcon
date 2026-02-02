@@ -777,9 +777,9 @@ F = \begin{bmatrix} 7 & 0 & 0 \\ -2 & 0 & 0 \\ 3 & 1 & -4 \end{bmatrix}.
 
 Find:
 
-(a) $AB, A^2, B^2$ &emsp;&emsp; (b) $CD, C^2, D^2$ &emsp;&emsp; (c) $EF, E^2, F^2$   
-(d) $AB$, $CE$ and $DF$ &emsp;&emsp; (d) Determinant of all matrices $A$ to $F$  
-(e) Inverse of all matrices $A$ to $F$
+(a) $AB, A^2, B^2$
+(a) $CD, C^2, D^2$ &emsp;&emsp; (b) $EF, E^2, F^2$ &emsp;&emsp; (c) $CE$ and $DF$  
+(d) Determinant of al matrices &emsp;&emsp; (e) Inverse of $C$ and $E$  
 ::::
 
 ## Cramer's Rule

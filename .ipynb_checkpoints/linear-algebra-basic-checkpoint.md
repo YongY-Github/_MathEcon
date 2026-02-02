@@ -318,6 +318,50 @@ Matrix row operations, also known as elementary row operations, are three basic 
 2. **Multiplying a row by a non-zero constant** (Scalar Multiplication): You can multiply every element in a specific row by any non-zero number. This is equivalent to multiplying both sides of an equation by a constant.
 3. **Adding a multiple of one row to another row** (Row Addition): You can multiply one row by a constant and then add the result to another row. The original row and the row being multiplied remain unchanged. This operation is often the most powerful for simplifying systems, as it corresponds to adding a modified version of one equation to another.
 
+::::{admonition} Definition: **REF** (Row Echelon Form)
+:class: note
+A matrix is in **Row Echelon Form** if...
+1. Every non-zero row begins with a leading one.  
+2. A leading one in a lower row is further to the right.  
+3. Zero rows are at the bottom of the matrix.
+
+Note: In some books, leading by one is not required.
+::::
+
+::::{admonition} Definition: **RREF** Reduced Row Echelon Form
+:class: note
+A matrix is in **Reduced Row Echelon Form** if...
+1. Every non-zero row begins with a leading one.  
+2. A leading one in a lower row is further to the right.  
+3. Zero rows are at the bottom of the matrix.  
+4. Every **column** with a leading one has zeros elsewhere.
+
+While there can exist several row echelon forms for a matrix, there is only one (a unique) reduced row echelon form.
+::::
+
+::::{dropdown} **Try these ^^**
+
+For the following matrices:
+
+:::{math}
+:enumerated: false
+A = \begin{bmatrix} 2 & 0 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 5 \end{bmatrix}, \quad 
+B = \begin{bmatrix} 7 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -4 \end{bmatrix},
+:::
+
+:::{math}
+:enumerated: false
+C = \begin{bmatrix} 2 & 1 & 2 \\ 0 & 3 & 0 \\ 0 & 0 & 5 \end{bmatrix}, \quad 
+D = \begin{bmatrix} 7 & 0 & 0 \\ -2 & 0 & 0 \\ 3 & 1 & -4 \end{bmatrix}.
+:::
+
+Find:
+  
+(a) Is the matrix $A$ in REF or RREF? What are its pivots?  
+(b) How about matrix $B$ and $C$? Explain.  
+(c) Change all matrices $A$ to $D$ to RREF (if they aren't in RREF yet) and determine their rank.
+::::
+
 We can solve system of equation by row operations.
 
 To solve for $x_1$ and $x_2$, we can use an augmented matrix and perform elementary row operations—swapping rows, scalar multiplication, and row addition—to reach **Reduced Row Echelon Form (RREF)**.
@@ -389,52 +433,6 @@ Basically, a matrix can be viewed as a way to transform or change a vector to so
 * Note: We need not reach RREF, and could stop at **Step 4** (or even **Step 3**). At Step 4, the last row tells us that $x_2 = 3$. We can then use **back-substitution** into the first row ($x_1 - x_2 = -2$). HEnce $x_1 - 3 = -2 \implies x_1 = 1$.
 * This confirms the same result without performing the final row addition.
 ---
-
-::::{admonition} Definition: **REF** (Row Echelon Form)
-:class: note
-A matrix is in **Row Echelon Form** if...
-1. Every non-zero row begins with a leading one.  
-2. A leading one in a lower row is further to the right.  
-3. Zero rows are at the bottom of the matrix.
-
-Note: In some books, leading by one is not required.
-::::
-
-::::{admonition} Definition: **RREF** Reduced Row Echelon Form
-:class: note
-A matrix is in **Reduced Row Echelon Form** if...
-1. Every non-zero row begins with a leading one.  
-2. A leading one in a lower row is further to the right.  
-3. Zero rows are at the bottom of the matrix.  
-4. Every **column** with a leading one has zeros elsewhere.
-
-While there can exist several row echelon forms for a matrix, there is only one (a unique) reduced row echelon form.
-::::
-
-::::{dropdown} **Try these ^^**
-
-For the following matrices:
-
-:::{math}
-:enumerated: false
-A = \begin{bmatrix} 2 & 0 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 5 \end{bmatrix}, \quad 
-B = \begin{bmatrix} 7 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -4 \end{bmatrix},
-:::
-
-:::{math}
-:enumerated: false
-C = \begin{bmatrix} 2 & 1 & 2 \\ 0 & 3 & 0 \\ 0 & 0 & 5 \end{bmatrix}, \quad 
-D = \begin{bmatrix} 7 & 0 & 0 \\ -2 & 0 & 0 \\ 3 & 1 & -4 \end{bmatrix}.
-:::
-
-Find:
-
-(a) $AB, A^2, B^2$ &emsp;&emsp; (b) $CD, C^2, D^2$ &emsp;&emsp; (c) $AC$ and $BD$  
-(d) Determinant of $A, B, C$ and $D$ &emsp;&emsp; (e) Inverse of $A$ and $C$  
-(f) Is the matrix $A$ in REF or RREF? What are its pivots?  
-(g) How about matrix $B$ and $C$? Explain.  
-(h) Change all matrices $A$ to $D$ to RREF (if they aren't in RREF yet) and determine their rank.
-::::
 
 ## The Determinant of a Matrix
 
@@ -753,6 +751,36 @@ and
 :::
 
 which gives $x_1 = 2, x_2 = 1$ and $x_3 = -2$.
+
+
+::::{dropdown} **Try these ^^**
+
+Given:
+
+:::{math}
+:enumerated: false
+A = \begin{bmatrix} 3 & -4 \\ 1 & 2 \end{bmatrix}, \quad 
+B = \begin{bmatrix} -2 & 1 \\ -4 & 2 \end{bmatrix},
+:::
+
+:::{math}
+:enumerated: false
+C = \begin{bmatrix} 2 & 0 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 5 \end{bmatrix}, \quad 
+D = \begin{bmatrix} 7 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -4 \end{bmatrix},
+:::
+
+:::{math}
+:enumerated: false
+E = \begin{bmatrix} 2 & 1 & 2 \\ 0 & 3 & 0 \\ 0 & 0 & 5 \end{bmatrix}, \quad 
+F = \begin{bmatrix} 7 & 0 & 0 \\ -2 & 0 & 0 \\ 3 & 1 & -4 \end{bmatrix}.
+:::
+
+Find:
+
+(a) $AB, A^2, B^2$ &emsp;&emsp; (b) $CD, C^2, D^2$ &emsp;&emsp; (c) $EF, E^2, F^2$   
+(d) $AB$, $CE$ and $DF$ &emsp;&emsp; (d) Determinant of all matrices $A$ to $F$  
+(e) Inverse of all matrices $A$ to $F$
+::::
 
 ## Cramer's Rule
 

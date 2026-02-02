@@ -759,8 +759,8 @@ Given:
 
 :::{math}
 :enumerated: false
-A = \begin{bmatrix} 3 & -4 \\ 1 & 2 \end{bmatrix}, \quad 
-B = \begin{bmatrix} -2 & 1 \\ -4 & 2 \end{bmatrix},
+A = \begin{bmatrix} 2 & 0 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 5 \end{bmatrix}, \quad 
+B = \begin{bmatrix} 7 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -4 \end{bmatrix},
 :::
 
 :::{math}
@@ -777,9 +777,11 @@ F = \begin{bmatrix} 7 & 0 & 0 \\ -2 & 0 & 0 \\ 3 & 1 & -4 \end{bmatrix}.
 
 Find:
 
-(a) $AB, A^2, B^2$ &emsp;&emsp; (b) $CD, C^2, D^2$ &emsp;&emsp; (c) $EF, E^2, F^2$   
-(d) $AB$, $CE$ and $DF$ &emsp;&emsp; (d) Determinant of all matrices $A$ to $F$  
-(e) Inverse of all matrices $A$ to $F$
+(a) $CD, C^2, D^2$ &emsp;&emsp; (b) $EF, E^2, F^2$ &emsp;&emsp; (c) $CE$ and $DF$  
+(d) Determinant of al mactiu &emsp;&emsp; (e) Inverse of $A$ and $C$  
+(f) Is the matrix $A$ in REF or RREF? What are its pivots?  
+(g) How about matrix $B$ and $C$? Explain.  
+(h) Change all matrices $A$ to $D$ to RREF (if they aren't in RREF yet) and determine their rank.
 ::::
 
 ## Cramer's Rule

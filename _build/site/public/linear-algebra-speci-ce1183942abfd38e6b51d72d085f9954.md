@@ -128,6 +128,17 @@ The Hessian is therefore
 
 We have $|H_{1}| = 4 > 0$ and $|H_{2}| = (4)(4) - (-1)^2 = 16 - 1 = 15 > 0$, i.e. both princpal minnores are positive and hence the Hessian is said to be **positive definite** and the function $z$ is characterized by a **minimu**m at the critical values (can you find these?).
 
+::::{dropdown} **Try these ^^**
+
+For each equation below find (a) critical values, and (b) the nature of the critical values using the Hessian.
+
+:::{math}
+:enumerated: false
+f(x,y) = 3x^2 - xy -2y^2 - 4x - 6y + 12
+:::
+
+::::
+
 ## The Discriminant
 
 Determinants can be used to test for positive and negative definiteness of any quadratic form. The determinant of a quadratic form is called a **discriminant** $|\mathbf{D}|$. Given the quadratic form
@@ -678,26 +689,6 @@ X = \begin{bmatrix} x_{1} \\ x_{2} \\ x_{3} \end{bmatrix} &= \frac{1}{0.151} \be
 \end{aligned}
 :::
 
-::::{dropdown} **Try these ^^**
-
-Determine the total demand for industries 1, 2 and 3, given the matrix of technical coefficients A and the final demand vector $b$ below.
-
-:::{math}
-:enumerated: false
-\mathbf{A} = \begin{bmatrix} 
-0.2 & 0.3 & 0.2 \\ 
-0.4 & 0.1 & 0.3 \\ 
-0.3 & 0.5 & 0.2 
-\end{bmatrix}, \quad 
-b = \begin{bmatrix} 
-150 \\ 
-200 \\ 
-210 
-\end{bmatrix}
-:::
-::::
-
-
 ## Characteristic Roots and Vectors (Eigenvalues and Eigenvectors)
 
 The sign and definiteness of a Hessian and a quadratic form has been tested by using the principal minors. Sign definiteness can also be tested by using the characteristic roots of a matrix. Given a square matrix $\mathbf{A}$, is possible to find a vector $\mathbf{V} \neq 0$ and a scalar $\lambda$ such that
@@ -1083,24 +1074,17 @@ T^{-1} A T = D.
 
 ::::{dropdown} **Try these ^^**
 
-Given:
+For each $\mathbf{A}$ below:
 
 :::{math}
 :enumerated: false
-A = \begin{bmatrix}  -4 & -2 \\ -2 & -6 \end{bmatrix}, \quad 
-B = \begin{bmatrix} 3 & 0 \\ 1 & 2 \end{bmatrix}
-:::
-
-:::{math}
-:enumerated: false
-C = \begin{bmatrix} 6 & 3 \\ 3 & -2 \end{bmatrix}, \quad
-C = \begin{bmatrix} 4 & 6 & 3 \\ 0 & 2 & 5 \\ 0 & 1 & 3 \end{bmatrix}
+A = \begin{bmatrix} 3 & -1 \\ -1 & 3 \end{bmatrix} \quad \text{and} \quad 
+A = \begin{bmatrix} 3 & 0 \\ 1 & 2 \end{bmatrix}.
 :::
 
 Find:  
 
-(a) Find the eigenvalues and eigenvectors for each of the matrices above    
-(b) What can you say about the sign definiteness of each mattix  
-(c) Verify $\mathbf{A} = \mathbf{T} \mathbf{D} \mathbf{T}^{-1}$  
-(d) Find $\mathbf{A}^5$
+(a) Their eigenvalues and eigenvectors.  
+(b) Verify $\mathbf{A} = \mathbf{T} \mathbf{D} \mathbf{T}^{-1}$.
+(c) Find $\mathbf{A}^5$
 ::::

@@ -752,36 +752,6 @@ and
 
 which gives $x_1 = 2, x_2 = 1$ and $x_3 = -2$.
 
-
-::::{dropdown} **Try these ^^**
-
-Given:
-
-:::{math}
-:enumerated: false
-A = \begin{bmatrix} 3 & -4 \\ 1 & 2 \end{bmatrix}, \quad 
-B = \begin{bmatrix} -2 & 1 \\ -4 & 2 \end{bmatrix},
-:::
-
-:::{math}
-:enumerated: false
-C = \begin{bmatrix} 2 & 0 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 5 \end{bmatrix}, \quad 
-D = \begin{bmatrix} 7 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -4 \end{bmatrix},
-:::
-
-:::{math}
-:enumerated: false
-E = \begin{bmatrix} 2 & 1 & 2 \\ 0 & 3 & 0 \\ 0 & 0 & 5 \end{bmatrix}, \quad 
-F = \begin{bmatrix} 7 & 0 & 0 \\ -2 & 0 & 0 \\ 3 & 1 & -4 \end{bmatrix}.
-:::
-
-Find:
-
-(a) $AB, A^2, B^2$ &emsp;&emsp; (b) $CD, C^2, D^2$ &emsp;&emsp; (c) $EF, E^2, F^2$   
-(d) $AB$, $CE$ and $DF$ &emsp;&emsp; (d) Determinant of all matrices $A$ to $F$  
-(e) Inverse of all matrices $A$ to $F$
-::::
-
 ## Cramer's Rule
 
 Cramer came up with a simplified method for solving a system of linear equations through the use of determinants.

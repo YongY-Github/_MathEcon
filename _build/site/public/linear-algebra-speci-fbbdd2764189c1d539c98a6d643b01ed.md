@@ -128,6 +128,17 @@ The Hessian is therefore
 
 We have $|H_{1}| = 4 > 0$ and $|H_{2}| = (4)(4) - (-1)^2 = 16 - 1 = 15 > 0$, i.e. both princpal minnores are positive and hence the Hessian is said to be **positive definite** and the function $z$ is characterized by a **minimu**m at the critical values (can you find these?).
 
+::::{dropdown} **Try these ^^**
+
+For each equation below find (a) critical values, and (b) the nature of the critical values using the Hessian.
+
+:::{math}
+:enumerated: false
+f(x,y) = 3x^2 - xy -2y^2 - 4x - 6y + 12
+:::
+
+::::
+
 ## The Discriminant
 
 Determinants can be used to test for positive and negative definiteness of any quadratic form. The determinant of a quadratic form is called a **discriminant** $|\mathbf{D}|$. Given the quadratic form
@@ -1099,8 +1110,8 @@ C = \begin{bmatrix} 4 & 6 & 3 \\ 0 & 2 & 5 \\ 0 & 1 & 3 \end{bmatrix}
 
 Find:  
 
-(a) Find the eigenvalues and eigenvectors for each of the matrices above    
-(b) What can you say about the sign definiteness of each mattix  
-(c) Verify $\mathbf{A} = \mathbf{T} \mathbf{D} \mathbf{T}^{-1}$  
+(a) Find the eigenvalues and eigenvectors for each of the matrices above.  
+(b) What can you say about the sign definiteness of each mattix.
+(c) Verify $\mathbf{A} = \mathbf{T} \mathbf{D} \mathbf{T}^{-1}$.
 (d) Find $\mathbf{A}^5$
 ::::
