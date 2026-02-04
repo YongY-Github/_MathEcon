@@ -9,6 +9,7 @@ project:
     - file: intro.md
     - file: linear-algebra-basic.md
     - file: linear-algebra-special.md
+    - file: basic-differentiation.md
 
   exports:
     - format: pdf
@@ -17,6 +18,7 @@ project:
         - intro.md
         - linear-algebra-basic.md
         - linear-algebra-special.md
+        - basic-differentiation.md
 
 site:
   template: book-theme
