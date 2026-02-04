@@ -68,8 +68,8 @@ This can easily be done by pre-multiplying the vector by the transformation matr
 
 Basically, a matrix can be viewed as a way to transform/change a vector!
 
-::::{admonition} Matrix multiplication
-:class: note
+::::{admonition} Matrix and vector multiplication
+:class: tip
 The proper way to multiply a matrix and a vector is:
 
 :::{math}
@@ -319,7 +319,7 @@ Matrix row operations, also known as elementary row operations, are three basic 
 3. **Adding a multiple of one row to another row** (Row Addition): You can multiply one row by a constant and then add the result to another row. The original row and the row being multiplied remain unchanged. This operation is often the most powerful for simplifying systems, as it corresponds to adding a modified version of one equation to another.
 
 ::::{admonition} Definition: **REF** (Row Echelon Form)
-:class: note
+:class: attention
 A matrix is in **Row Echelon Form** if...
 1. Every non-zero row begins with a leading one.  
 2. A leading one in a lower row is further to the right.  
@@ -329,7 +329,7 @@ Note: In some books, leading by one is not required.
 ::::
 
 ::::{admonition} Definition: **RREF** Reduced Row Echelon Form
-:class: note
+:class: attention
 A matrix is in **Reduced Row Echelon Form** if...
 1. Every non-zero row begins with a leading one.  
 2. A leading one in a lower row is further to the right.  

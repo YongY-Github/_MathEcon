@@ -253,7 +253,7 @@ Q(x, y) &= 2x^2 + 2xy + 3y^2 = 2(x^2 + xy) + 3y^2 \\
 Since both squared terms have positive coefficients, $Q(x, y) > 0$ for all $(x, y) \neq (0, 0)$, the quadratic form is **positive definite**.
 
 ::::{admonition} **Sign Definiteness of Quadratic Form**
-:class: note
+:class: important
 
 A quadratic form is said to be:
 
@@ -697,7 +697,6 @@ b = \begin{bmatrix}
 :::
 ::::
 
-
 ## Characteristic Roots and Vectors (Eigenvalues and Eigenvectors)
 
 The sign and definiteness of a Hessian and a quadratic form has been tested by using the principal minors. Sign definiteness can also be tested by using the characteristic roots of a matrix. Given a square matrix $\mathbf{A}$, is possible to find a vector $\mathbf{V} \neq 0$ and a scalar $\lambda$ such that
@@ -737,7 +736,7 @@ $$
 With $|\mathbf{A} - \lambda\mathbf{I}| = 0$, there will be an infinite number of solutions for $\mathbf{V}$. To force a unique solution, the solution may be *normalized* by requiring of the elements $v_i$ of $\mathbf{V}$ such that $\sum v_i^2 = 1$.
 
 ::::{admonition} **Sign Definiteness and Characteristc Roots**
-:class: note
+:class: important
 
 For a square matrix $\mathbf{A}$ if
 
