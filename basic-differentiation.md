@@ -119,7 +119,7 @@ Geometrically, $f'(x)$ is the slope of the tangent line to the graph of $f$ at $
 Common notations include:
 - $ f'(x) $
 - $ \dfrac{dy}{dx} $
-- $ Df(x) 0$
+- $ Df(x) $
 
 Note that what we usually think of as a variable $x$ is held constant while $\Delta x$ varies and converges to zero. It is useful to keep in mind that the derivative of a function $f$ at $x$ is the slope of a line tangent to the graph of the function $f$ at the point $(x, f(x))$. It is crucial to understand the implications of the existence of the derivative at a point $x$. The function must be smooth—meaning it is both continuous and differentiable—at the point $x$. The tangent line provides a high-quality linear approximation to the graph of the function near $x$. In general, if we know that the function $f$ is differentiable at $a$, then the tangent line approximation to $f$ at $a$ is:
 
