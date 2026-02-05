@@ -580,7 +580,7 @@ We can find the inverse of a matrix using row operations or **Gauss-Jordan Elimi
 Given the matrix $A$ from the example above
 
 :::{math}
-:enumerated: false}
+:enumerated: false
 A = \begin{bmatrix} 1 & -2 \\ 3 & 4 \end{bmatrix}
 :::
 
