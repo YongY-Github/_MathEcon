@@ -558,7 +558,7 @@ Note that $\log_b e = \displaystyle \frac{1}{\ln b}$.
 
 ## The Differential
 
-Define $dx$ as an arbitrary change in $x$fro its initial value $x_0$ and $dy$ as teh resulting change in $y$ **along the tangent line** from the initial value of the function $y_0 = f(x_0)$. 
+Define $dx$ as an arbitrary change in $x$ from its initial value $x_0$ and $dy$ as the resulting change in $y$ **along the tangent line** from the initial value of the function $y_0 = f(x_0)$. 
 
 The **differential** of $y=f(x_0)$ evaluated at $x_0$ is
 
@@ -567,9 +567,15 @@ The **differential** of $y=f(x_0)$ evaluated at $x_0$ is
 dy = f'(x_0)\, dx.
 :::
 
-This represents the change in $y$ along the tangent line at $x_0$. Graphically, we have:
+This represents the change in $y$ along the tangent line at $x_0$. Graphically, this is shown in {numref}`fig-differential`. 
 
-<img src="figs/differential.png" alt="Differential" width="300"/>
+```{figure} figs/differential.png
+:alt: Differential
+:width: 70%
+:name: fig-differential
+
+Differential
+```
 
 ::::{dropdown} **Try these ^^**
 **Differentials**
@@ -609,9 +615,15 @@ z(a)
 
 This idea underlies many approximation methods in economics.
 
-<img src="figs/TaylorSeries.png" alt="Taylor Series" width="500"/>
+```{figure} figs/TaylorSeries.png
+:alt: Taylor Series
+:width: 70%
+:name: fig-taylor-series
 
-The image provided illustrates a function $z(x)$ being approximated by three different Taylor polynomials (or Taylor series expansions) centered around the point $x=a$. 
+Taylor expansion of a smooth function around a point.
+```
+
+As shown in {numref}`fig-taylor-series` a function $z(x)$ being approximated by three different Taylor polynomials (or Taylor series expansions) centered around the point $x=a$. 
 
 The simplest approximation perhaps would simply be $g(x) = a$. This constant-valued function does not work well, especially if we move away from the point $a$.
 
@@ -872,7 +884,7 @@ Thus,
 \left(\frac{Q}{L}\right)^{1+\beta}.
 :::
 
-**The marginal product of capital***
+**The marginal product of capital**
 
 Similarly,
 
@@ -915,7 +927,7 @@ and therefore,
 \left(\frac{P_L}{P_K}\right)^{1/(1+\beta)}.
 :::
 
-***Elasticity of substitution***
+**Elasticity of substitution**
 
 Since $\alpha$ and $\beta$ are constants, we can treat $K/L$ as a function of
 $P_L/P_K$.

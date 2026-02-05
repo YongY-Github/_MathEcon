@@ -24,3 +24,4 @@ site:
   template: book-theme
   options:
     logo_text: "Math Econ II"
+    outline_maxdepth: 1
