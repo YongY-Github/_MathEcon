@@ -1,0 +1,1137 @@
+\section{Multivariate Calculus}
+
+\subsection{Functions of Several Variables and Partial Derivatives}
+
+While there are some subtleties involved in moving from univariate to multivariate calculus, much of the intuition carries over.
+
+Consider a function
+
+\begin{equation*}
+y = f(x_1, x_2, \ldots, x_n).
+\end{equation*}
+
+The partial derivative of $y$ with respect to its $i$-th argument $x_i$ is defined as
+
+\begin{equation}
+\frac{\partial y}{\partial x_i} 
+= \lim_{\Delta x_i \to 0} 
+\frac{f(x_1, \ldots, x_i + \Delta x_i, \ldots, x_n) 
+- f(x_1, \ldots, x_i, \ldots, x_n)}{\Delta x_i}
+\end{equation}
+
+provided the limit exists.
+
+Common notations include
+
+\begin{equation*}
+\frac{\partial y}{\partial x_i},
+\quad
+\frac{\partial}{\partial x_i} f(x_1,\ldots,x_n),
+\quad
+f_i.
+\end{equation*}
+
+For a function $f(x,y)$, the partial derivative with respect to $x$ is written $f_x(x,y)$ or $f_x$; For a function $f(x_1,x_2)$, the partial derivative with respect to $x_1$ is written $f_1(x,y)$ or just $f_1$, and so on.
+
+\begin{framed}
+\textbf{Intuition}\\
+A partial derivative measures how the function changes when \textbf{one variable changes and all others are held constant}.
+\end{framed}
+
+\subsection{Rules of Partial Differentiation}
+
+The rules of partial differentiation are the same as those for univariate calculus, except that \textbf{all other variables are treated as constants}.
+
+\textbf{Examples}
+
+\textbf{a)} Let
+
+\begin{equation*}
+f(x_1,x_2) = \sqrt{x_1 + 3x_2^2}.
+\end{equation*}
+
+has two partial derivatives:
+
+\begin{equation*}
+f_1 = \frac{1}{2\sqrt{x_1 + 3x_2^2}},
+\qquad
+f_2 = \frac{3x_2}{\sqrt{x_1 + 3x_2^2}}.
+\end{equation*}
+
+\textbf{b)} Similarly, let
+
+\begin{equation*}
+h(x,y,z) = \ln(5x + 2y - 3z).
+\end{equation*}
+
+then
+
+\begin{equation*}
+h_x = \frac{5}{5x+2y-3z}, \quad
+h_y = \frac{2}{5x+2y-3z}, \quad
+h_z = \frac{-3}{5x+2y-3z}.
+\end{equation*}
+
+\subsubsection{Example - Cobb-Douglass production function}
+
+Consider the Cobb--Douglas production function
+
+\begin{equation*}
+Q = AK^{1-\alpha}L^\alpha.
+\end{equation*}
+
+The marginal product of labor (MPL) can be found by taking the partial derivative of output with respect to labor:
+
+\begin{equation*}
+\frac{\partial Q}{\partial L} 
+= \alpha A K^{1 - \alpha} L^{\alpha - 1} 
+= \alpha A \left( \frac{K}{L} \right)^{1 - \alpha}
+\end{equation*}
+
+In neo-classical economics theory, workers are paid a real wage equal to their marginal productivity of labor. So in the equation above we see that the real wage and MPL increase with larger capital stock relative to labor.
+
+Similarly,
+
+\begin{equation*}
+\frac{\partial Q}{\partial K} 
+= (1 - \alpha) A K^{-\alpha} L^{\alpha} 
+= (1 - \alpha) A \left( \frac{L}{K} \right)^{\alpha}
+\end{equation*}
+
+Which suggests that the rate of return to capital is relatively high in countries that have a relatively large labor-capital ratios. These high rates of returns should cause capital inflow from rich to poor countries. But why do we not see this in reality? See \cite{Lucas1990}.
+
+\begin{framed}
+\textbf{Economic interpretation}\\
+In neoclassical theory, factors are paid their marginal products. Hence wages rise with capital intensity, and the return to capital is higher where labor is abundant.
+\end{framed}
+
+\subsection{Multivariate Derivative Rules}
+
+\textbf{(1) Product Rule}
+
+\begin{equation}
+\begin{aligned}
+\frac{\partial}{\partial x}[f(x,y)g(x,y)]
+&=
+g(x,y)\frac{\partial f(x,y)}{\partial x}
++
+f(x,y)\frac{\partial g(x,y)}{\partial x}, \\[2em]
+\frac{\partial}{\partial y}[f(x,y)g(x,y)]
+&=
+g(x,y)\frac{\partial f(x,y)}{\partial y}
++
+f(x,y)\frac{\partial g(x,y)}{\partial y}.
+\end{aligned}
+\end{equation}
+
+\textbf{(2) Quotient Rule}
+
+The derivative of the quotient of two (differentiable) functions, $f(x,y)/g(x,y)$, is
+
+\begin{equation}
+\begin{aligned}
+\frac{\partial}{\partial x}\left[\frac{f(x,y)}{g(x,y)}\right]
+&=
+\frac{
+g(x,y)\frac{\partial f(x,y)}{\partial x}
+-
+f(x,y)\frac{\partial g(x,y)}{\partial x}
+}{
+[g(x,y)]^2
+}, \\[2em]
+\frac{\partial}{\partial y}\left[\frac{f(x,y)}{g(x,y)}\right]
+&=
+\frac{
+g(x,y)\frac{\partial f(x,y)}{\partial y}
+-
+f(x,y)\frac{\partial g(x,y)}{\partial y}
+}{
+[g(x,y)]^2
+}.
+\end{aligned}
+\end{equation}
+
+where $f(x,y)$ and $g(x,y)$ are differentiable and $g(x,y)\neq 0$.
+
+\textbf{(3) Generalized Power Function}
+
+\begin{equation}
+\begin{aligned}
+\frac{\partial [g(x,y)]^n}{\partial x}
+&=
+n[g(x,y)]^{\,n-1}\frac{\partial g(x,y)}{\partial x}, \\[1em]
+\frac{\partial [g(x,y)]^n}{\partial y}
+&=
+n[g(x,y)]^{\,n-1}\frac{\partial g(x,y)}{\partial y}.
+\end{aligned}
+\end{equation}
+
+where $n$ is a constant and $g(x,y)$ is differentiable.
+
+\subsection{Second-Order and Cross-Partial Derivatives}
+
+For
+
+\begin{equation*}
+y = f(x_1,x_2),
+\end{equation*}
+
+the second partial derivatives are
+
+\begin{equation*}
+f_{11} = \frac{\partial^2 y}{\partial x_1^2},
+\qquad
+f_{22} = \frac{\partial^2 y}{\partial x_2^2}.
+\end{equation*}
+
+The cross partial derivatives are
+
+\begin{equation*}
+f_{12} = \frac{\partial^2 y}{\partial x_1 \partial x_2},
+\qquad
+f_{21} = \frac{\partial^2 y}{\partial x_2 \partial x_1}.
+\end{equation*}
+
+Continuing with the examples above, the function
+
+\begin{equation*}
+f(x_1, x_2) = \sqrt{x_1 + 3x_2^2}
+\end{equation*}
+
+has two second partial derivatives
+
+\begin{equation*}
+\begin{aligned}
+f_{11}(x_1,x_2)
+&=
+-\frac{1}{4\left(x_1 + 3x_2^2\right)^{3/2}}, \\[2em]
+f_{22}(x_1,x_2)
+&=
+-\frac{9x_2^2}{\left(x_1 + 3x_2^2\right)^{3/2}}
++
+\frac{3}{\left(x_1 + 3x_2^2\right)^{1/2}}
+\end{aligned}
+\end{equation*}
+
+and the cross partial derivative
+
+\begin{equation*}
+f_{12}(x_1,x_2)
+=
+f_{21}(x_1,x_2)
+=
+-\frac{3x_2}{2\left(x_1 + 3x_2^2\right)^{3/2}}.
+\end{equation*}
+
+For the function
+
+\begin{equation*}
+h(x,y,z) = \ln(5x + 2y - 3z)
+\end{equation*}
+
+There are three second partial derivatives:
+
+\begin{equation*}
+h_{xx}(x,y,z)
+=
+-\frac{25}{(5x + 2y - 3z)^2},
+\end{equation*}
+
+\begin{equation*}
+h_{yy}(x,y,z)
+=
+-\frac{4}{(5x + 2y - 3z)^2},
+\quad \text{and} \quad
+h_{zz}(x,y,z)
+=
+-\frac{9}{(5x + 2y - 3z)^2}.
+\end{equation*}
+
+The function also has three cross partial derivatives:
+
+\begin{equation*}
+h_{xy}(x,y,z)
+=
+h_{yx}(x,y,z)
+=
+-\frac{10}{(5x + 2y - 3z)^2},
+\end{equation*}
+
+\begin{equation*}
+h_{xz}(x,y,z)
+=
+h_{zx}(x,y,z)
+=
+-\frac{15}{(5x + 2y - 3z)^2},
+\quad \text{and} \quad
+\end{equation*}
+
+\begin{equation*}
+h_{yz}(x,y,z)
+=
+h_{zy}(x,y,z)
+=
+-\frac{6}{(5x + 2y - 3z)^2}
+\end{equation*}
+
+\subsubsection{Young's Theorem}
+
+If all second-order partial derivatives are continuous, then
+
+\begin{equation*}
+f_{ij} = f_{ji}.
+\end{equation*}
+
+\begin{framed}
+\textbf{Why this matters}\\
+Young's Theorem ensures that the order of differentiation does not matter for well-behaved functions, a key assumption in optimization.
+\end{framed}
+
+More generally, if all the partial derivatives of the function
+
+\begin{equation*}
+f(x_1, x_2, \ldots, x_n)
+\end{equation*}
+
+exist and are themselves differentiable with continuous derivatives, then
+
+\begin{equation*}
+\frac{\partial}{\partial x_i}
+\left(
+\frac{\partial f(x_1, x_2, \ldots, x_n)}{\partial x_j}
+\right)
+=
+\frac{\partial}{\partial x_j}
+\left(
+\frac{\partial f(x_1, x_2, \ldots, x_n)}{\partial x_i}
+\right).
+\end{equation*}
+
+Or, written differently,
+
+\begin{equation*}
+f_{ji}(x_1, x_2, \ldots, x_n)
+=
+f_{ij}(x_1, x_2, \ldots, x_n),
+\end{equation*}
+
+for any $i$ and $j$ from 1 to $n$.
+
+\begin{framed}
+\textbf{Young's Theorem and second derivatives}\\
+Young's Theorem shows that a multivariate function that is fully differentiable with respect to all its $n$ arguments has, at most, $n$ distinct second partial
+derivatives, and $(n^2 - n)/2$ distinct cross partial derivatives.
+\end{framed}
+
+For our Cobb--Douglas production function,
+
+\begin{equation*}
+Q = AK^{1-\alpha}L^{\alpha},
+\end{equation*}
+
+the second partial derivative with respect to $L$ and with respect to $K$ is
+
+\begin{equation*}
+\frac{\partial^2 Q}{\partial L^2}
+=
+-(1-\alpha)\alpha A K^{1-\alpha}L^{\alpha-1},
+\end{equation*}
+
+\begin{equation*}
+\frac{\partial^2 Q}{\partial K^2}
+=
+-(1-\alpha)\alpha A K^{-\alpha-1}L^{\alpha}.
+\end{equation*}
+
+Each of these second partial derivatives is negative, reflecting diminishing
+marginal productivity.
+
+The single cross partial derivative is
+
+\begin{equation*}
+\frac{\partial^2 Q}{\partial K \partial L}
+=
+\frac{\partial^2 Q}{\partial L \partial K}
+=
+(1-\alpha)\alpha A K^{-\alpha}L^{\alpha-1},
+\end{equation*}
+
+which is positive since $K$ and $L$ are positive.
+
+\begin{framed}
+\textbf{Economic intuition}\\
+A positive cross partial derivative means that capital and labor are \textit{complements}: increasing the use of one input raises the marginal productivity of the other. At the same time, the negative second partial derivatives capture diminishing marginal productivity of each input on its own.
+\end{framed}
+
+\begin{framed}
+\textbf{Hessian matrix representation (optional)}\\
+The second-order derivatives of the Cobb--Douglas production function can be
+summarized by the Hessian matrix
+
+\begin{equation*}
+H(Q)
+=
+\begin{bmatrix}
+\displaystyle \frac{\partial^2 Q}{\partial K^2}
+&
+\displaystyle \frac{\partial^2 Q}{\partial K \partial L}
+\\[1em]
+\displaystyle \frac{\partial^2 Q}{\partial L \partial K}
+&
+\displaystyle \frac{\partial^2 Q}{\partial L^2}
+\end{bmatrix}
+\end{equation*}
+
+The signs of the Hessian entries reflect diminishing marginal productivity
+(negative diagonal terms) and complementarity between inputs (positive
+off-diagonal terms).
+\end{framed}
+
+\subsection{Composite Functions and Multivariate Chain Rules}
+
+In the univariate case, we learnt that the derivative of the composite function
+
+\begin{equation*}
+y = f(x) = g(h(x))
+\end{equation*}
+
+is
+
+\begin{equation*}
+\frac{dy}{dx} = g'(h(x))h'(x).
+\end{equation*}
+
+A multivariate form of the chain rule can be used with multivariate compositefunctions.
+
+\subsection{Multivariate Chain Rule I (Single Parameter)}
+
+If the arguments of the differentiable function
+
+\begin{equation*}
+y = f(x_1, x_2, \ldots, x_n)
+\end{equation*}
+
+are themselves differentiable functions of a single variable $t$ such that
+
+\begin{equation*}
+x_1 = g^1(t), \quad x_2 = g^2(t), \quad \ldots, \quad x_n = g^n(t),
+\end{equation*}
+
+where $g^i(t)$ is the $i$th univariate function, then
+
+\begin{equation*}
+\frac{dy}{dt}
+=
+f_1 \frac{dx_1}{dt}
++
+f_2 \frac{dx_2}{dt}
++
+\cdots
++
+f_n \frac{dx_n}{dt},
+\end{equation*}
+
+where
+
+\begin{equation*}
+f_i = \frac{\partial y}{\partial x_i}.
+\end{equation*}
+
+\textbf{Example}
+
+Consider the function
+
+\begin{equation*}
+y = f(x_1, x_2) = x_1^2 x_2,
+\end{equation*}
+
+where
+
+\begin{equation*}
+x_1 = t^2
+\quad \text{and} \quad
+x_2 = 3t - 1.
+\end{equation*}
+
+Then
+
+\begin{equation*}
+\frac{dx_1}{dt} = 2t
+\quad \text{and} \quad
+\frac{dx_2}{dt} = 3,
+\end{equation*}
+
+and
+
+\begin{equation*}
+f_1 = 2x_1 x_2
+\quad \text{and} \quad
+f_2 = x_1^2.
+\end{equation*}
+
+Using the chain rule,
+
+\begin{equation*}
+\frac{dy}{dt}
+=
+(2x_1 x_2)\frac{dx_1}{dt}
++
+(x_1^2)\frac{dx_2}{dt}.
+\end{equation*}
+
+Substituting,
+
+\begin{equation*}
+\frac{dy}{dt}
+=
+(2t^2(3t - 1))(2t)
++
+3(t^2)^2
+=
+4t^3(3t - 1) + 3t^4.
+\end{equation*}
+
+Simplifying,
+
+\begin{equation*}
+\frac{dy}{dt}
+=
+15t^4 - 4t^3.
+\end{equation*}
+
+\subsection{Multivariate Chain Rule II (Multiple Parameters)}
+
+If the arguments of the differentiable function
+
+\begin{equation*}
+y = f(x_1, x_2, \ldots, x_n)
+\end{equation*}
+
+are themselves differentiable functions of variables $t_1, \ldots, t_m$ such that
+
+\begin{equation*}
+x_1 = g^1(t_1, \ldots, t_m), \quad
+\ldots, \quad
+x_n = g^n(t_1, \ldots, t_m),
+\end{equation*}
+
+then, for each $t_i$,
+
+\begin{equation*}
+\frac{\partial y}{\partial t_i}
+=
+f_1 \frac{\partial x_1}{\partial t_i}
++
+f_2 \frac{\partial x_2}{\partial t_i}
++
+\cdots
++
+f_n \frac{\partial x_n}{\partial t_i},
+\end{equation*}
+
+where
+
+\begin{equation*}
+f_i = \frac{\partial y}{\partial x_i}.
+\end{equation*}
+
+\begin{framed}
+\textbf{Key intuition}\\
+The multivariate chain rule states that the total change in $y$ with respect to a
+parameter is the sum of each marginal effect multiplied by how the corresponding
+argument changes.
+
+In other words,
+
+\begin{equation*}
+\text{Total change}
+=
+\sum
+\left(
+\text{marginal effect}
+\times
+\text{change in argument}
+\right).
+\end{equation*}
+\end{framed}
+
+\subsection{Total Differentials}
+
+The total differential of the multivariate function
+
+\begin{equation*}
+y = f(x_1, \ldots, x_n)
+\end{equation*}
+
+evaluated at the point
+
+\begin{equation*}
+(x_1^0, x_2^0, \ldots, x_n^0)
+\end{equation*}
+
+is
+
+\begin{equation*}
+\begin{aligned}
+dy
+&=
+f_1(x_1^0, \ldots, x_n^0)\,dx_1
++
+f_2(x_1^0, \ldots, x_n^0)\,dx_2 \\
+&\quad
++
+\cdots
++
+f_n(x_1^0, \ldots, x_n^0)\,dx_n.
+\end{aligned}
+\end{equation*}
+
+where $f_i(x_1^0, x_2^0, \ldots, x_n^0)$ represents the partial derivative of the function $f(x_1, x_2, \ldots, x_n)$ with respect to its $i$th argument, evaluated at the point $(x_1^0, x_2^0, \ldots, x_n^0)$.
+
+\textbf{Example}
+
+Given
+
+\begin{equation*}
+z = f(x,y) = x^4 + 8xy + 3y^3,
+\end{equation*}
+
+the total differential is
+
+\begin{equation*}
+dz = z_x\,dx + z_y\,dy.
+\end{equation*}
+
+Since
+
+\begin{equation*}
+z_x = 4x^3 + 8y
+\quad \text{and} \quad
+z_y = 8x + 9y^2,
+\end{equation*}
+
+we have
+
+\begin{equation*}
+dz = (4x^3 + 8y)\,dx + (8x + 9y^2)\,dy.
+\end{equation*}
+
+\subsubsection{Higher-Order Total Differentials}
+
+We can take higher-order total differentials if required. Continuing with the same example, the second-order total differential is
+
+\begin{equation*}
+d^2 z
+=
+12x^2\,dx^2
++
+16\,dx\,dy
++
+18y\,dy^2.
+\end{equation*}
+
+\begin{framed}
+\textbf{Connection to the Multivariate Chain Rule}\\
+The total differential provides a direct link to the multivariate chain rule.
+
+If each variable $x_i$ depends on a single parameter $t$, then
+
+\begin{equation*}
+dx_i = \frac{dx_i}{dt}\,dt.
+\end{equation*}
+
+Substituting into the total differential,
+
+\begin{equation*}
+dy
+=
+\sum_{i=1}^n
+\frac{\partial f}{\partial x_i}
+\frac{dx_i}{dt}\,dt.
+\end{equation*}
+
+Dividing both sides by $dt$ yields
+
+\begin{equation*}
+\frac{dy}{dt}
+=
+\sum_{i=1}^n
+\frac{\partial f}{\partial x_i}
+\frac{dx_i}{dt},
+\end{equation*}
+
+which is precisely the \textbf{multivariate chain rule}.
+
+Thus, the chain rule can be interpreted as applying the total differential to situations in which the arguments of a multivariate function depend on an underlying parameter.
+\end{framed}
+
+\subsection{Total Derivatives}
+
+Given a case with
+$z = f(x,y)$ and $y = g(x)$,
+that is, when $x$ and $y$ are not independent, a change in $x$ will affect $z$ directly through the function $f$ and indirectly through the function $g$.
+
+The total derivative measures the \textbf{direct effect} of $x$ on $z$, $\partial z / \partial x$, plus the \textbf{indirect effect} of $x$ on $z$ through $y$, $(\partial z/\partial y)(dy/dx)$.
+
+That is,
+
+\begin{equation*}
+\frac{dz}{dx}
+=
+z_x + z_y \frac{dy}{dx}.
+\end{equation*}
+
+\begin{framed}
+\textbf{Connection to Total Differentiation}\\
+An alternative method of finding the total derivative is to take the \textbf{total differential} of $z$:
+
+\begin{equation*}
+dz = z_x,dx + z_y,dy.
+\end{equation*}
+
+Dividing through by $dx$ gives
+
+\begin{equation*}
+\frac{dz}{dx}
+=
+z_x \frac{dx}{dx}
++
+z_y \frac{dy}{dx}.
+\end{equation*}
+
+Since $dx/dx = 1$, this simplifies to
+
+\begin{equation*}
+\frac{dz}{dx}
+=
+z_x + z_y \frac{dy}{dx}.
+\end{equation*}
+\end{framed}
+
+\textbf{Example 1}
+
+Let
+
+\begin{equation*}
+z = f(x,y) = 6x^3 + 7y,
+\end{equation*}
+
+where
+
+\begin{equation*}
+y = 4x^2 + 3x.
+\end{equation*}
+
+Then
+
+\begin{equation*}
+z_x = 18x^2,
+\qquad
+z_y = 7,
+\qquad
+\frac{dy}{dx} = 8x + 3.
+\end{equation*}
+
+Substituting into the total derivative formula,
+
+\begin{equation*}
+\frac{dz}{dx}
+=
+18x^2 + 7(8x + 3)
+=
+18x^2 + 56x + 21.
+\end{equation*}
+
+\textbf{Example 2 (Parametric Dependence)}
+
+Let
+
+\begin{equation*}
+z = f(x,y) = 8x^2 + 3y^2,
+\end{equation*}
+
+where
+
+\begin{equation*}
+x = 4t,
+\qquad
+y = 5t.
+\end{equation*}
+
+The total derivative of $z$ with respect to $t$ is
+
+\begin{equation*}
+\frac{dz}{dt}
+=
+z_x \frac{dx}{dt}
++
+z_y \frac{dy}{dt}.
+\end{equation*}
+
+Since
+
+\begin{equation*}
+z_x = 16x,
+\qquad
+z_y = 6y,
+\qquad
+\frac{dx}{dt} = 4,
+\qquad
+\frac{dy}{dt} = 5,
+\end{equation*}
+
+we obtain
+
+\begin{equation*}
+\frac{dz}{dt}
+=
+16x(4) + 6y(5)
+=
+64x + 30y.
+\end{equation*}
+
+Substituting $x = 4t$ and $y = 5t$ gives
+
+\begin{equation*}
+\frac{dz}{dt}
+=
+64(4t) + 30(5t)
+=
+256t + 150t
+=
+406t.
+\end{equation*}
+
+\subsection{Implicit Multivariate Differentiation}
+
+An \textbf{explicit function} expresses the dependent variable directly as a function of independent variables:
+
+\begin{equation*}
+y = f(x_1, x_2, \ldots, x_n).
+\end{equation*}
+
+An \textbf{implicit function} combines the dependent and independent variables in a relation of the form
+
+\begin{equation*}
+F(y, x_1, x_2, \ldots, x_n) = k,
+\end{equation*}
+
+where $k$ is a constant (possibly zero).
+
+\textbf{Implicit Function Rule}
+
+For an implicit function
+
+\begin{equation*}
+F(y, x_1, x_2, \ldots, x_n) = k,
+\end{equation*}
+
+defined at a point $(y^0, x_1^0, x_2^0, \ldots, x_n^0)$, assume $F$ has continuous first partial derivatives and
+
+\begin{equation*}
+F_y(y^0, x_1^0, x_2^0, \ldots, x_n^0) \neq 0.
+\end{equation*}
+
+Then there exists a function
+
+\begin{equation*}
+y = f(x_1, x_2, \ldots, x_n)
+\end{equation*}
+
+defined in a neighborhood of $(x_1^0, x_2^0, \ldots, x_n^0)$ such that:
+
+\begin{equation*}
+F(f(x_1^0, x_2^0, \ldots, x_n^0), x_1^0, x_2^0, \ldots, x_n^0) = k,
+\end{equation*}
+
+\begin{equation*}
+y^0 = f(x_1^0, x_2^0, \ldots, x_n^0),
+\end{equation*}
+
+and
+
+\begin{equation*}
+f_i(x_1^0, x_2^0, \ldots, x_n^0)
+=
+-
+\frac{
+F_{x_i}(y^0, x_1^0, x_2^0, \ldots, x_n^0)
+}{
+F_y(y^0, x_1^0, x_2^0, \ldots, x_n^0)
+}.
+\end{equation*}
+
+Here,
+
+\begin{equation*}
+F_{x_i} = \frac{\partial F}{\partial x_i},
+\qquad
+F_y = \frac{\partial F}{\partial y},
+\end{equation*}
+
+evaluated at $(y^0, x_1^0, x_2^0, \ldots, x_n^0)$.
+
+This result is sometimes referred to as the \textbf{inverse rule for implicit functions}.
+
+\subsection{Homogeneous Functions and Euler's Theorem}
+
+A function $y = f(x_1, \ldots, x_n)$ is \textbf{homogeneous of degree $k$} if, for any $s > 0$,
+
+\begin{equation*}
+f(sx_1, \ldots, sx_n) = s^k f(x_1, \ldots, x_n).
+\end{equation*}
+
+\subsubsection{Euler's Theorem}
+
+If $y = f(x_1, \ldots, x_n)$ is homogeneous of degree $k$, then
+
+\begin{equation*}
+k y
+===
+
+x_1 f_1(x_1, \ldots, x_n)
++
+\cdots
++
+x_n f_n(x_1, \ldots, x_n),
+\end{equation*}
+
+where
+
+\begin{equation*}
+f_i = \frac{\partial f}{\partial x_i}.
+\end{equation*}
+
+\subsubsection{Proof of Euler's Theorem}
+
+By homogeneity,
+
+\begin{equation*}
+f(sx_1, \ldots, sx_n) = s^k y.
+\end{equation*}
+
+Taking the derivative with respect to $s$ of the left-hand side,
+
+\begin{equation*}
+\frac{d}{ds} f(sx_1, \ldots, sx_n)
+=
+x_1 f_1(sx_1, \ldots, sx_n)
++
+\cdots
++
+x_n f_n(sx_1, \ldots, sx_n).
+\end{equation*}
+
+Differentiating the right-hand side,
+
+\begin{equation*}
+\frac{d}{ds}(s^k y) = k s^{k-1} y.
+\end{equation*}
+
+Setting $s = 1$ yields Euler's Theorem.
+
+\textbf{Notes}
+
+\textbf{Note 1.}
+Any function homogeneous of degree 0 can be written as
+
+\begin{equation*}
+f!\left(
+\frac{x_1}{x_i}, \frac{x_2}{x_i}, \ldots, 1, \ldots, \frac{x_n}{x_i}
+\right),
+\end{equation*}
+
+for any $i = 1, \ldots, n$.
+
+\textbf{Note 2.}
+If $f(x_1, \ldots, x_n)$ is homogeneous of degree $k$, then each partial derivative
+
+\begin{equation*}
+f_i = \frac{\partial f}{\partial x_i}
+\end{equation*}
+
+is homogeneous of degree $k -1$.
+
+\subsection{Homothetic Functions}
+
+A homothetic function is a monotonic transformation of a homogeneous function.
+
+That is, if
+
+\begin{equation*}
+y = f(x_1, \ldots, x_n)
+\end{equation*}
+
+is a homogeneous function, then
+
+\begin{equation*}
+z = g(y)
+\end{equation*}
+
+is a homothetic function if $g(y)$ is a strictly monotonic transformation, i.e.,
+
+\begin{equation*}
+g'(y) > 0 \quad \text{for all } y
+\quad \text{or} \quad
+g'(y) < 0 \quad \text{for all } y.
+\end{equation*}
+
+\textbf{Note.} While every homogeneous function is a homothetic function (since we can simply choose $g(y) = y$), not every homothetic function is homogeneous.
+
+\textbf{Example}
+
+For example, take
+
+\begin{equation*}
+y = x_1^{\alpha} x_2^{\beta},
+\end{equation*}
+
+which is homogeneous of degree $\alpha + \beta$.
+
+Taking logarithms, we obtain
+
+\begin{equation*}
+z = \ln(y) = \alpha \ln(x_1) + \beta \ln(x_2).
+\end{equation*}
+
+The function $z$ is homothetic since the logarithm function is strictly monotonic.
+
+However, this homothetic function is \textbf{not homogeneous} in the arguments $x_1$ and $x_2$, since
+
+\begin{equation*}
+\alpha \ln(sx_1) + \beta \ln(sx_2)
+=
+\alpha \ln(x_1) + \beta \ln(x_2) + (\alpha + \beta)\ln(s)
+\end{equation*}
+
+and therefore
+
+\begin{equation*}
+z(sx_1, sx_2)
+=
+z(x_1, x_2) + (\alpha + \beta)\ln(s),
+\end{equation*}
+
+which does not satisfy the definition of homogeneity.
+
+\begin{framed}
+\textbf{Homothetic Functions}\\
+Homothetic functions preserve \textbf{input rankings and marginal rates of substitution}, but not proportional scaling.
+\end{framed}
+
+\subsection{Examples in Economics}
+
+Consider a Cobb--Douglas production function
+
+\begin{equation*}
+Q = A K^{1-\alpha} L^{\alpha}
+\end{equation*}
+
+The tangent (slope) to its isoquant is
+
+\begin{equation*}
+\frac{dK}{dL}
+=
+\left( \frac{\alpha}{1-\alpha} \right)\frac{K}{L}
+\end{equation*}
+
+An interesting property of the Cobb--Douglas production function is that the ratio of its marginal products depends on the capital--labor ratio and not on the overall level of production.
+
+Hence multiplying $K$ and $L$ by some factor $s$ leaves the slope unchanged:
+
+\begin{equation*}
+\frac{dK}{dL}
+=
+\left( \frac{\alpha}{1-\alpha} \right)\frac{K}{L}
+=
+\left( \frac{\alpha}{1-\alpha} \right)\frac{sK}{sL}
+\end{equation*}
+
+More generally, the slope of the level curves of any homogeneous function is constant along any ray from the origin.
+The slope of a level curve of a function $f(x_1,x_2)$ is
+
+\begin{equation*}
+\frac{dx_2}{dx_1}
+=
+\frac{f_1(x_1,x_2)}{f_2(x_1,x_2)}
+\end{equation*}
+
+Now recall that for a homogeneous function of degree $k$,
+
+\begin{equation*}
+f_i(sx_1,sx_2)
+=
+s^{k-1} f_i(x_1,x_2)
+\end{equation*}
+
+Thus along a ray from the origin,
+
+\begin{equation*}
+\begin{aligned}
+\frac{dx_2}{dx_1}
+&=
+\frac{f_1(sx_1,sx_2)}{f_2(sx_1,sx_2)} [0.5em]
+&=
+\frac{s^{k-1} f_1(x_1,x_2)}{s^{k-1} f_2(x_1,x_2)} [0.5em]
+&=
+\frac{f_1(x_1,x_2)}{f_2(x_1,x_2)} .
+\end{aligned}
+\end{equation*}
+
+Put differently, any proportional scaling $s$ of the two arguments $x_1$ and $x_2$ leaves the slope unchanged.
+
+This property also extends to \textbf{homothetic functions}.
+
+Consider the function
+
+\begin{equation*}
+y = f(x_1,x_2),
+\end{equation*}
+
+which we assume to be homogeneous of degree $k$, and the homothetic transformation
+
+\begin{equation*}
+z = g(y) = g(f(x_1,x_2)),
+\end{equation*}
+
+where $g'(y) > 0$ for all $y$ or $g'(y) < 0$ for all $y$.
+
+Using the chain rule together with the \textbf{Implicit Function Theorem}, we obtain
+
+\begin{equation*}
+\begin{aligned}
+\frac{dx_2}{dx_1}
+&=
+\frac{g'(y) f_1(sx_1,sx_2)}{g'(y) f_2(sx_1,sx_2)}
+&=
+\frac{f_1(sx_1,sx_2)}{f_2(sx_1,sx_2)}
+&=
+\frac{s^{k-1} f_1(x_1,x_2)}{s^{k-1} f_2(x_1,x_2)}
+&=
+\frac{f_1(x_1,x_2)}{f_2(x_1,x_2)}
+\end{aligned}
+\end{equation*}
+
+Thus, as with homogeneous functions, the scaling factor $s$ does not affect the slope of the level curve.
+This shows that the slope of the level curves of \textbf{any homothetic function}---a class that includes but is not limited to homogeneous functions---is not altered by proportional scaling of all its arguments.
+
+\begin{framed}
+\textbf{Key implication}\\
+Homogeneous and homothetic functions have \textbf{constant slopes along rays from the origin}, a crucial property in production theory.
+\end{framed}
+
+% 
+% :::{comment}
+% ## Chapter Summary
+% 
+% ::::{admonition} Summary
+% :class: important
+% 
+% * Partial derivatives measure marginal effects holding other variables fixed
+% * Second and cross partials capture curvature and interaction effects
+% * The multivariate chain rule links composite functions
+% * Total differentials and derivatives measure combined effects
+% * Homogeneity and homotheticity explain scale and substitution properties
+% * These tools underpin multivariate and constrained optimization in economics
+% ::::
+% :::

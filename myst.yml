@@ -4,12 +4,15 @@ project:
   title: Math Econ
   authors:
     - name: YY
-   
+  bibliography:
+    - references.bib
+
   toc:
     - file: intro.md
     - file: linear-algebra-basic.md
     - file: linear-algebra-special.md
     - file: basic-differentiation.md
+    - file: multivariate-calculus.md
 
   exports:
     - format: pdf
@@ -19,6 +22,7 @@ project:
         - linear-algebra-basic.md
         - linear-algebra-special.md
         - basic-differentiation.md
+        - multivariate-calculus.md
 
 site:
   template: book-theme

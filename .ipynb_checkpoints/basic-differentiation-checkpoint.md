@@ -598,7 +598,7 @@ $1.\; dy = (14x - 3)\,dx \quad
 4.\; dy = (3x^2 + 3)\,dx$
 ::::
 
-## Taylor Series (Preview)
+## Taylor Series
 
 A smooth complex function $z(x)$ can be approximated around $x=a$ by
 
