@@ -424,6 +424,177 @@ The signs of the Hessian entries reflect diminishing marginal productivity
 off-diagonal terms).
 ::::
 
+::::{dropdown} **Try these ^^**
+For each of the following functions:
+
+1. Compute the **first-order partial derivatives**
+   :::{math}
+   :enumerated: false
+   \frac{\partial y}{\partial x_1}, \qquad \frac{\partial y}{\partial x_2}.
+   :::
+
+2. For each functions, evaluate the first-order partial derivatives at the point
+   :::{math}
+   :enumerated: false
+   x_1 = 1, \quad x_2 = 4.
+   :::
+
+3. For each functions, compute the **second-order partial derivatives**
+   :::{math}
+   :enumerated: false
+   \frac{\partial^2 y}{\partial x_1^2}, \qquad
+   \frac{\partial^2 y}{\partial x_2^2},
+   ::: 
+   and the **cross partial derivative**
+   :::{math}
+   :enumerated: false
+   \frac{\partial^2 y}{\partial x_1 \partial x_2}.
+   :::
+
+Assume all functions are defined on domains where the expressions are well-defined.
+
+**(i)** $y = f(x_1,x_2) = 12x_1^4 - 6x_1^2x_2 + 4x_2^3$
+
+**(ii)** $y = f(x_1,x_2) = (3x_1^2 + 5x_2 + 1)(x_2 + 4)$
+
+**(iii)** $y = f(x_1,x_2) = \frac{7x_1 - x_1x_2^2}{x_1 - 2}$
+
+**(iv)** $y = f(x_1,x_2) = (2e^{x_1})(e^{2x_1}x_2^2)$
+
+**(v)** $y = f(x_1,x_2) = 2\ln(3x_1) - 4\ln(2x_1x_2)$
+
+**(vi)** $y = f(x_1,x_2) = x_1^2 + 2x_1x_2^{1/2} - 4x_2$
+
+---
+
+**Answers: First-Order Partial Derivatives**
+
+**(i)** $\frac{\partial y}{\partial x_1} = 48x_1^3 - 12x_1x_2,
+\qquad
+\frac{\partial y}{\partial x_2} = -6x_1^2 + 12x_2^2$
+
+**(ii)** $\frac{\partial y}{\partial x_1} = 6x_1x_2 + 24x_1,
+\qquad
+\frac{\partial y}{\partial x_2} = 3x_1^2 + 5x_1 + 1
+$
+
+**(iii)** $\frac{\partial y}{\partial x_1} = \frac{2x_2^2 - 14}{(x_1 - 2)^2},
+\qquad
+\frac{\partial y}{\partial x_2} =
+-\frac{2x_1x_2}{x_1 - 2}
+$
+
+**(iv)** $\frac{\partial y}{\partial x_1} = 6x_2^2 e^{3x_1},
+\qquad
+\frac{\partial y}{\partial x_2} = 4x_2 e^{3x_1}
+$
+
+**(v)** $
+\frac{\partial y}{\partial x_1} = -\frac{2}{x_1},
+\qquad
+\frac{\partial y}{\partial x_2} = -\frac{4}{x_2}
+$
+
+**(vi)** $\frac{\partial y}{\partial x_1} = 2x_1 + 2\sqrt{x_2},
+\qquad
+\frac{\partial y}{\partial x_2} = \frac{x_1}{\sqrt{x_2}} - 4
+$
+
+---
+
+**Answers 2**
+
+**(i)** $\left.\frac{\partial y}{\partial x_1}\right|_{(1,4)} = 0,
+\qquad
+\left.\frac{\partial y}{\partial x_2}\right|_{(1,4)} = 186
+$
+
+**(ii)** $\left.\frac{\partial y}{\partial x_1}\right|_{(1,4)} = 88,
+\qquad
+\left.\frac{\partial y}{\partial x_2}\right|_{(1,4)} = 9
+$
+
+**(iii)** $\left.\frac{\partial y}{\partial x_1}\right|_{(1,4)} = 18,
+\qquad
+\left.\frac{\partial y}{\partial x_2}\right|_{(1,4)} = 8
+$
+
+**(iv)** $\left.\frac{\partial y}{\partial x_1}\right|_{(1,4)} = 1928,
+\qquad
+\left.\frac{\partial y}{\partial x_2}\right|_{(1,4)} = 321
+$
+
+**(v)** $\left.\frac{\partial y}{\partial x_1}\right|_{(1,4)} = -2,
+\qquad
+\left.\frac{\partial y}{\partial x_2}\right|_{(1,4)} = -1
+$
+
+**(vi)** $\left.\frac{\partial y}{\partial x_1}\right|_{(1,4)} = 6,
+\qquad
+\left.\frac{\partial y}{\partial x_2}\right|_{(1,4)} = -\frac{7}{2}
+$
+
+---
+
+**3. Second-Order and Cross Partial Derivatives**
+
+For each function, compute: $\dfrac{\partial^2 y}{\partial x_1^2}$, $\dfrac{\partial^2 y}{\partial x_2^2}$, and $\dfrac{\partial^2 y}{\partial x_1\partial x_2}$.
+
+**Answers: Second-Order and Cross Partial Derivatives**
+
+**(i)** $
+\frac{\partial^2 y}{\partial x_1^2} = 144x_1^2 - 12x_2,
+\qquad
+\frac{\partial^2 y}{\partial x_2^2} = 24x_2,
+\qquad
+\frac{\partial^2 y}{\partial x_1\partial x_2} = -12x_1
+$
+
+**(ii)** $
+\frac{\partial^2 y}{\partial x_1^2} = 6x_2 + 24,
+\qquad
+\frac{\partial^2 y}{\partial x_2^2} = 6x_1 + 5,
+\qquad
+\frac{\partial^2 y}{\partial x_1\partial x_2} = 6x_1
+$
+
+**(iii)** $
+\frac{\partial^2 y}{\partial x_1^2} =
+-\frac{4(x_1x_2^2 - 2x_2^2 - 7x_1 + 14)}{(x_1 - 2)^3},
+\qquad
+\frac{\partial^2 y}{\partial x_2^2} =
+\frac{4x_1}{(x_1 - 2)^2},
+\qquad
+\frac{\partial^2 y}{\partial x_1\partial x_2} =
+-\frac{4x_2}{(x_1 - 2)^2}
+$
+
+**(iv)** $
+\frac{\partial^2 y}{\partial x_1^2} = 18x_2^2 e^{3x_1},
+\qquad
+\frac{\partial^2 y}{\partial x_2^2} = 4e^{3x_1},
+\qquad
+\frac{\partial^2 y}{\partial x_1\partial x_2} = 12e^{3x_1}x_2
+$
+
+**(v)** $
+\frac{\partial^2 y}{\partial x_1^2} = \frac{2}{x_1^2},
+\qquad
+\frac{\partial^2 y}{\partial x_2^2} = \frac{4}{x_2^2},
+\qquad
+\frac{\partial^2 y}{\partial x_1\partial x_2} = 0
+$
+
+**(vi)** $
+\frac{\partial^2 y}{\partial x_1^2} = 2,
+\qquad
+\frac{\partial^2 y}{\partial x_2^2} = -\frac{1}{2}x_1 x_2^{-3/2},
+\qquad
+\frac{\partial^2 y}{\partial x_1\partial x_2} = x_2^{-1/2}
+$
+
+::::
+
 ## Composite Functions and Multivariate Chain Rules
 
 In the univariate case, we learnt that the derivative of the composite function
@@ -612,6 +783,56 @@ In other words,
 
 ::::
 
+:::::{dropdown} **Try these ^^**
+### Partial Derivatives with Change of Variables
+
+For each of the following cases, find the partial derivatives $\displaystyle \frac{\partial Z}{\partial u}$ and $\displaystyle \frac{\partial Z}{\partial v}$.
+
+**(i)** Let $Z = f(x,y) = 4x^2 + 2xy + y^2,$ where $x = 3u^2 \text{ and } y = u - 2v$
+
+**(ii)** Let $Z = f(x,y) = ax^3 - bx^2y + cy,$ where $x = \gamma u + \theta v \text{ and } y = \theta u - \gamma v^2$
+
+**(iii)** Let $Z = f(x,y) = 2e^x + \tfrac{1}{2}x^2y - 4y,$ where $x = \tfrac{1}{4}u \text{ and } y = u^2 + 6v$
+
+**(iv)** Let $Z = f(x,y,u) = 2x^3 - 3xy^2 + 0.75yu - 5u^2,$ where $x = \sqrt{u+v} \text{ and } y = v^2$
+
+---
+
+**Answers**
+
+**(i)** $\frac{\partial Z}{\partial u} = 48xu + 12yu + 2x + 2y, \text{ and } \frac{\partial Z}{\partial v} = -4x - 4y$
+
+**(ii)** $\frac{\partial Z}{\partial u} = (3ax^2 - 2bxy)\gamma + (-bx^2 + c)\theta, \text{ and } \frac{\partial Z}{\partial v} = (3ax^2 - 2bxy)\theta + (-bx^2 + c)(-2\gamma v)$
+
+**(iii)** $\frac{\partial Z}{\partial u} = (2e^x + xy)\tfrac{1}{4} + \left(\tfrac{1}{2}x^2 - 4\right)2u, \text{ and } \frac{\partial Z}{\partial v} = 3x^2 - 24$
+
+**(iv)** $\frac{\partial Z}{\partial u} = (6x^2 - 3y^2)\frac{1}{2\sqrt{u+v}} + 0.75y - 10u, \text{ and } \frac{\partial Z}{\partial v} = (6x^2 - 3y^2)\frac{1}{2\sqrt{u+v}} + (-6xy + 0.75u)2v$
+
+::::{admonition} Common pitfall: direct vs indirect effects
+:class: warning
+
+In parts (i)–(iii), the variable $Z$ depends on $u$ and $v$ **only through** the intermediate variables $x$ and $y$.
+The multivariate chain rule therefore involves **only indirect effects**.
+
+In part (iv), however, $Z = f(x,y,u)$ depends on $u$ **both directly and indirectly** (through $x$).
+As a result,
+
+:::{math}
+:enumerated: false
+\frac{\partial Z}{\partial u}
+=
+Z_x \frac{\partial x}{\partial u}
++
+Z_y \frac{\partial y}{\partial u}
++
+Z_u.
+:::
+
+A very common mistake is to **omit the direct term $Z_u$**, which leads to an incomplete derivative.
+::::
+
+:::::
+
 ## Total Differentials
 
 The total differential of the multivariate function  
@@ -735,6 +956,53 @@ Thus, the chain rule can be interpreted as applying the total differential to si
 
 ::::
 
+:::::{dropdown} **Try these ^^**
+### Total Differentials
+
+**1. Find the total differentials of each function.**
+
+**(i)** $w = 2x^2 + \frac{1}{2}xy - 3y^3$  
+**(ii)** $w = 4x_1^3 - \ln(x_1 x_2) + 6x_2$  
+**(iii)** $z = \dfrac{x^2}{y^3 + xy}$  
+**(iv)** $y = 2x_1^2 e^{3x_2}$
+
+**2. For each function, use the total differential to approximate the change in $y$ due to the given changes in $x$ and $z$.**
+
+**(i)** $y = x^2 + 4x - z^2 - 2xz$,
+   where $x = 1$, $z = 4$, $\Delta x = 2$, $\Delta z = -2$
+
+**(ii)** $y = e^{x^2 + 3z}$,
+   where $x = 1$, $z = 2$, $\Delta x = 2$, $\Delta z = -2$
+
+**(iii)** $y = \ln x^3 - 4z + 2xz$,
+   where $x = 1$, $z = 2$, $\Delta x = 2$, $\Delta z = 4$
+
+**(iv)** $y = x^2 + e^{z/2}$,
+   where $x = 2$, $z = 2$, $\Delta x = 1$, $\Delta z = -1$
+
+---
+
+**Answers: Question 1**
+
+**(i)** $dw = (4x + \tfrac{1}{2}y),dx + (\tfrac{1}{2}x - 9y^2),dy$ **(ii)** $dw = \left(12x_1^2 - \frac{1}{x_1}\right),dx_1 + \left(6 - \frac{1}{x_2}\right),dx_2$ **(iii)** $dz = \dfrac{2xy^3 + x^2y}{(y^3 + xy)^2},dx - \dfrac{3x^2y^2 + x^3}{(y^3 + xy)^2},dy$ **(iv)** $dy = (4x_1 e^{3x_2}),dx_1 + (6x_1^2 e^{3x_2}),dx_2$
+
+---
+
+**Answers: Question 2**
+
+**(i)** $\Delta y = 24$, $dy = 16$ **(ii)** $\Delta y = 7007$, $dy = -2194$ **(iii)** $\Delta y = 19.3$, $dy = 6$ **(iv)** $dy = 2x,dx + \tfrac{1}{2}e^{z/2},dz = 4 - \tfrac{1}{2}e = 2.64$. Actual change is $\Delta y = 3.93$
+
+::::{admonition} Interpretation
+:class: important
+
+The total differential provides a **local linear approximation** to the actual change in a function.
+
+When changes are small, $dy$ closely approximates $\Delta y$.
+When changes are large or the function is highly nonlinear, the approximation may be poor.
+::::
+
+:::::
+
 ## Total Derivatives
 
 Given a case with
@@ -751,7 +1019,6 @@ That is,
 =
 z_x + z_y \frac{dy}{dx}.
 :::
-
 
 ::::{admonition} Connection to Total Differentiation
 :class: tip
@@ -851,7 +1118,6 @@ z_x \frac{dx}{dt}
 z_y \frac{dy}{dt}.
 :::
 
-
 Since
 
 :::{math}
@@ -888,6 +1154,98 @@ Substituting $x = 4t$ and $y = 5t$ gives
 =
 406t.
 :::
+
+:::::{dropdown} **Try these ^^**
+
+### Total Derivatives
+
+In the following questions, the function $f(x,y)$ depends on $x$ **both directly and indirectly** through $y$.
+You must therefore compute the **total derivative**, not a partial derivative.
+
+Recall that if $y = y(t)$, then
+
+:::{math}
+:enumerated: false
+\frac{df}{dt} = f_x \frac{dx}{dt} + f_y \frac{dy}{dt}.
+:::
+
+**1. Total derivative with respect to $x$**
+
+Find the total derivative $df(x,y)/dx$ for each of the following functions.
+
+**(i)** $f(x,y) = 6x^2 + 15xy + 3y^2, 
+\quad \text{where } y = 7x^2.$
+
+**(ii)** $f(x,y) = \frac{9x - 7y}{2x + 5y},
+\quad \text{where } y = 3x - 4.$
+
+**(iii)** $f(x,y) = 8x - 12y,
+\quad \text{where } y = \frac{x+1}{x^2}.
+$
+
+---
+
+**2. Total derivative with respect to $w$**
+
+Find the total derivative $df(x,y)/dw$ for each of the following functions.
+
+**(i)** $f(x,y) = 7x^2 + 4y^2,
+\quad \text{where } x = 5w \text{ and } y = 4w.
+$
+
+**(ii)** $f(x,y) = 10x^2 - 6xy - 12y^2,
+\quad \text{where } x = 2w \text{ and } y = 3w.
+$
+
+---
+
+::::{admonition} Common pitfall
+:class: warning
+
+Do **not** compute $f_x$ alone.
+
+Because $y$ depends on the same variable as $x$ (either $x$ itself or $w$),
+you must include **both terms**:
+
+:::{math}
+:enumerated: false
+\frac{df}{dt} = f_x \frac{dx}{dt} + f_y \frac{dy}{dt}.
+:::
+::::
+
+---
+
+**Answers: Question 1**
+
+**(i)**  $\frac{df}{dx}
+= f_x + f_y \frac{dy}{dx}
+= 210x^2 + 84xy + 12x + 15y.
+$
+
+**(ii)** $\frac{df}{dx}
+= \frac{59(y - 3x)}{(2x + 5y)^2}.
+$
+
+**(iii)** $\frac{df}{dx}
+= 8 + \frac{12(x+2)}{x^3}.
+$
+
+---
+
+**Answers: Question 2**
+
+**(i)** $\frac{df}{dw}
+= f_x \frac{dx}{dw} + f_y \frac{dy}{dw}
+= 14x(5) + 8y(4)
+= 70x + 32y.
+$
+
+**(ii)** $\frac{df}{dw}
+= (20x - 6y)(2) + (-6x - 24y)(3)
+= 22x - 84y.
+$
+
+:::::
 
 ## Implicit Multivariate Differentiation
 
@@ -969,6 +1327,46 @@ evaluated at $(y^0, x_1^0, x_2^0, \ldots, x_n^0)$.
 
 This result is sometimes referred to as the **inverse rule for implicit functions**.
 
+::::{admonition} Reminder
+:class: warning
+
+When using implicit differentiation, always compute **both** $F_x$ and $F_y$ carefully.
+A sign error or a missing term in either partial derivative will lead to an incorrect result.
+::::
+
+::::{dropdown} **Try these ^^**
+
+### Implicit and Inverse Function Rule
+
+Find the derivative of each implicit function, where
+
+:::{math}
+:enumerated: false
+\frac{dy}{dx} = -\frac{F_x}{F_y},
+:::
+
+provided that $F_y \neq 0$.
+
+---
+
+**(i)**  $F(x,y) = x^2 + y^2 + (xy)^{1/3} = 0$
+
+**(ii)** $F(x,y) = x^2 y + y^2 x + xy = 0$
+
+**(iii)** $F(x,y) = \ln x^3 + (xy)^2 - 4y = 0$
+
+**(iv)** $F(x,y,w) = w^3 y^3 + x^2 + wxy + 7 = 0$ (Find $\partial y / \partial x$)
+
+**(v)** $F(x,y) = xy^2 e^y = 0$
+
+---
+
+**Answers**
+
+**(i)**  $\frac{dy}{dx} = -\frac{6x + x^{-2/3} y^{1/3}}{6y + y^{-2/3} x^{1/3}}$ **(ii)**  $\frac{dy}{dx} = -\frac{y(2x + y + 1)}{x(2y + x + 1)}$ **(iii)**  $\frac{dy}{dx} = -\frac{3x^{-1} + 2xy^2}{2x^2 y - 4}$ **(iv)**  $\frac{\partial y}{\partial x} = -\frac{3x^2 + wy}{3w^3 y^2 + wx}$ **(v)**  $\frac{dy}{dx} = -\frac{y}{x(2 + y)}$
+
+::::
+
 ## Homogeneous Functions and Euler’s Theorem
 
 A function $y = f(x_1, \ldots, x_n)$ is **homogeneous of degree $k$** if, for any $s > 0$,
@@ -977,6 +1375,39 @@ A function $y = f(x_1, \ldots, x_n)$ is **homogeneous of degree $k$** if, for an
 :enumerated: false
 f(sx_1, \ldots, sx_n) = s^k f(x_1, \ldots, x_n).
 :::
+
+::::{admonition} Tip
+:class: important
+
+To check homogeneity, scale all arguments by a common factor $s$ and verify whether
+$f(sx, sy, sw) = s^k f(x,y,w)$ for some constant $k$.
+
+If different terms scale with **different powers of $s$**, the function is **not homogeneous**.
+::::
+
+::::{dropdown} **Try these ^^**
+### Homogeneous Functions — Practice Problems
+
+Determine whether each function is **homogeneous** and, if so, state **its degree of homogeneity**.
+
+1. $f(x,y,w) = \dfrac{x}{w} + \dfrac{3y}{5x}$
+
+2. $f(x,y,w) = \dfrac{x^2}{w} + \dfrac{2w^2}{y}$
+
+3. $f(x,y,w) = \dfrac{x^3 y}{w} + 2xyw$
+
+4. $f(x,y) = \sqrt{x^2 + y^2}$
+
+5. $f(x,y,w) = 3x^2 y - \dfrac{3y}{w^2}$
+
+6. $f(x,y) = x^{1/2} y^{1/4} + y^{5/8}$
+
+---
+
+**Answers**
+
+**1.** Homogeneous of degree 0 **2.** Homogeneous of degree 1 **3.** Homogeneous of degree 3 **4.** Homogeneous of degree 1 **5.** Not homogeneous **6.** Not homogeneous
+::::
 
 ### Euler’s Theorem
 
@@ -1056,6 +1487,100 @@ f_i = \frac{\partial f}{\partial x_i}
 
 is homogeneous of degree $k-1$.
 
+::::{dropdown} **Try these ^^**
+
+### Homogeneous Production Function and Euler’s Theorem
+
+Consider the production function
+:::{math}
+:enumerated: false
+f(x_1,x_2) = x_1^{1/4} x_2^{1/3}.
+:::
+
+**Question**
+
+   i. Determine whether this production function is homogeneous. If so, of what degree?
+
+   ii. Take the partial derivatives of this production function and show that they are homogeneous of degree $k-1$.
+
+   iii. Using Euler’s Theorem, show that
+   :::{math}
+   :enumerated: false
+   x_1 f_1(sx_1,sx_2) + x_2 f_2(sx_1,sx_2)
+   =
+   k s^{k-1} f(x_1,x_2).
+   :::
+
+---
+
+**Answers**
+
+   i. The function is homogeneous of degree
+   :::{math}
+   :enumerated: false
+   k = \frac14 + \frac13 = \frac{7}{12},
+   :::
+   since
+   :::{math}
+   :enumerated: false
+   f(sx_1,sx_2)
+   =
+   (sx_1)^{1/4}(sx_2)^{1/3}
+   =
+   s^{7/12} f(x_1,x_2).
+   :::
+
+   ii. The partial derivatives are
+   :::{math}
+   :enumerated: false
+   f_1(x_1,x_2)
+   =
+   \frac{\partial f}{\partial x_1}
+   =
+   \frac14 x_1^{-3/4} x_2^{1/3},
+   :::
+   and
+   :::{math}
+   :enumerated: false
+   f_2(x_1,x_2)
+   =
+   \frac{\partial f}{\partial x_2}
+   =
+   \frac13 x_1^{1/4} x_2^{-2/3}.
+   :::
+
+   Each partial derivative is homogeneous of degree
+   :::{math}
+   :enumerated: false
+   k-1 = \frac{7}{12} - 1 = -\frac{5}{12},
+   :::
+   since
+   :::{math}
+   :enumerated: false
+   f_1(sx_1,sx_2) = s^{-5/12} f_1(x_1,x_2),
+   \quad
+   f_2(sx_1,sx_2) = s^{-5/12} f_2(x_1,x_2).
+   :::
+
+   iii. By Euler’s Theorem for homogeneous functions,
+   :::{math}
+   :enumerated: false
+   x_1 f_1(x_1,x_2) + x_2 f_2(x_1,x_2)
+   =
+   k f(x_1,x_2).
+   :::
+
+   Evaluating this expression at $(sx_1,sx_2)$ and using the homogeneity of the partial derivatives,
+   :::{math}
+   :enumerated: false
+   x_1 f_1(sx_1,sx_2) + x_2 f_2(sx_1,sx_2)
+   =
+   k s^{k-1} f(x_1,x_2),
+   :::
+   where $k = \tfrac{7}{12}$ and $f(x_1,x_2) = x_1^{1/4} x_2^{1/3}$.
+
+::::
+
 ## Homothetic Functions
 
 A homothetic function is a monotonic transformation of a homogeneous function.
@@ -1130,6 +1655,219 @@ which does not satisfy the definition of homogeneity.
 :class: tip
 
 Homothetic functions preserve **input rankings and marginal rates of substitution**, but not proportional scaling.
+::::
+
+::::{dropdown} **Try these ^^**
+### Homogeneous and Homothetic Functions
+
+Consider the function
+
+:::{math}
+:enumerated: false
+y = f(x_1, x_2) = x_1 x_2
+:::
+
+defined over the domain $x_1 > 0$ and $x_2 > 0$.
+Also consider the functions
+
+:::{math}
+:enumerated: false
+g(y) = \ln y,
+\quad
+h(y) = 10y,
+\quad
+j(y) = y^2,
+\quad
+k(y) = e^y.
+:::
+
+Answer the following questions.
+
+1. Is $f(x_1, x_2)$ a homogeneous function? If so, what is its degree?
+
+2. Is $g(y)$ a homothetic function?
+   Is $g(y)$ a homogeneous function in the arguments $x_1$ and $x_2$?
+   If so, what is its degree?
+
+3. How about $h(y)$?
+   Is it a homothetic function?
+   Is it homogeneous in the arguments $x_1$ and $x_2$?
+   If so, what is its degree?
+
+4. How about $j(y)$ and $k(y)$?
+   For each function, state whether it is homothetic and/or homogeneous in $(x_1, x_2)$, and give the degree if applicable.
+
+---
+
+**Answers**
+
+1. **$f(x_1, x_2)$**
+
+   Yes. Since
+
+   :::{math}
+   :enumerated: false
+   f(sx_1, sx_2) = (sx_1)(sx_2) = s^2 f(x_1, x_2),
+   :::
+
+   the function is **homogeneous of degree 2**.
+
+2. **$g(y)=\ln y$**
+
+- **Homothetic?** Yes, because $\ln(\cdot)$ is strictly increasing on $(0,\infty)$, and $y=x_1x_2>0$ on the given domain.
+
+- **Homogeneous in $(x_1,x_2)$?** No.  
+  Let $G(x_1,x_2)=\ln(f(x_1,x_2))=\ln(x_1x_2)$. Then
+
+:::{math}
+:enumerated: false
+G(sx_1,sx_2)=\ln\big((sx_1)(sx_2)\big)=\ln(s^2x_1x_2)=\ln(x_1x_2)+2\ln s,
+:::
+
+which is **not** of the form $s^k G(x_1,x_2)$ for any constant $k$.
+
+---
+
+3. **$h(y)=10y$**
+
+- **Homothetic?** Yes (it is strictly increasing in $y$).
+
+- **Homogeneous in $(x_1,x_2)$?** Yes.  
+  Let $H(x_1,x_2)=h(f(x_1,x_2))=10x_1x_2$. Then
+
+:::{math}
+:enumerated: false
+H(sx_1,sx_2)=10(sx_1)(sx_2)=s^2\cdot 10x_1x_2=s^2H(x_1,x_2),
+:::
+
+so $h(f(x_1,x_2))$ is **homogeneous of degree 2** in $(x_1,x_2)$.
+
+---
+
+4. **$j(y)=y^2$ and $k(y)=e^y$**
+
+**(a) $j(y)=y^2$**
+
+- **Homothetic?** Yes on the given domain, because $y=x_1x_2>0$ and $y^2$ is strictly increasing for $y>0$.
+
+- **Homogeneous in $(x_1,x_2)$?** Yes.  
+  Let $J(x_1,x_2)=j(f(x_1,x_2))=(x_1x_2)^2$. Then
+
+:::{math}
+:enumerated: false
+J(sx_1,sx_2)=\big((sx_1)(sx_2)\big)^2=(s^2x_1x_2)^2=s^4(x_1x_2)^2=s^4J(x_1,x_2),
+:::
+
+so it is **homogeneous of degree 4**.
+
+**(b) $k(y)=e^y$**
+
+- **Homothetic?** Yes, because $e^y$ is strictly increasing for all $y$.
+
+- **Homogeneous in $(x_1,x_2)$?** No.  
+  Let $K(x_1,x_2)=k(f(x_1,x_2))=e^{x_1x_2}$. Then
+
+:::{math}
+:enumerated: false
+K(sx_1,sx_2)=e^{(sx_1)(sx_2)}=e^{s^2x_1x_2},
+:::
+
+which cannot be written as $s^k K(x_1,x_2)$ for a constant $k$.
+
+---
+
+**Summary**
+
+| Function            | Homothetic? | Homogeneous in $(x_1,x_2)$? | Degree |
+| ------------------- | ----------- | --------------------------- | ------ |
+| $f(x_1,x_2)=x_1x_2$ | —           | Yes                         | 2      |
+| $g(y)=\ln y$        | Yes         | No                          | —      |
+| $h(y)=10y$          | Yes         | Yes                         | 2      |
+| $j(y)=y^2$          | Yes         | Yes                         | 4      |
+| $k(y)=e^y$          | Yes         | No                          | —      |
+
+::::
+
+::::{admonition} Key takeaway
+:class: important
+
+Every **homogeneous** function is **homothetic**, because a homogeneous function is already a special case of a monotonic transformation (the identity transformation).
+
+However, the converse is **not** always true:
+
+- A **homothetic** function need *not* be homogeneous.
+- Monotonic transformations such as $\ln(\cdot)$ or $e^{(\cdot)}$ generally **destroy homogeneity**, even though they preserve ordering.
+
+:::{math}
+:enumerated: false
+\text{Homogeneous} \;\Longrightarrow\; \text{Homothetic}, 
+\qquad
+\text{but not necessarily vice versa}.
+:::
+
+This distinction is crucial in production theory and consumer theory:  
+homothetic functions preserve **optimal input proportions**, while homogeneous functions additionally impose **scale properties**.
+::::
+
+::::{dropdown} **Try these ^^**
+
+Show that each of the following functions is **homothetic** by transforming it back to its underlying **homogeneous** form.
+
+1.  
+   i. $y = \ln(x) + \ln(z)$  
+
+   ii. $y = 0.3 \ln(L) + 0.7 \ln(K)$  
+
+   iii. $y = 2\ln(x) + \ln(y) - \ln(w)$  
+
+   iv. $y = e^{xz}$  
+
+---
+
+### Answers
+
+i.  
+Starting from  
+$y = \ln(x) + \ln(z)$  
+
+Exponentiating both sides gives  
+$e^{y} = xz$  
+
+The function $xz$ is homogeneous of degree $2$, and since $\ln(\cdot)$ is strictly monotonic, the original function is **homothetic**.
+
+---
+
+ii.  
+Starting from  
+$y = 0.3 \ln(L) + 0.7 \ln(K)$  
+
+Exponentiating both sides gives  
+$e^{y} = L^{0.3} K^{0.7}$  
+
+The Cobb–Douglas function $L^{0.3} K^{0.7}$ is homogeneous of degree $1$, hence the original function is **homothetic**.
+
+---
+
+iii.  
+Starting from  
+$y = 2\ln(x) + \ln(y) - \ln(w)$  
+
+Exponentiating both sides gives  
+$e^{y} = \dfrac{x^{2} y}{w}$  
+
+The function $\dfrac{x^{2} y}{w}$ is homogeneous of degree $2$, so the original function is **homothetic**.
+
+---
+
+iv.  
+Starting from  
+$y = e^{xz}$  
+
+Taking logs gives  
+$\ln(y) = xz$  
+
+The function $xz$ is homogeneous of degree $2$, and since the exponential function is strictly monotonic, $y = e^{xz}$ is **homothetic**.
+
 ::::
 
 ## Examples in Economics

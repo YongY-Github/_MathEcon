@@ -386,6 +386,32 @@ while
 \frac{d}{d x} \ln(x^2) = \frac{d}{d(x^2)} \ln(x^2) \frac{d}{d x}(x^2) = \frac{1}{x^2} 2x = 2/x
 :::
 
+Note also when considered base other than $e$. Because
+
+:::{math}
+:enumerated: false
+\log_b(x) = \frac{\ln(x)}{\ln(b)}
+:::
+
+we have
+
+:::{math}
+:enumerated: false
+\frac{d}{d x} \log_b(x) = \frac{1}{x} \frac{1}{\ln(b)}
+:::
+
+Or more generally:
+
+:::{math}
+:enumerated: false
+\begin{aligned} 
+\frac{d}{d x} \log_b g(x) &= \frac{g'(x)}{g(x)} \frac{1}{\ln b}, \text{ where } b > 0, b \neq 1 \\ 
+&= \frac{g'(x)}{g(x)} \log_b e 
+\end{aligned}
+:::
+
+Note that $\log_b e = \displaystyle \frac{1}{\ln b}$.
+
 ::::{dropdown} **Try these ^^**
 **Exponential Functions**
 
@@ -527,32 +553,6 @@ f'(x) = \frac{2x}{(x^2 + 1) \ln(10)}
 \frac{dy}{dx} = \frac{7x^6}{x^7} = \frac{7}{x}
 :::
 ::::
-
-Note also when considered base other than $e$. Because
-
-:::{math}
-:enumerated: false
-\log_b(x) = \frac{\ln(x)}{\ln(b)}
-:::
-
-we have
-
-:::{math}
-:enumerated: false
-\frac{d}{d x} \log_b(x) = \frac{1}{x} \frac{1}{\ln(b)}
-:::
-
-Or more generally:
-
-:::{math}
-:enumerated: false
-\begin{aligned} 
-\frac{d}{d x} \log_b g(x) &= \frac{g'(x)}{g(x)} \frac{1}{\ln b}, \text{ where } b > 0, b \neq 1 \\ 
-&= \frac{g'(x)}{g(x)} \log_b e 
-\end{aligned}
-:::
-
-Note that $\log_b e = \displaystyle \frac{1}{\ln b}$.
 
 ---
 
