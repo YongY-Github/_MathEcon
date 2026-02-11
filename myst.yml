@@ -13,6 +13,7 @@ project:
     - file: linear-algebra-special.md
     - file: basic-differentiation.md
     - file: multivariate-calculus.md
+    - file: optimization.md
 
   exports:
     - format: pdf
@@ -23,6 +24,7 @@ project:
         - linear-algebra-special.md
         - basic-differentiation.md
         - multivariate-calculus.md
+        - optimization.md
 
 site:
   template: book-theme
