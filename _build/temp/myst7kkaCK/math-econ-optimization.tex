@@ -1,0 +1,672 @@
+\section{Unconstrained Optimization}
+
+Finding the ``best'' way to do a specific task in economics often involves what is called an \textbf{optimization problem}.
+
+\subsection{Univariate Optimization}
+
+\subsection{Stationary Points}
+
+Generally, we say that $x^*$ is a \textbf{stationary point} of a differentiable function $f(x)$ when its slope evaluated at $x^*$ is zero, i.e., when
+
+\begin{equation*}
+f'(x^*) = 0.
+\end{equation*}
+
+\subsection{Necessary First-Order Condition (F.O.C)}
+
+More formally, suppose a function $f(x)$ is differentiable in some interval $I$ and that $x^*$ is an interior point of $I$.
+Then for $x = x^*$ to be a maximum or minimum point for $f(x)$ in $I$, a \textbf{necessary condition} is that it is a stationary point for $f(x)$, i.e., $x = x^*$ satisfies
+
+\begin{equation*}
+f'(x^*) = 0.
+\end{equation*}
+
+\textbf{Example 1}
+
+Let
+
+\begin{equation*}
+h(x) = -x^2 + 8x - 15.
+\end{equation*}
+
+\textbf{F.O.C:}
+
+\begin{equation*}
+-2x + 8 = 0.
+\end{equation*}
+
+So the stationary point is $x^* = 4$ and $y^* = 1$.
+
+\textbf{Example 2}
+
+Let
+
+\begin{equation*}
+z(x) = x^2 - 8x + 17.
+\end{equation*}
+
+\textbf{F.O.C:}
+
+\begin{equation*}
+2x - 8 = 0.
+\end{equation*}
+
+So the stationary point is $x^* = 4$ and $y^* = 1$.
+
+We have the same stationary point, but clearly these are different functions.
+The former is \textbf{$\cap$-shaped} and the latter is \textbf{$\cup$-shaped}.
+
+\subsection{Sufficient Second-Order Condition (S.O.C) for Maximum/Minimum}
+
+Following the two examples above, we can characterize a stationary point as a maximum or minimum by taking the second derivative.
+
+\begin{itemize}
+\item If $f''(x^*) < 0$, the stationary point represents a \textbf{maximum}.
+\item If $f''(x^*) > 0$, the stationary point represents a \textbf{minimum}.
+\end{itemize}
+
+\textbf{Example 1}
+
+\begin{equation*}
+h''(x) = -2.
+\end{equation*}
+
+Since this is negative, the stationary point $(4,1)$ is a \textbf{maximum}.
+
+\textbf{Example 2}
+
+\begin{equation*}
+z''(x) = 2.
+\end{equation*}
+
+Since this is positive, the stationary point $(4,1)$ is a \textbf{minimum}.
+
+
+\bigskip
+\centerline{\rule{13cm}{0.4pt}}
+\bigskip
+
+\textbf{Example 3}
+
+Let
+
+\begin{equation*}
+p(x) = \frac{1}{3}x^3 - \frac{1}{2}x^2 - 2x + 20.
+\end{equation*}
+
+The \textbf{F.O.C} gives
+
+\begin{equation*}
+p'(x) = x^2 - x - 2 = 0,
+\end{equation*}
+
+which implies $x^* = -1$ and $x^* = 2$.
+
+The \textbf{S.O.C} gives
+
+\begin{equation*}
+p''(x) = 2x - 1.
+\end{equation*}
+
+\begin{itemize}
+\item At $x^* = -1$, $p''( -1) = -3 < 0$ \rightarrow \textbf{maximum}
+\item At $x^* = 2$, $p''(2) = 3 > 0$ \rightarrow \textbf{minimum}
+\end{itemize}
+
+
+\bigskip
+\centerline{\rule{13cm}{0.4pt}}
+\bigskip
+
+\subsubsection{S.O.C Is Sufficient but Not Necessary}
+
+Consider
+
+\begin{equation*}
+y = x^4.
+\end{equation*}
+
+The \textbf{F.O.C} gives $x^* = 0$.
+
+The \textbf{S.O.C} also gives 0, which is neither positive nor negative.
+Yet, $x^* = 0$ is clearly a \textbf{minimum}.
+
+\subsection{Global and Local Minimum/Maximum}
+
+We must distinguish between \textbf{global} and \textbf{local} extrema.
+
+\subsubsection{Global Maximum}
+
+If $f(x)$ is everywhere differentiable and has stationary point $x^*$, then $x^*$ is a \textbf{global maximum} if
+
+\begin{equation*}
+f'(x) \ge 0 \text{ for all } x \le x^*,
+\quad \text{and} \quad
+f'(x) \le 0 \text{ for all } x \ge x^*.
+\end{equation*}
+
+That is, the function increases up to $x^*$ and decreases afterward.
+
+\subsubsection{Global Minimum}
+
+Similarly, $x^*$ is a \textbf{global minimum} if
+
+\begin{equation*}
+f'(x) \le 0 \text{ for all } x \le x^*,
+\quad \text{and} \quad
+f'(x) \ge 0 \text{ for all } x \ge x^*.
+\end{equation*}
+
+\subsubsection{Local Maximum / Minimum}
+
+We speak of a \textbf{local maximum or minimum} if $x^*$ is a stationary maximum or minimum \textbf{only in a neighborhood of $x^*$}, not over the entire domain.
+
+\subsection{Concavity and Convexity}
+
+\begin{itemize}
+\item If $f(x)$ is \textbf{strictly concave} on $(m,n)$ and has a stationary point $x^*$ with $m < x^* < n$, then $x^*$ is a \textbf{local maximum}.
+\item If $f(x)$ is strictly concave everywhere, it has at most one stationary point, which is a \textbf{global maximum}.
+\end{itemize}
+
+Conversely,
+
+\begin{itemize}
+\item If $f(x)$ is \textbf{strictly convex} on $(m,n)$ and has a stationary point $x^*$, then $x^*$ is a \textbf{local minimum}.
+\item If $f(x)$ is strictly convex everywhere, that stationary point is a \textbf{global minimum}.
+\end{itemize}
+
+\subsection{Inflection Points}
+
+Consider the function
+
+\begin{equation*}
+k(x) = 1 + (x - 4)^3.
+\end{equation*}
+
+The \textbf{F.O.C} gives a stationary point $(4,1)$.
+
+The \textbf{S.O.C} evaluated at this point is 0, so it is inconclusive.
+
+We must then take higher-order derivatives.
+
+If the \textbf{first nonzero higher-order derivative} evaluated at the stationary point is:
+
+\begin{itemize}
+\item \textbf{Odd-order} \rightarrow inflection point
+\item \textbf{Even-order} \rightarrow maximum or minimum (depending on sign)
+\end{itemize}
+
+For this example,
+
+\begin{equation*}
+k'''(4) \ne 0,
+\end{equation*}
+
+which is the third (odd) derivative.
+Hence, $(4,1)$ is an \textbf{inflection point}.
+
+
+\bigskip
+\centerline{\rule{13cm}{0.4pt}}
+\bigskip
+
+\subsection{Economic Applications}
+
+\begin{itemize}
+\item A Monopolist's Optimal Pricing Scheme
+\item Strategic Behavior of Duopolists
+\item Rules versus Discretion in Monetary Policy
+\item The Inflation Tax and Seigniorage
+\item The Golden Rule
+\end{itemize}
+
+
+\bigskip
+\centerline{\rule{13cm}{0.4pt}}
+\bigskip
+
+\subsection{Multivariate Optimization}
+
+We now generalize the univariate techniques to multivariate optimization.
+
+\subsection{Multivariate First-Order Condition}
+
+If we have a function
+
+\begin{equation*}
+y = f(x_1, x_2, \ldots, x_n)
+\end{equation*}
+
+that is differentiable with respect to each of its arguments and has a stationary point at
+$(x_1^*, x_2^*, \ldots, x_n^*)$, then each of the partial derivatives at that point equals zero.
+
+That is,
+
+\begin{equation*}
+f_1(x_1^*, x_2^*, \ldots, x_n^*) = 0 \\
+f_2(x_1^*, x_2^*, \ldots, x_n^*) = 0 \\
+\vdots \\
+f_n(x_1^*, x_2^*, \ldots, x_n^*) = 0
+\end{equation*}
+
+\textbf{Example 1}
+
+Consider the bivariate function
+
+\begin{equation*}
+g(x_1, x_2) = 6x_1 - x_1^2 + 16x_2 - 4x_2^2
+\end{equation*}
+
+The first-order conditions are
+
+\begin{equation*}
+g_1(x_1, x_2) = 6 - 2x_1 = 0 \\
+g_2(x_1, x_2) = 16 - 8x_2 = 0
+\end{equation*}
+
+The single stationary point is therefore
+
+\begin{equation*}
+x_1^* = 3, \quad x_2^* = 2
+\end{equation*}
+
+and the value of the function at this point is
+
+\begin{equation*}
+g(3,2) = 25.
+\end{equation*}
+
+We will show later using the second-order condition that this stationary point represents a \textbf{maximum}.
+
+Let's visualize the equation and its stationary point.
+
+\includegraphics[width=0.7\linewidth]{files/max-276ff934b40ddc6b321af5c1fef60b57.png}
+
+If we take a slice of the function $g(x_1, x_2)$ at $x_2 = 2$, the stationary point is achieved at $x_1 = 3$.
+Similarly, taking a slice at $x_1 = 3$ shows a stationary point at $x_2 = 2$. Visually, we have
+
+\includegraphics[width=0.9\linewidth]{files/slice-b4c227002f7802e53e7d116d3048a3c9.png}
+
+\textbf{Example 2}
+
+Consider the function
+
+\begin{equation*}
+h(x_1, x_2) = x_1^2 + 4x_2^2 - 2x_1 - 16x_2 + x_1 x_2
+\end{equation*}
+
+The first-order conditions give
+
+\begin{equation*}
+h_1(x_1, x_2) = 2x_1 - 2 + x_2 = 0 \\
+h_2(x_1, x_2) = 8x_2 - 16 + x_1 = 0
+\end{equation*}
+
+Hence the single stationary point is
+
+\begin{equation*}
+x_1^* = 0, \quad x_2^* = 2
+\end{equation*}
+
+and the value of the function at this point is
+
+\begin{equation*}
+h(0,2) = -16.
+\end{equation*}
+
+Below is a visualization of this function with the plane tangent and stationary point.
+
+\includegraphics[width=0.7\linewidth]{files/min-cbd453d95fce0c1c84f5af921e6435af.png}
+
+\subsection{Second-Order Condition in the Bivariate Case}
+
+For the univariate case, the second differential of a function can be considered as the differential of the first differential and denoted as
+
+\begin{equation*}
+d(dy) = d^2 y.
+\end{equation*}
+
+For $y = f(x)$, the second differential is
+
+\begin{equation*}
+d^2 y = f''(x)(dx)^2,
+\end{equation*}
+
+which is nonnegative for any $dx$.
+
+\subsubsection{Second Differential in the Bivariate Case}
+
+For a bivariate function $y = f(x_1, x_2)$, the total differential is
+
+\begin{equation*}
+dy = f_1(x_1, x_2),dx_1 + f_2(x_1, x_2),dx_2.
+\end{equation*}
+
+Taking the total derivative of this expression yields the second total differential:
+
+\begin{equation*}
+d^2 y
+= f_{11}(dx_1)^2 + f_{22}(dx_2)^2 + 2f_{12}dx_1 dx_2.
+\end{equation*}
+
+\subsection{Sufficient Conditions for Local Maxima and Minima}
+
+\begin{itemize}
+\item If $d^2 y < 0$ for all $(dx_1, dx_2)$, the stationary point is a \textbf{local maximum}.
+\item If $d^2 y > 0$ for all $(dx_1, dx_2)$, the stationary point is a \textbf{local minimum}.
+\end{itemize}
+
+A necessary condition for a minimum is
+
+\begin{equation*}
+f_{11} > 0 \quad \text{and} \quad f_{22} > 0,
+\end{equation*}
+
+and for a maximum,
+
+\begin{equation*}
+f_{11} < 0 \quad \text{and} \quad f_{22} < 0.
+\end{equation*}
+
+However, the cross-partial derivative $f_{12}$ must also be considered.
+
+\subsubsection{Completing the Square}
+
+By completing the square, the second differential can be rewritten, leading to the condition:
+
+\begin{equation*}
+f_{11} f_{22} > (f_{12})^2.
+\end{equation*}
+
+\subsubsection{Second-Order Condition for a Maximum}
+
+If $y = f(x_1, x_2)$ has a stationary point $(x_1^*, x_2^*)$ and
+
+\begin{equation*}
+f_{11}(x_1^*, x_2^*) < 0
+\quad \text{and} \quad
+f_{11} f_{22} > (f_{12})^2,
+\end{equation*}
+
+then the function reaches a \textbf{maximum} at that point.
+
+\subsubsection{Second-Order Condition for a Minimum}
+
+If
+
+\begin{equation*}
+f_{11}(x_1^*, x_2^*) > 0
+\quad \text{and} \quad
+f_{11} f_{22} > (f_{12})^2,
+\end{equation*}
+
+then the function reaches a \textbf{minimum}.
+
+\begin{framed}
+\textbf{Special Cases}\\
+\begin{itemize}
+\item If $f_{11} f_{22} < (f_{12})^2$, the stationary point is a \textbf{saddle point}.
+\item If $f_{11} f_{22} = (f_{12})^2$, the test is \textbf{inconclusive}.
+\end{itemize}
+\end{framed}
+
+Let's continue with the example above.
+
+The second partial derivatives of
+
+\begin{equation*}
+h(x_1,x_2) = x_1^2 + 4x_2^2 - 2x_1 - 16x_2 + x_1x_2
+\end{equation*}
+
+are
+
+\begin{equation*}
+h_{11}(x_1,x_2) = 2 \quad \text{and} \quad h_{22}(x_1,x_2) = 8
+\end{equation*}
+
+Both are positive. The cross-partial derivative is
+
+\begin{equation*}
+h_{12}(x_1,x_2) = 1.
+\end{equation*}
+
+Since
+
+\begin{equation*}
+h_{11} h_{22} > (h_{12})^2,
+\end{equation*}
+
+that is,
+
+\begin{equation*}
+16 > 1,
+\end{equation*}
+
+the stationary point $(0,2)$ is a \textbf{minimum}.
+
+As another example, consider
+
+\begin{equation*}
+g(x_1,x_2) = 6x_1 - x_1^2 + 16x_2 - 4x_2^2.
+\end{equation*}
+
+The second partial derivatives are
+
+\begin{equation*}
+g_{11}(x_1,x_2) = -2 \quad \text{and} \quad g_{22}(x_1,x_2) = -8,
+\end{equation*}
+
+and the cross-partial derivative is
+
+\begin{equation*}
+g_{12}(x_1,x_2) = 0.
+\end{equation*}
+
+Since the second partial derivatives are both negative and
+
+\begin{equation*}
+g_{11} g_{22} > (g_{12})^2,
+\end{equation*}
+
+that is,
+
+\begin{equation*}
+16 > 0,
+\end{equation*}
+
+we have the conditions for a \textbf{maximum}.
+
+\subsection{Second-Order Condition in the General Multivariate Case}
+
+Let us use the tools of matrix algebra to develop a set of conditions that enables us to find the sign of the second total differential of a multivariate function.
+
+First, assume a \textbf{bivariate case} for which the second total differential is given by
+
+\begin{equation*}
+d^2 y
+=
+f_{11}(dx_1)^2
++
+f_{22}(dx_2)^2
++
+2 f_{12}(dx_1)(dx_2).
+\end{equation*}
+
+This expression can be written in \textbf{matrix form} as the quadratic form of the two variables $dx_1$ and $dx_2$ as follows:
+
+\begin{equation*}
+d^2 y
+=
+\begin{bmatrix}
+dx_1 & dx_2
+\end{bmatrix}
+\begin{bmatrix}
+f_{11} & f_{12} \\
+f_{21} & f_{22}
+\end{bmatrix}
+\begin{bmatrix}
+dx_1 \\
+dx_2
+\end{bmatrix}.
+\end{equation*}
+
+In other words, the second total differential (or second total derivative) for a multivariate function can be written more generally as
+
+\begin{equation*}
+d^2 y
+=
+dx' H dx
+=
+\begin{bmatrix}
+dx_1 & dx_2 & \cdots & dx_n
+\end{bmatrix}
+\begin{bmatrix}
+f_{11} & f_{12} & \cdots & f_{1n} \\
+f_{21} & f_{22} & \cdots & f_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+f_{n1} & f_{n2} & \cdots & f_{nn}
+\end{bmatrix}
+\begin{bmatrix}
+dx_1 \\
+dx_2 \\
+\vdots \\
+dx_n
+\end{bmatrix}.
+\end{equation*}
+
+Here, $H$ is the \textbf{Hessian matrix}, and $dx$ is the column vector of differentials.
+
+All that remains is to determine the \textbf{sign definiteness} of the quadratic form by determining the sign definiteness of the Hessian.
+
+\subsubsection{Interpreting the Second-Order Condition}
+
+The sign of the second total differential $d^2 y$ determines the local curvature of the function and therefore whether a critical point is a local maximum, minimum, or neither.
+
+Because
+
+\begin{equation*}
+d^2 y = dx' H dx,
+\end{equation*}
+
+the problem reduces to determining the \textbf{sign definiteness of the Hessian matrix $H$}.
+
+\subsubsection{Positive and Negative Definiteness}
+
+\begin{framed}
+\textbf{Definition}\\
+Let $H$ be a symmetric matrix.
+
+\begin{itemize}
+\item $H$ is \textbf{positive definite} if
+$dx' H dx > 0$ for all nonzero $dx$.
+\item $H$ is \textbf{negative definite} if
+$dx' H dx < 0$ for all nonzero $dx$.
+\item $H$ is \textbf{indefinite} if the quadratic form takes both positive and negative values.
+\end{itemize}
+\end{framed}
+
+These cases correspond to the curvature of the function at a critical point.
+
+\subsubsection{Second-Order Conditions for Optimization}
+
+Suppose $y = f(x_1, \ldots, x_n)$ and $\nabla f = 0$ at a point $x^*$.
+
+\begin{framed}
+\textbf{Second-Order Test}\\
+\begin{itemize}
+\item If $H(x^*)$ is \textbf{negative definite}, then $x^*$ is a \textbf{local maximum}.
+\item If $H(x^*)$ is \textbf{positive definite}, then $x^*$ is a \textbf{local minimum}.
+\item If $H(x^*)$ is \textbf{indefinite}, then $x^*$ is a \textbf{saddle point}.
+\end{itemize}
+\end{framed}
+
+\begin{framed}
+\textbf{Key Distinction}\\
+$\cdot$ In \textbf{one variable}, if the first nonzero derivative at a stationary point is of \textbf{odd order}, the point is an \textbf{inflection point}.
+
+$\cdot$ In \textbf{multiple variables}, if the Hessian is \textbf{indefinite} (determinant \textless  0), the stationary point is a \textbf{saddle point}.
+
+An inflection point concerns curvature along a single line. A saddle point concerns curvature across different directions.
+\end{framed}
+
+
+\bigskip
+\centerline{\rule{13cm}{0.4pt}}
+\bigskip
+
+\subsection{Sylvester's Criterion (Practical Test)}
+
+In practice, definiteness is checked using \textbf{principal minors} of the Hessian.
+
+\subsubsection{Bivariate Case ($n = 2$)}
+
+Let
+
+\begin{equation*}
+H =
+\begin{bmatrix}
+f_{11} & f_{12} \\
+f_{21} & f_{22}
+\end{bmatrix}.
+\end{equation*}
+
+Then:
+
+\begin{framed}
+\textbf{Sylvester's Criterion (2 variables)}\\
+\begin{itemize}
+\item $H$ is \textbf{positive definite} if
+$f_{11} > 0$ and $\det(H) > 0$.
+\item $H$ is \textbf{negative definite} if
+$f_{11} < 0$ and $\det(H) > 0$.
+\item $H$ is \textbf{indefinite} if
+$\det(H) < 0$.
+\end{itemize}
+\end{framed}
+
+This criterion is widely used in economics because it avoids computing the quadratic form directly.
+
+
+\bigskip
+\centerline{\rule{13cm}{0.4pt}}
+\bigskip
+
+\textbf{Example}
+
+Consider the function
+
+\begin{equation*}
+y = -x_1^2 - 2x_2^2 + 4x_1 x_2.
+\end{equation*}
+
+The Hessian matrix is
+
+\begin{equation*}
+H =
+\begin{bmatrix}
+-2 & 4 \
+4 & -4
+\end{bmatrix}.
+\end{equation*}
+
+Compute the determinant:
+
+\begin{equation*}
+\det(H) = (-2)(-4) - 16 = -8 < 0.
+\end{equation*}
+
+Since the determinant is negative, the Hessian is \textbf{indefinite}, and the critical point is a \textbf{saddle point}.
+
+\subsection{Economic Interpretation}
+
+\begin{itemize}
+\item Concavity (negative definite Hessian) corresponds to \textbf{diminishing marginal returns} and guarantees interior maxima in optimization problems.
+\item Convexity (positive definite Hessian) corresponds to \textbf{cost minimization} problems.
+\item Indefiniteness indicates \textbf{instability} or saddle behavior, common in strategic or general equilibrium settings.
+\end{itemize}
+
+\begin{framed}
+\textbf{Key takeaway}\\
+The second-order condition in multivariate optimization reduces to checking the \textbf{sign definiteness of the Hessian matrix}.
+Matrix algebra provides a compact and powerful way to characterize curvature, stability, and optimality in economic models.
+\end{framed}

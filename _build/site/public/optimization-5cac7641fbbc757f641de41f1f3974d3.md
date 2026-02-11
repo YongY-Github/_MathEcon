@@ -754,11 +754,12 @@ Suppose $y = f(x_1, \ldots, x_n)$ and $\nabla f = 0$ at a point $x^*$.
 ::::{admonition} Key Distinction
 :class: important
 
-• In **one variable**, if the first nonzero derivative at a stationary point is of **odd order**, the point is an **inflection point**.
+• In one variable, if the first nonzero derivative at a stationary point is of **odd order**, the point is an **inflection point**.
 
-• In **multiple variables**, if the Hessian is **indefinite** (determinant < 0), the stationary point is a **saddle point**.
+• In multiple variables, if the Hessian is **indefinite** (determinant < 0), the stationary point is a **saddle point**.
 
-An inflection point concerns curvature along a single line. A saddle point concerns curvature across different directions.
+An inflection point concerns curvature along a single line.  
+A saddle point concerns curvature across different directions.
 ::::
 
 ---

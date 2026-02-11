@@ -256,7 +256,7 @@ The first-order conditions are
 
 :::{math}
 :enumerated: false
-g_1(x_1, x_2) = 6 - 2x_1 = 0 \\
+g_1(x_1, x_2) = 6 - 2x_1 = 0 \
 g_2(x_1, x_2) = 16 - 8x_2 = 0
 :::
 
@@ -298,7 +298,7 @@ The first-order conditions give
 
 :::{math}
 :enumerated: false
-h_1(x_1, x_2) = 2x_1 - 2 + x_2 = 0 \\
+h_1(x_1, x_2) = 2x_1 - 2 + x_2 = 0 \
 h_2(x_1, x_2) = 8x_2 - 16 + x_1 = 0
 :::
 
@@ -411,89 +411,194 @@ f_{11} f_{22} > (f_{12})^2,
 
 then the function reaches a **minimum**.
 
-
-::::{admonition} Special Cases
-:class: important
+### Special Cases
 
 * If $f_{11} f_{22} < (f_{12})^2$, the stationary point is a **saddle point**.
 * If $f_{11} f_{22} = (f_{12})^2$, the test is **inconclusive**.
+
+## Second-Order Condition in the General Multivariate Case
+
+Let us use the tools of matrix algebra to develop a set of conditions that enables us to find the sign of the second total differential of a multivariate function.
+
+First, assume a **bivariate case** for which the second total differential is given by
+
+:::{math}
+:enumerated: false
+d^2 y
+=
+f_{11}(dx_1)^2
++
+f_{22}(dx_2)^2
++
+2 f_{12}(dx_1)(dx_2).
+:::
+
+This expression can be written in **matrix form** as the quadratic form of the two variables $dx_1$ and $dx_2$ as follows:
+
+:::{math}
+:enumerated: false
+d^2 y
+=
+\begin{bmatrix}
+dx_1 & dx_2
+\end{bmatrix}
+\begin{bmatrix}
+f_{11} & f_{12} \\
+f_{21} & f_{22}
+\end{bmatrix}
+\begin{bmatrix}
+dx_1 \\
+dx_2
+\end{bmatrix}.
+:::
+
+In other words, the second total differential (or second total derivative) for a multivariate function can be written more generally as
+
+:::{math}
+:enumerated: false
+d^2 y
+=
+dx' H dx
+=
+\begin{bmatrix}
+dx_1 & dx_2 & \cdots & dx_n
+\end{bmatrix}
+\begin{bmatrix}
+f_{11} & f_{12} & \cdots & f_{1n} \\
+f_{21} & f_{22} & \cdots & f_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+f_{n1} & f_{n2} & \cdots & f_{nn}
+\end{bmatrix}
+\begin{bmatrix}
+dx_1 \\
+dx_2 \\
+\vdots \\
+dx_n
+\end{bmatrix}.
+:::
+
+Here, $H$ is the **Hessian matrix**, and $dx$ is the column vector of differentials.
+
+All that remains is to determine the **sign definiteness** of the quadratic form by determining the sign definiteness of the Hessian.
+
+### Interpreting the Second-Order Condition
+
+The sign of the second total differential $d^2 y$ determines the local curvature of the function and therefore whether a critical point is a local maximum, minimum, or neither.
+
+Because
+
+:::{math}
+:enumerated: false
+d^2 y = dx' H dx,
+:::
+
+the problem reduces to determining the **sign definiteness of the Hessian matrix $H$**.
+
+### Positive and Negative Definiteness
+
+::::{admonition} Definition
+:class: important
+
+Let $H$ be a symmetric matrix.
+
+* $H$ is **positive definite** if
+  $dx' H dx > 0$ for all nonzero $dx$.
+* $H$ is **negative definite** if
+  $dx' H dx < 0$ for all nonzero $dx$.
+* $H$ is **indefinite** if the quadratic form takes both positive and negative values.
+  ::::
+
+These cases correspond to the curvature of the function at a critical point.
+
+### Second-Order Conditions for Optimization
+
+Suppose $y = f(x_1, \ldots, x_n)$ and $\nabla f = 0$ at a point $x^*$.
+
+::::{admonition} Second-Order Test
+:class: important
+
+* If $H(x^*)$ is **negative definite**, then $x^*$ is a **local maximum**.
+* If $H(x^*)$ is **positive definite**, then $x^*$ is a **local minimum**.
+* If $H(x^*)$ is **indefinite**, then $x^*$ is a **saddle point**.
+  ::::
+
+---
+
+## Sylvester’s Criterion (Practical Test)
+
+In practice, definiteness is checked using **principal minors** of the Hessian.
+
+### Bivariate Case ($n = 2$)
+
+Let
+
+:::{math}
+:enumerated: false
+H =
+\begin{bmatrix}
+f_{11} & f_{12} \\
+f_{21} & f_{22}
+\end{bmatrix}.
+:::
+
+Then:
+
+::::{admonition} Sylvester’s Criterion (2 variables)
+:class: tip
+
+* $H$ is **positive definite** if
+  $f_{11} > 0$ and $\det(H) > 0$.
+* $H$ is **negative definite** if
+  $f_{11} < 0$ and $\det(H) > 0$.
+* $H$ is **indefinite** if
+  $\det(H) < 0$.
+  ::::
+
+This criterion is widely used in economics because it avoids computing the quadratic form directly.
+
+---
+
+**Example**
+
+Consider the function
+
+:::{math}
+:enumerated: false
+y = -x_1^2 - 2x_2^2 + 4x_1 x_2.
+:::
+
+The Hessian matrix is
+
+:::{math}
+:enumerated: false
+H =
+\begin{bmatrix}
+-2 & 4 \
+4 & -4
+\end{bmatrix}.
+:::
+
+Compute the determinant:
+
+:::{math}
+:enumerated: false
+\det(H) = (-2)(-4) - 16 = -8 < 0.
+:::
+
+Since the determinant is negative, the Hessian is **indefinite**, and the critical point is a **saddle point**.
+
+## Economic Interpretation
+
+* Concavity (negative definite Hessian) corresponds to **diminishing marginal returns** and guarantees interior maxima in optimization problems.
+* Convexity (positive definite Hessian) corresponds to **cost minimization** problems.
+* Indefiniteness indicates **instability** or saddle behavior, common in strategic or general equilibrium settings.
+
+::::{admonition} Key takeaway
+:class: important
+
+The second-order condition in multivariate optimization reduces to checking the **sign definiteness of the Hessian matrix**.
+Matrix algebra provides a compact and powerful way to characterize curvature, stability, and optimality in economic models.
 ::::
-
-Let's continue with the example above.
-
-The second partial derivatives of  
-
-:::{math}
-:enumerated: false
-h(x_1,x_2) = x_1^2 + 4x_2^2 - 2x_1 - 16x_2 + x_1x_2
-:::
-
-are  
-
-:::{math}
-:enumerated: false
-h_{11}(x_1,x_2) = 2 \quad \text{and} \quad h_{22}(x_1,x_2) = 8
-:::
-
-Both are positive. The cross-partial derivative is  
-
-:::{math}
-:enumerated: false
-h_{12}(x_1,x_2) = 1.
-:::
-
-Since  
-
-:::{math}
-:enumerated: false
-h_{11} h_{22} > (h_{12})^2,
-:::
-
-that is,
-
-:::{math}
-:enumerated: false
-16 > 1,
-:::
-
-the stationary point $(0,2)$ is a **minimum**.
-
-As another example, consider  
-
-:::{math}
-:enumerated: false
-g(x_1,x_2) = 6x_1 - x_1^2 + 16x_2 - 4x_2^2.
-:::
-
-The second partial derivatives are  
-
-:::{math}
-:enumerated: false
-g_{11}(x_1,x_2) = -2 \quad \text{and} \quad g_{22}(x_1,x_2) = -8,
-:::
-
-and the cross-partial derivative is  
-
-:::{math}
-:enumerated: false
-g_{12}(x_1,x_2) = 0.
-:::
-
-Since the second partial derivatives are both negative and  
-
-:::{math}
-:enumerated: false
-g_{11} g_{22} > (g_{12})^2,
-:::
-
-that is,
-
-:::{math}
-:enumerated: false
-16 > 0,
-:::
-
-we have the conditions for a **maximum**.
 
 ::::{dropdown} **Try these ^^**
 
@@ -643,198 +748,4 @@ f^{(5)}(4) = -120 < 0
 
 The first nonzero derivative is of **odd order**, hence we have an **inflection point**.
 
-::::
-
-## Second-Order Condition in the General Multivariate Case
-
-Let us use the tools of matrix algebra to develop a set of conditions that enables us to find the sign of the second total differential of a multivariate function.
-
-First, assume a **bivariate case** for which the second total differential is given by
-
-:::{math}
-:enumerated: false
-d^2 y
-=
-f_{11}(dx_1)^2
-+
-f_{22}(dx_2)^2
-+
-2 f_{12}(dx_1)(dx_2).
-:::
-
-This expression can be written in **matrix form** as the quadratic form of the two variables $dx_1$ and $dx_2$ as follows:
-
-:::{math}
-:enumerated: false
-d^2 y
-=
-\begin{bmatrix}
-dx_1 & dx_2
-\end{bmatrix}
-\begin{bmatrix}
-f_{11} & f_{12} \\
-f_{21} & f_{22}
-\end{bmatrix}
-\begin{bmatrix}
-dx_1 \\
-dx_2
-\end{bmatrix}.
-:::
-
-In other words, the second total differential (or second total derivative) for a multivariate function can be written more generally as
-
-:::{math}
-:enumerated: false
-d^2 y
-=
-dx' H dx
-=
-\begin{bmatrix}
-dx_1 & dx_2 & \cdots & dx_n
-\end{bmatrix}
-\begin{bmatrix}
-f_{11} & f_{12} & \cdots & f_{1n} \\
-f_{21} & f_{22} & \cdots & f_{2n} \\
-\vdots & \vdots & \ddots & \vdots \\
-f_{n1} & f_{n2} & \cdots & f_{nn}
-\end{bmatrix}
-\begin{bmatrix}
-dx_1 \\
-dx_2 \\
-\vdots \\
-dx_n
-\end{bmatrix}.
-:::
-
-Here, $H$ is the **Hessian matrix**, and $dx$ is the column vector of differentials.
-
-All that remains is to determine the **sign definiteness** of the quadratic form by determining the sign definiteness of the Hessian.
-
-### Interpreting the Second-Order Condition
-
-The sign of the second total differential $d^2 y$ determines the local curvature of the function and therefore whether a critical point is a local maximum, minimum, or neither.
-
-Because
-
-:::{math}
-:enumerated: false
-d^2 y = dx' H dx,
-:::
-
-the problem reduces to determining the **sign definiteness of the Hessian matrix $H$**.
-
-### Positive and Negative Definiteness
-
-::::{admonition} Definition
-:class: important
-
-Let $H$ be a symmetric matrix.
-
-* $H$ is **positive definite** if
-  $dx' H dx > 0$ for all nonzero $dx$.
-* $H$ is **negative definite** if
-  $dx' H dx < 0$ for all nonzero $dx$.
-* $H$ is **indefinite** if the quadratic form takes both positive and negative values.
-  ::::
-
-These cases correspond to the curvature of the function at a critical point.
-
-### Second-Order Conditions for Optimization
-
-Suppose $y = f(x_1, \ldots, x_n)$ and $\nabla f = 0$ at a point $x^*$.
-
-::::{admonition} Second-Order Test
-:class: important
-
-* If $H(x^*)$ is **negative definite**, then $x^*$ is a **local maximum**.
-* If $H(x^*)$ is **positive definite**, then $x^*$ is a **local minimum**.
-* If $H(x^*)$ is **indefinite**, then $x^*$ is a **saddle point**.
-  ::::
-
-::::{admonition} Key Distinction
-:class: important
-
-• In **one variable**, if the first nonzero derivative at a stationary point is of **odd order**, the point is an **inflection point**.
-
-• In **multiple variables**, if the Hessian is **indefinite** (determinant < 0), the stationary point is a **saddle point**.
-
-An inflection point concerns curvature along a single line. A saddle point concerns curvature across different directions.
-::::
-
----
-
-## Sylvester’s Criterion (Practical Test)
-
-In practice, definiteness is checked using **principal minors** of the Hessian.
-
-### Bivariate Case ($n = 2$)
-
-Let
-
-:::{math}
-:enumerated: false
-H =
-\begin{bmatrix}
-f_{11} & f_{12} \\
-f_{21} & f_{22}
-\end{bmatrix}.
-:::
-
-Then:
-
-::::{admonition} Sylvester’s Criterion (2 variables)
-:class: tip
-
-* $H$ is **positive definite** if
-  $f_{11} > 0$ and $\det(H) > 0$.
-* $H$ is **negative definite** if
-  $f_{11} < 0$ and $\det(H) > 0$.
-* $H$ is **indefinite** if
-  $\det(H) < 0$.
-  ::::
-
-This criterion is widely used in economics because it avoids computing the quadratic form directly.
-
----
-
-**Example**
-
-Consider the function
-
-:::{math}
-:enumerated: false
-y = -x_1^2 - 2x_2^2 + 4x_1 x_2.
-:::
-
-The Hessian matrix is
-
-:::{math}
-:enumerated: false
-H =
-\begin{bmatrix}
--2 & 4 \
-4 & -4
-\end{bmatrix}.
-:::
-
-Compute the determinant:
-
-:::{math}
-:enumerated: false
-\det(H) = (-2)(-4) - 16 = -8 < 0.
-:::
-
-Since the determinant is negative, the Hessian is **indefinite**, and the critical point is a **saddle point**.
-
-## Economic Interpretation
-
-* Concavity (negative definite Hessian) corresponds to **diminishing marginal returns** and guarantees interior maxima in optimization problems.
-* Convexity (positive definite Hessian) corresponds to **cost minimization** problems.
-* Indefiniteness indicates **instability** or saddle behavior, common in strategic or general equilibrium settings.
-
-::::{admonition} Key takeaway
-:class: important
-
-The second-order condition in multivariate optimization reduces to checking the **sign definiteness of the Hessian matrix**.
-Matrix algebra provides a compact and powerful way to characterize curvature, stability, and optimality in economic models.
 ::::
