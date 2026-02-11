@@ -794,7 +794,7 @@ The Hessian matrix is
 :enumerated: false
 H =
 \begin{bmatrix}
--2 & 4 \\
+-2 & 4 \
 4 & -4
 \end{bmatrix}.
 :::

@@ -195,13 +195,6 @@ If the **first nonzero higher-order derivative** evaluated at the stationary poi
 * **Odd-order** → inflection point
 * **Even-order** → maximum or minimum (depending on sign)
 
-If the first non-zero derivative at the stationary point $c$ is of **even order** ($n = 2, 4, 6...$):
-
-| Derivative Sign | Result | Visual Intuition |
-| :--- | :--- | :--- |
-| **$f^{(n)}(c) > 0$** | **Local Minimum** | The function "curves up" away from the point in all directions. |
-| **$f^{(n)}(c) < 0$** | **Local Maximum** | The function "curves down" away from the point in all directions. |
-
 For this example,
 
 :::{math}
@@ -212,13 +205,14 @@ k'''(4) \ne 0,
 which is the third (odd) derivative.
 Hence, $(4,1)$ is an **inflection point**.
 
+
 ::::{dropdown} **Try these ^^**
 
 **Stationary Points and Higher-Order Derivative Test**
 
 Find the stationary points of the following functions and determine whether you have a minimum, maximum, or inflection point by determining whether at the stationary point the function is convex or concave (or neither).
 
-**(i)** $f(x) = -x^3 + 6x^2 + 15x - 32$
+**(I)** $f(x) = -x^3 + 6x^2 + 15x - 32$
 
 **(ii)** $f(x) = (2x - 7)^3$
 
@@ -226,13 +220,18 @@ Find the stationary points of the following functions and determine whether you 
 
 **(iv)** $f(x) = -2(x - 6)^6$
 
-**(v)** $f(x) = x^4$
+**(v)** $f(x) = (4 - x)^5$
 
 ---
 
 **Answers**
 
-**(i)** $f'(x) = -3x^2 + 12x + 15$
+**(i)**
+
+:::{math}
+:enumerated: false
+f'(x) = -3x^2 + 12x + 15
+:::
 
 Setting $f'(x)=0$:
 
@@ -265,11 +264,16 @@ Inflection point:
 f''(x)=0 \Rightarrow x=2
 :::
 
-**(ii)** $f'(x) = 6(2x - 7)^2$
+**(ii)**
 
 :::{math}
 :enumerated: false
-\text{Hence, }x = 3.5
+f'(x) = 6(2x - 7)^2
+:::
+
+:::{math}
+:enumerated: false
+x = 3.5
 :::
 
 :::{math}
@@ -289,7 +293,12 @@ f'''(x) = 48
 
 Since the first nonzero derivative at the critical point is of **odd order**, we have an **inflection point** at $x=3.5$.
 
-**(iii)** $f'(x) = 4(x+2)^3$
+**(iii)**
+
+:::{math}
+:enumerated: false
+f'(x) = 4(x+2)^3
+:::
 
 :::{math}
 :enumerated: false
@@ -303,7 +312,12 @@ f''(-2)=0, \quad f'''(-2)=0, \quad f^{(4)}(-2)=24>0
 
 The first nonzero derivative is **even and positive**, hence we have a **minimum**.
 
-**(iv)** $f'(x) = -12(x-6)^5$
+**(iv)**
+
+:::{math}
+:enumerated: false
+f'(x) = -12(x-6)^5
+:::
 
 :::{math}
 :enumerated: false
@@ -319,21 +333,26 @@ f^{(6)}(6) = -1440 < 0
 
 The first nonzero derivative is **even and negative**, hence we have a **maximum**.
 
-**(v)** $f'(x) = 4x^3$
+**(v)**
 
 :::{math}
 :enumerated: false
-x=0
+f'(x) = -5(4-x)^4
 :::
-
-All derivatives up to order 3 vanish.
 
 :::{math}
 :enumerated: false
-f^{(0)}(4) = 24 > 0
+x=4
 :::
 
-The first nonzero derivative is of **even order** and it's value is positive, hence we have an **local minimum**.
+All derivatives up to order 4 vanish.
+
+:::{math}
+:enumerated: false
+f^{(5)}(4) = -120 < 0
+:::
+
+The first nonzero derivative is of **odd order**, hence we have an **inflection point**.
 
 ::::
 
@@ -794,7 +813,7 @@ The Hessian matrix is
 :enumerated: false
 H =
 \begin{bmatrix}
--2 & 4 \\
+-2 & 4 \
 4 & -4
 \end{bmatrix}.
 :::
@@ -821,110 +840,3 @@ The second-order condition in multivariate optimization reduces to checking the 
 Matrix algebra provides a compact and powerful way to characterize curvature, stability, and optimality in economic models.
 ::::
 
-::::{dropdown} **Try these ^^**
-
-### Optimizing Multivariate Functions
-
----
-
-**The Hessian Test Procedure**
-
-To classify a stationary point $(x, y)$ for a function $f(x, y)$:
-
-1. **Find Stationary Points:** Set first partial derivatives to zero: $f_x = 0$ and $f_y = 0$.
-2. **Calculate the Hessian Matrix ($H$):**
-   $$H = \begin{bmatrix} f_{xx} & f_{xy} \\ f_{yx} & f_{yy} \end{bmatrix}$$
-3. **Evaluate the Determinant ($D$):** $$D = f_{xx} f_{yy} - (f_{xy})^2$$
-4. **Classification Rules:**
-   * If $D > 0$ and $f_{xx} > 0$: **Local Minimum**
-   * If $D > 0$ and $f_{xx} < 0$: **Local Maximum**
-   * If $D < 0$: **Saddle Point**
-   * If $D = 0$: **Inconclusive**
-
----
-
-**Worked Solutions**
-
-#### i. $f(x,y) = 3x^2 - xy + 2y^2 - 4x - 7y + 12$
-
-**a. Find Stationary Points**
-* $f_x = 6x - y - 4 = 0$
-* $f_y = -x + 4y - 7 = 0$
-
-Solving the system:
-From $f_y$, $x = 4y - 7$. Substitute into $f_x$:
-$6(4y - 7) - y - 4 = 0$
-$24y - 42 - y - 4 = 0 \implies 23y = 46 \implies \mathbf{y = 2}$
-Substituting back: $x = 4(2) - 7 \implies \mathbf{x = 1}$
-
-Note that you can actually use $x=A^{-1}b$, which is recommended for more complex system of equations.
-
-**b. Hessian Classification**
-* $f_{xx} = 6$
-* $f_{yy} = 4$
-* $f_{xy} = -1$
-* $D = (6)(4) - (-1)^2 = 23$
-
-**Conclusion:** Since $D > 0$ and $f_{xx} > 0$, the point **$(1, 2)$ is a minimum**.
-
----
-
-#### ii. $f(x, y) = 60x + 34y - 4xy - 6x^2 - 3y^2 + 5$
-
-**a. Find Stationary Points**
-* $f_x = 60 - 4y - 12x = 0 \implies 3x + y = 15$
-* $f_y = 34 - 4x - 6y = 0 \implies 2x + 3y = 17$
-
-Solving the system:
-Multiply first equation by 3: $9x + 3y = 45$.
-Subtract second equation: $(9x - 2x) = 45 - 17 \implies 7x = 28 \implies \mathbf{x = 4}$.
-Then $3(4) + y = 15 \implies \mathbf{y = 3}$.
-
-**b. Hessian Classification**
-* $f_{xx} = -12$
-* $f_{yy} = -6$
-* $f_{xy} = -4$
-* $D = (-12)(-6) - (-4)^2 = 72 - 16 = 56$
-
-**Conclusion:** Since $D > 0$ and $f_{xx} < 0$, the point **$(4, 3)$ is a maximum**.
-
----
-
-#### iii. $f(x,y) = 48y - 3x^2 - 6xy - 2y^2 + 72x$
-
-**a. Find Stationary Points**
-* $f_x = -6x - 6y + 72 = 0 \implies x + y = 12$
-* $f_y = 48 - 6x - 4y = 0 \implies 3x + 2y = 24$
-
-Solving the system:
-From first eq, $x = 12 - y$. Substitute into second:
-$3(12 - y) + 2y = 24 \implies 36 - 3y + 2y = 24 \implies -y = -12 \implies \mathbf{y = 12}$.
-Then $\mathbf{x = 0}$.
-
-**b. Hessian Classification**
-* $f_{xx} = -6$
-* $f_{yy} = -4$
-* $f_{xy} = -6$
-* $D = (-6)(-4) - (-6)^2 = 24 - 36 = -12$
-
-**Conclusion:** Since $D < 0$, the point **$(0, 12)$ is a saddle point**.
-
----
-
-#### iv. $f(x, y) = 5x^2 - 3y^2 - 30x + 7y + 4xy$
-
-**a. Find Stationary Points**
-* $f_x = 10x - 30 + 4y = 0$
-* $f_y = -6y + 7 + 4x = 0$
-
-Hence, $x = 2, y = 2.5$
-
-**b. Hessian Classification**
-* $f_{xx} = 10$
-* $f_{yy} = -6$
-* $f_{xy} = 4$
-* $D = (10)(-6) - (4)^2 = -60 - 16 = -76$
-
-**Conclusion:** Since $D < 0$, this function results in a **saddle point**.
-
-::::

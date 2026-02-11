@@ -226,7 +226,9 @@ Find the stationary points of the following functions and determine whether you 
 
 **(iv)** $f(x) = -2(x - 6)^6$
 
-**(v)** $f(x) = x^4$
+**(v)** $f(x) = (4 - x)^5$
+
+**(vi)** $f(x) = x^4$
 
 ---
 
@@ -269,7 +271,7 @@ f''(x)=0 \Rightarrow x=2
 
 :::{math}
 :enumerated: false
-\text{Hence, }x = 3.5
+x = 3.5
 :::
 
 :::{math}
@@ -319,21 +321,47 @@ f^{(6)}(6) = -1440 < 0
 
 The first nonzero derivative is **even and negative**, hence we have a **maximum**.
 
-**(v)** $f'(x) = 4x^3$
+**(v)**
 
 :::{math}
 :enumerated: false
-x=0
+f'(x) = -5(4-x)^4
 :::
-
-All derivatives up to order 3 vanish.
 
 :::{math}
 :enumerated: false
-f^{(0)}(4) = 24 > 0
+x=4
 :::
 
-The first nonzero derivative is of **even order** and it's value is positive, hence we have an **local minimum**.
+All derivatives up to order 4 vanish.
+
+:::{math}
+:enumerated: false
+f^{(5)}(4) = -120 < 0
+:::
+
+The first nonzero derivative is of **odd order**, hence we have an **inflection point**.
+
+**(vi)**
+
+:::{math}
+:enumerated: false
+f'(x) = 4x^3
+:::
+
+:::{math}
+:enumerated: false
+x=4
+:::
+
+All derivatives up to order 4 vanish.
+
+:::{math}
+:enumerated: false
+f^{(5)}(4) = -120 < 0
+:::
+
+The first nonzero derivative is of **odd order**, hence we have an **inflection point**.
 
 ::::
 
@@ -794,7 +822,7 @@ The Hessian matrix is
 :enumerated: false
 H =
 \begin{bmatrix}
--2 & 4 \\
+-2 & 4 \
 4 & -4
 \end{bmatrix}.
 :::

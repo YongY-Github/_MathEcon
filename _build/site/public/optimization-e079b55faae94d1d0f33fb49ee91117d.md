@@ -195,13 +195,6 @@ If the **first nonzero higher-order derivative** evaluated at the stationary poi
 * **Odd-order** → inflection point
 * **Even-order** → maximum or minimum (depending on sign)
 
-If the first non-zero derivative at the stationary point $c$ is of **even order** ($n = 2, 4, 6...$):
-
-| Derivative Sign | Result | Visual Intuition |
-| :--- | :--- | :--- |
-| **$f^{(n)}(c) > 0$** | **Local Minimum** | The function "curves up" away from the point in all directions. |
-| **$f^{(n)}(c) < 0$** | **Local Maximum** | The function "curves down" away from the point in all directions. |
-
 For this example,
 
 :::{math}
@@ -211,6 +204,7 @@ k'''(4) \ne 0,
 
 which is the third (odd) derivative.
 Hence, $(4,1)$ is an **inflection point**.
+
 
 ::::{dropdown} **Try these ^^**
 
@@ -226,13 +220,18 @@ Find the stationary points of the following functions and determine whether you 
 
 **(iv)** $f(x) = -2(x - 6)^6$
 
-**(v)** $f(x) = x^4$
+**(v)** $f(x) = (4 - x)^5$
 
 ---
 
 **Answers**
 
-**(i)** $f'(x) = -3x^2 + 12x + 15$
+**(i)**
+
+:::{math}
+:enumerated: false
+f'(x) = -3x^2 + 12x + 15
+:::
 
 Setting $f'(x)=0$:
 
@@ -265,11 +264,16 @@ Inflection point:
 f''(x)=0 \Rightarrow x=2
 :::
 
-**(ii)** $f'(x) = 6(2x - 7)^2$
+**(ii)**
 
 :::{math}
 :enumerated: false
-\text{Hence, }x = 3.5
+f'(x) = 6(2x - 7)^2
+:::
+
+:::{math}
+:enumerated: false
+x = 3.5
 :::
 
 :::{math}
@@ -289,7 +293,12 @@ f'''(x) = 48
 
 Since the first nonzero derivative at the critical point is of **odd order**, we have an **inflection point** at $x=3.5$.
 
-**(iii)** $f'(x) = 4(x+2)^3$
+**(iii)**
+
+:::{math}
+:enumerated: false
+f'(x) = 4(x+2)^3
+:::
 
 :::{math}
 :enumerated: false
@@ -303,7 +312,12 @@ f''(-2)=0, \quad f'''(-2)=0, \quad f^{(4)}(-2)=24>0
 
 The first nonzero derivative is **even and positive**, hence we have a **minimum**.
 
-**(iv)** $f'(x) = -12(x-6)^5$
+**(iv)**
+
+:::{math}
+:enumerated: false
+f'(x) = -12(x-6)^5
+:::
 
 :::{math}
 :enumerated: false
@@ -319,21 +333,26 @@ f^{(6)}(6) = -1440 < 0
 
 The first nonzero derivative is **even and negative**, hence we have a **maximum**.
 
-**(v)** $f'(x) = 4x^3$
+**(v)**
 
 :::{math}
 :enumerated: false
-x=0
+f'(x) = -5(4-x)^4
 :::
-
-All derivatives up to order 3 vanish.
 
 :::{math}
 :enumerated: false
-f^{(0)}(4) = 24 > 0
+x=4
 :::
 
-The first nonzero derivative is of **even order** and it's value is positive, hence we have an **local minimum**.
+All derivatives up to order 4 vanish.
+
+:::{math}
+:enumerated: false
+f^{(5)}(4) = -120 < 0
+:::
+
+The first nonzero derivative is of **odd order**, hence we have an **inflection point**.
 
 ::::
 
@@ -794,7 +813,7 @@ The Hessian matrix is
 :enumerated: false
 H =
 \begin{bmatrix}
--2 & 4 \\
+-2 & 4 \
 4 & -4
 \end{bmatrix}.
 :::
