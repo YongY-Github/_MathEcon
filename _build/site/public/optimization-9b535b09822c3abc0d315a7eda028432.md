@@ -928,8 +928,7 @@ Hence, $x = 2, y = 2.5$
 **Conclusion:** Since $D < 0$, this function results in a **saddle point**.
 
 ---
-
-#### v. $f(x,y) = x^3 - 3x + y^2 - 4y$
+#### v. f(x,y) = x^3 - 3x + y^2 - 4y$
 
 **a. Find Stationary Points**
 
@@ -978,6 +977,7 @@ Compute the second partial derivatives.
 * $f_{xx} = 6x$
 * $f_{yy} = 2$
 * $f_{xy} = f_{yx} = 0$
+:::
 
 The Hessian matrix is
 
@@ -985,7 +985,7 @@ The Hessian matrix is
 :enumerated: false
 H =
 \begin{bmatrix}
-6x & 0 \\
+6x & 0 \
 0 & 2
 \end{bmatrix}.
 :::
@@ -994,7 +994,7 @@ Note that the determinant is
 
 :::{math}
 :enumerated: false
-|H| = (6x)(2) - 0 = 12x.
+D = (6x)(2) - 0 = 12x.
 :::
 
 **Classification**

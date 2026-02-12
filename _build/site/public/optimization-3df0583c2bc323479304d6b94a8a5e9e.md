@@ -994,7 +994,7 @@ Note that the determinant is
 
 :::{math}
 :enumerated: false
-|H| = (6x)(2) - 0 = 12x.
+D = (6x)(2) - 0 = 12x.
 :::
 
 **Classification**

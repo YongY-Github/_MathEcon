@@ -978,23 +978,24 @@ Compute the second partial derivatives.
 * $f_{xx} = 6x$
 * $f_{yy} = 2$
 * $f_{xy} = f_{yx} = 0$
+:::
 
 The Hessian matrix is
 
 :::{math}
 :enumerated: false
 H =
-\begin{bmatrix}
+\begin{pmatrix}
 6x & 0 \\
 0 & 2
-\end{bmatrix}.
+\end{pmatrix}.
 :::
 
 Note that the determinant is
 
 :::{math}
 :enumerated: false
-|H| = (6x)(2) - 0 = 12x.
+D = (6x)(2) - 0 = 12x.
 :::
 
 **Classification**

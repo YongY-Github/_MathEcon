@@ -927,4 +927,110 @@ Hence, $x = 2, y = 2.5$
 
 **Conclusion:** Since $D < 0$, this function results in a **saddle point**.
 
+---
+
+#### v. $f(x,y) = x^3 - 3x + y^2 - 4y$
+
+**a. Find Stationary Points**
+
+Compute the partial derivatives.
+
+* $f_{x} = 3x^2 - 3$
+* $f_{y} = 2y - 4$
+
+Set both equal to zero.
+
+**From $f_{x}=0$:**
+
+:::{math}
+:enumerated: false
+3x^2 - 3 = 0
+\quad\Rightarrow\quad
+x^2 = 1
+\quad\Rightarrow\quad
+x = \pm 1.
+:::
+
+**From $f_{x_2}=0$:**
+
+:::{math}
+:enumerated: false
+2y - 4 = 0
+\quad\Rightarrow\quad
+y = 2.
+:::
+
+We therefore have two critical points:
+
+:::{math}
+:enumerated: false
+(1,2)
+\quad\text{and}\quad
+(-1,2).
+:::
+
+Both are integers — nice and clean.
+
+**b. Hessian Classification**
+
+Compute the second partial derivatives.
+
+* $f_{xx} = 6x$
+* $f_{yy} = 2$
+* $f_{xy} = f_{yx} = 0$
+
+The Hessian matrix is
+
+:::{math}
+:enumerated: false
+H =
+\begin{bmatrix}
+6x & 0 \\
+0 & 2
+\end{bmatrix}.
+:::
+
+Note that the determinant is
+
+:::{math}
+:enumerated: false
+|H| = (6x)(2) - 0 = 12x.
+:::
+
+**Classification**
+
+At $(1,2)$
+
+:::{math}
+:enumerated: false
+|H_1| = 6 > 0 //
+|H_2| = |H| = 12(1) = 12 > 0
+:::
+
+So the Hessian is **positive definite**.
+
+[
+\Rightarrow
+\textbf{Local minimum at } (1,2).
+]
+
+At $(-1,2)$
+
+:::{math}
+:enumerated: false
+|H_2| = 12(-1) = -12 < 0.
+:::
+
+Since the determinant is negative, the Hessian is sign **indefinite**.
+
+[
+\Rightarrow
+\textbf{Saddle point at } (-1,2).
+]
+
+**Final Answer**
+
+* $(1,2)$ → **local minimum**
+* $(-1,2)$ → **saddle point**
+
 ::::
