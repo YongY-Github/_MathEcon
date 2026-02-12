@@ -1,0 +1,1037 @@
+# Optimization
+
+Finding the “best” way to do a specific task in economics often involves what is called an **optimization problem**.
+
+## Univariate Optimization
+
+## Stationary Points
+
+Generally, we say that $x^*$ is a **stationary point** of a differentiable function $f(x)$ when its slope evaluated at $x^*$ is zero, i.e., when
+
+:::{math}
+:enumerated: false
+f'(x^*) = 0.
+:::
+
+## Necessary First-Order Condition (F.O.C)
+
+More formally, suppose a function $f(x)$ is differentiable in some interval $I$ and that $x^*$ is an interior point of $I$.
+Then for $x = x^*$ to be a maximum or minimum point for $f(x)$ in $I$, a **necessary condition** is that it is a stationary point for $f(x)$, i.e., $x = x^*$ satisfies
+
+:::{math}
+:enumerated: false
+f'(x^*) = 0.
+:::
+
+**Example 1**
+
+Let
+
+:::{math}
+:enumerated: false
+h(x) = -x^2 + 8x - 15.
+:::
+
+**F.O.C:**
+
+:::{math}
+:enumerated: false
+-2x + 8 = 0.
+:::
+
+So the stationary point is $x^* = 4$ and $y^* = 1$.
+
+**Example 2**
+
+Let
+
+:::{math}
+:enumerated: false
+z(x) = x^2 - 8x + 17.
+:::
+
+**F.O.C:**
+
+:::{math}
+:enumerated: false
+2x - 8 = 0.
+:::
+
+So the stationary point is $x^* = 4$ and $y^* = 1$.
+
+We have the same stationary point, but clearly these are different functions.
+The former is **$\cap$-shaped** and the latter is **$\cup$-shaped**.
+
+## Sufficient Second-Order Condition (S.O.C) for Maximum/Minimum
+
+Following the two examples above, we can characterize a stationary point as a maximum or minimum by taking the second derivative.
+
+* If $f''(x^*) < 0$, the stationary point represents a **maximum**.
+* If $f''(x^*) > 0$, the stationary point represents a **minimum**.
+
+**Example 1**
+
+:::{math}
+:enumerated: false
+h''(x) = -2.
+:::
+
+Since this is negative, the stationary point $(4,1)$ is a **maximum**.
+
+**Example 2**
+
+:::{math}
+:enumerated: false
+z''(x) = 2.
+:::
+
+Since this is positive, the stationary point $(4,1)$ is a **minimum**.
+
+---
+
+**Example 3**
+
+Let
+
+:::{math}
+:enumerated: false
+p(x) = \frac{1}{3}x^3 - \frac{1}{2}x^2 - 2x + 20.
+:::
+
+The **F.O.C** gives
+
+:::{math}
+:enumerated: false
+p'(x) = x^2 - x - 2 = 0,
+:::
+
+which implies $x^* = -1$ and $x^* = 2$.
+
+The **S.O.C** gives
+
+:::{math}
+:enumerated: false
+p''(x) = 2x - 1.
+:::
+
+* At $x^* = -1$, $p''(-1) = -3 < 0$ → **maximum**
+* At $x^* = 2$, $p''(2) = 3 > 0$ → **minimum**
+
+---
+
+### S.O.C Is Sufficient but Not Necessary
+
+Consider
+
+:::{math}
+:enumerated: false
+y = x^4.
+:::
+
+The **F.O.C** gives $x^* = 0$.
+
+The **S.O.C** also gives $0$, which is neither positive nor negative.
+Yet, $x^* = 0$ is clearly a **minimum**.
+
+## Global and Local Minimum/Maximum
+
+We must distinguish between **global** and **local** extrema.
+
+### Global Maximum
+
+If $f(x)$ is everywhere differentiable and has stationary point $x^*$, then $x^*$ is a **global maximum** if
+
+:::{math}
+:enumerated: false
+f'(x) \ge 0 \text{ for all } x \le x^*,
+\quad \text{and} \quad
+f'(x) \le 0 \text{ for all } x \ge x^*.
+:::
+
+That is, the function increases up to $x^*$ and decreases afterward.
+
+### Global Minimum
+
+Similarly, $x^*$ is a **global minimum** if
+
+:::{math}
+:enumerated: false
+f'(x) \le 0 \text{ for all } x \le x^*,
+\quad \text{and} \quad
+f'(x) \ge 0 \text{ for all } x \ge x^*.
+:::
+
+### Local Maximum / Minimum
+
+We speak of a **local maximum or minimum** if $x^*$ is a stationary maximum or minimum **only in a neighborhood of $x^*$**, not over the entire domain.
+
+## Concavity and Convexity
+
+* If $f(x)$ is **strictly concave** on $(m,n)$ and has a stationary point $x^*$ with $m < x^* < n$, then $x^*$ is a **local maximum**.
+* If $f(x)$ is strictly concave everywhere, it has at most one stationary point, which is a **global maximum**.
+
+Conversely,
+
+* If $f(x)$ is **strictly convex** on $(m,n)$ and has a stationary point $x^*$, then $x^*$ is a **local minimum**.
+* If $f(x)$ is strictly convex everywhere, that stationary point is a **global minimum**.
+
+## Inflection Points
+
+Consider the function
+
+:::{math}
+:enumerated: false
+k(x) = 1 + (x - 4)^3.
+:::
+
+The **F.O.C** gives a stationary point $(4,1)$.
+
+The **S.O.C** evaluated at this point is $0$, so it is inconclusive.
+
+We must then take higher-order derivatives.
+
+If the **first nonzero higher-order derivative** evaluated at the stationary point is:
+
+* **Odd-order** → inflection point
+* **Even-order** → maximum or minimum (depending on sign)
+
+If the first non-zero derivative at the stationary point $c$ is of **even order** ($n = 2, 4, 6...$):
+
+| Derivative Sign | Result | Visual Intuition |
+| :--- | :--- | :--- |
+| **$f^{(n)}(c) > 0$** | **Local Minimum** | The function "curves up" away from the point in all directions. |
+| **$f^{(n)}(c) < 0$** | **Local Maximum** | The function "curves down" away from the point in all directions. |
+
+For this example,
+
+:::{math}
+:enumerated: false
+k'''(4) \ne 0,
+:::
+
+which is the third (odd) derivative.
+Hence, $(4,1)$ is an **inflection point**.
+
+::::{dropdown} **Try these ^^**
+
+**Stationary Points and Higher-Order Derivative Test**
+
+Find the stationary points of the following functions and determine whether you have a minimum, maximum, or inflection point by determining whether at the stationary point the function is convex or concave (or neither).
+
+**(i)** $f(x) = -x^3 + 6x^2 + 15x - 32$
+
+**(ii)** $f(x) = (2x - 7)^3$
+
+**(iii)** $f(x) = (x + 2)^4$
+
+**(iv)** $f(x) = -2(x - 6)^6$
+
+**(v)** $f(x) = x^4$
+
+---
+
+**Answers**
+
+**(i)** $f'(x) = -3x^2 + 12x + 15$
+
+Setting $f'(x)=0$:
+
+:::{math}
+:enumerated: false
+x = -1 \quad \text{and} \quad x = 5
+:::
+
+Second derivative:
+
+:::{math}
+:enumerated: false
+f''(x) = -6x + 12
+:::
+
+:::{math}
+:enumerated: false
+f''(-1) = 18 > 0 \Rightarrow \text{minimum}
+:::
+
+:::{math}
+:enumerated: false
+f''(5) = -18 < 0 \Rightarrow \text{maximum}
+:::
+
+Inflection point:
+
+:::{math}
+:enumerated: false
+f''(x)=0 \Rightarrow x=2
+:::
+
+**(ii)** $f'(x) = 6(2x - 7)^2$
+
+:::{math}
+:enumerated: false
+\text{Hence, }x = 3.5
+:::
+
+:::{math}
+:enumerated: false
+f''(x) = 24(2x - 7)
+:::
+
+:::{math}
+:enumerated: false
+f''(3.5) = 0
+:::
+
+:::{math}
+:enumerated: false
+f'''(x) = 48
+:::
+
+Since the first nonzero derivative at the critical point is of **odd order**, we have an **inflection point** at $x=3.5$.
+
+**(iii)** $f'(x) = 4(x+2)^3$
+
+:::{math}
+:enumerated: false
+x = -2
+:::
+
+:::{math}
+:enumerated: false
+f''(-2)=0, \quad f'''(-2)=0, \quad f^{(4)}(-2)=24>0
+:::
+
+The first nonzero derivative is **even and positive**, hence we have a **minimum**.
+
+**(iv)** $f'(x) = -12(x-6)^5$
+
+:::{math}
+:enumerated: false
+x=6
+:::
+
+All derivatives up to order 5 vanish.
+
+:::{math}
+:enumerated: false
+f^{(6)}(6) = -1440 < 0
+:::
+
+The first nonzero derivative is **even and negative**, hence we have a **maximum**.
+
+**(v)** $f'(x) = 4x^3$
+
+:::{math}
+:enumerated: false
+x=0
+:::
+
+All derivatives up to order 3 vanish.
+
+:::{math}
+:enumerated: false
+f^{(0)}(4) = 24 > 0
+:::
+
+The first nonzero derivative is of **even order** and it's value is positive, hence we have an **local minimum**.
+
+::::
+
+---
+
+## Economic Applications
+
+* A Monopolist’s Optimal Pricing Scheme
+* Strategic Behavior of Duopolists
+* Rules versus Discretion in Monetary Policy
+* The Inflation Tax and Seigniorage
+* The Golden Rule
+
+---
+
+## Multivariate Optimization
+
+We now generalize the univariate techniques to multivariate optimization. 
+
+## Multivariate First-Order Condition
+
+If we have a function
+
+:::{math}
+:enumerated: false
+y = f(x_1, x_2, \ldots, x_n)
+:::
+
+that is differentiable with respect to each of its arguments and has a stationary point at
+$(x_1^*, x_2^*, \ldots, x_n^*)$, then each of the partial derivatives at that point equals zero.
+
+That is,
+
+:::{math}
+:enumerated: false
+f_1(x_1^*, x_2^*, \ldots, x_n^*) = 0 \\
+f_2(x_1^*, x_2^*, \ldots, x_n^*) = 0 \\
+\vdots \\
+f_n(x_1^*, x_2^*, \ldots, x_n^*) = 0
+:::
+
+**Example 1**
+
+Consider the bivariate function
+
+:::{math}
+:enumerated: false
+g(x_1, x_2) = 6x_1 - x_1^2 + 16x_2 - 4x_2^2
+:::
+
+The first-order conditions are
+
+:::{math}
+:enumerated: false
+g_1(x_1, x_2) = 6 - 2x_1 = 0 \\
+g_2(x_1, x_2) = 16 - 8x_2 = 0
+:::
+
+The single stationary point is therefore
+
+:::{math}
+:enumerated: false
+x_1^* = 3, \quad x_2^* = 2
+:::
+
+and the value of the function at this point is
+
+:::{math}
+:enumerated: false
+g(3,2) = 25.
+:::
+
+We will show later using the second-order condition that this stationary point represents a **maximum**.
+
+Let's visualize the equation and its stationary point.
+
+<img src="figs/max.png" alt="Stationary Point" width="70%"/>
+
+If we take a slice of the function $g(x_1, x_2)$ at $x_2 = 2$, the stationary point is achieved at $x_1 = 3$.
+Similarly, taking a slice at $x_1 = 3$ shows a stationary point at $x_2 = 2$. Visually, we have
+
+<img src="figs/slice.png" alt="Stationary Point" width="90%"/>
+
+**Example 2**
+
+Consider the function
+
+:::{math}
+:enumerated: false
+h(x_1, x_2) = x_1^2 + 4x_2^2 - 2x_1 - 16x_2 + x_1 x_2
+:::
+
+The first-order conditions give
+
+:::{math}
+:enumerated: false
+h_1(x_1, x_2) = 2x_1 - 2 + x_2 = 0 \\
+h_2(x_1, x_2) = 8x_2 - 16 + x_1 = 0
+:::
+
+Hence the single stationary point is
+
+:::{math}
+:enumerated: false
+x_1^* = 0, \quad x_2^* = 2
+:::
+
+and the value of the function at this point is
+
+:::{math}
+:enumerated: false
+h(0,2) = -16.
+:::
+
+Below is a visualization of this function with the plane tangent and stationary point.
+
+<img src="figs/min.png" alt="Stationary Point" width="70%"/>
+
+## Second-Order Condition in the Bivariate Case
+
+For the univariate case, the second differential of a function can be considered as the differential of the first differential and denoted as
+
+:::{math}
+:enumerated: false
+d(dy) = d^2 y.
+:::
+
+For $y = f(x)$, the second differential is
+
+:::{math}
+:enumerated: false
+d^2 y = f''(x)(dx)^2,
+:::
+
+which is nonnegative for any $dx$.
+
+### Second Differential in the Bivariate Case
+
+For a bivariate function $y = f(x_1, x_2)$, the total differential is
+
+:::{math}
+:enumerated: false
+dy = f_1(x_1, x_2),dx_1 + f_2(x_1, x_2),dx_2.
+:::
+
+Taking the total derivative of this expression yields the second total differential:
+
+:::{math}
+:enumerated: false
+d^2 y
+= f_{11}(dx_1)^2 + f_{22}(dx_2)^2 + 2f_{12}dx_1 dx_2.
+:::
+
+## Sufficient Conditions for Local Maxima and Minima
+
+* If $d^2 y < 0$ for all $(dx_1, dx_2)$, the stationary point is a **local maximum**.
+* If $d^2 y > 0$ for all $(dx_1, dx_2)$, the stationary point is a **local minimum**.
+
+A necessary condition for a minimum is
+
+:::{math}
+:enumerated: false
+f_{11} > 0 \quad \text{and} \quad f_{22} > 0,
+:::
+
+and for a maximum,
+
+:::{math}
+:enumerated: false
+f_{11} < 0 \quad \text{and} \quad f_{22} < 0.
+:::
+
+However, the cross-partial derivative $f_{12}$ must also be considered.
+
+### Completing the Square
+
+By completing the square, the second differential can be rewritten, leading to the condition:
+
+:::{math}
+:enumerated: false
+f_{11} f_{22} > (f_{12})^2.
+:::
+
+### Second-Order Condition for a Maximum
+
+If $y = f(x_1, x_2)$ has a stationary point $(x_1^*, x_2^*)$ and
+
+:::{math}
+:enumerated: false
+f_{11}(x_1^*, x_2^*) < 0
+\quad \text{and} \quad
+f_{11} f_{22} > (f_{12})^2,
+:::
+
+then the function reaches a **maximum** at that point.
+
+### Second-Order Condition for a Minimum
+
+If
+
+:::{math}
+:enumerated: false
+f_{11}(x_1^*, x_2^*) > 0
+\quad \text{and} \quad
+f_{11} f_{22} > (f_{12})^2,
+:::
+
+then the function reaches a **minimum**.
+
+
+::::{admonition} Special Cases
+:class: important
+
+* If $f_{11} f_{22} < (f_{12})^2$, the stationary point is a **saddle point**.
+* If $f_{11} f_{22} = (f_{12})^2$, the test is **inconclusive**.
+::::
+
+Let's continue with the example above.
+
+The second partial derivatives of  
+
+:::{math}
+:enumerated: false
+h(x_1,x_2) = x_1^2 + 4x_2^2 - 2x_1 - 16x_2 + x_1x_2
+:::
+
+are  
+
+:::{math}
+:enumerated: false
+h_{11}(x_1,x_2) = 2 \quad \text{and} \quad h_{22}(x_1,x_2) = 8
+:::
+
+Both are positive. The cross-partial derivative is  
+
+:::{math}
+:enumerated: false
+h_{12}(x_1,x_2) = 1.
+:::
+
+Since  
+
+:::{math}
+:enumerated: false
+h_{11} h_{22} > (h_{12})^2,
+:::
+
+that is,
+
+:::{math}
+:enumerated: false
+16 > 1,
+:::
+
+the stationary point $(0,2)$ is a **minimum**.
+
+As another example, consider  
+
+:::{math}
+:enumerated: false
+g(x_1,x_2) = 6x_1 - x_1^2 + 16x_2 - 4x_2^2.
+:::
+
+The second partial derivatives are  
+
+:::{math}
+:enumerated: false
+g_{11}(x_1,x_2) = -2 \quad \text{and} \quad g_{22}(x_1,x_2) = -8,
+:::
+
+and the cross-partial derivative is  
+
+:::{math}
+:enumerated: false
+g_{12}(x_1,x_2) = 0.
+:::
+
+Since the second partial derivatives are both negative and  
+
+:::{math}
+:enumerated: false
+g_{11} g_{22} > (g_{12})^2,
+:::
+
+that is,
+
+:::{math}
+:enumerated: false
+16 > 0,
+:::
+
+we have the conditions for a **maximum**.
+
+## Second-Order Condition in the General Multivariate Case
+
+Let us use the tools of matrix algebra to develop a set of conditions that enables us to find the sign of the second total differential of a multivariate function.
+
+First, assume a **bivariate case** for which the second total differential is given by
+
+:::{math}
+:enumerated: false
+d^2 y
+=
+f_{11}(dx_1)^2
++
+f_{22}(dx_2)^2
++
+2 f_{12}(dx_1)(dx_2).
+:::
+
+This expression can be written in **matrix form** as the quadratic form of the two variables $dx_1$ and $dx_2$ as follows:
+
+:::{math}
+:enumerated: false
+d^2 y
+=
+\begin{bmatrix}
+dx_1 & dx_2
+\end{bmatrix}
+\begin{bmatrix}
+f_{11} & f_{12} \\
+f_{21} & f_{22}
+\end{bmatrix}
+\begin{bmatrix}
+dx_1 \\
+dx_2
+\end{bmatrix}.
+:::
+
+In other words, the second total differential (or second total derivative) for a multivariate function can be written more generally as
+
+:::{math}
+:enumerated: false
+d^2 y
+=
+dx' H dx
+=
+\begin{bmatrix}
+dx_1 & dx_2 & \cdots & dx_n
+\end{bmatrix}
+\begin{bmatrix}
+f_{11} & f_{12} & \cdots & f_{1n} \\
+f_{21} & f_{22} & \cdots & f_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+f_{n1} & f_{n2} & \cdots & f_{nn}
+\end{bmatrix}
+\begin{bmatrix}
+dx_1 \\
+dx_2 \\
+\vdots \\
+dx_n
+\end{bmatrix}.
+:::
+
+Here, $H$ is the **Hessian matrix**, and $dx$ is the column vector of differentials.
+
+All that remains is to determine the **sign definiteness** of the quadratic form by determining the sign definiteness of the Hessian.
+
+### Interpreting the Second-Order Condition
+
+The sign of the second total differential $d^2 y$ determines the local curvature of the function and therefore whether a critical point is a local maximum, minimum, or neither.
+
+Because
+
+:::{math}
+:enumerated: false
+d^2 y = dx' H dx,
+:::
+
+the problem reduces to determining the **sign definiteness of the Hessian matrix $H$**.
+
+### Positive and Negative Definiteness
+
+::::{admonition} Definition
+:class: important
+
+Let $H$ be a symmetric matrix.
+
+* $H$ is **positive definite** if
+  $dx' H dx > 0$ for all nonzero $dx$.
+* $H$ is **negative definite** if
+  $dx' H dx < 0$ for all nonzero $dx$.
+* $H$ is **indefinite** if the quadratic form takes both positive and negative values.
+  ::::
+
+These cases correspond to the curvature of the function at a critical point.
+
+### Second-Order Conditions for Optimization
+
+Suppose $y = f(x_1, \ldots, x_n)$ and $\nabla f = 0$ at a point $x^*$.
+
+::::{admonition} Second-Order Test
+:class: important
+
+* If $H(x^*)$ is **negative definite**, then $x^*$ is a **local maximum**.
+* If $H(x^*)$ is **positive definite**, then $x^*$ is a **local minimum**.
+* If $H(x^*)$ is **indefinite**, then $x^*$ is a **saddle point**.
+  ::::
+
+::::{admonition} Key Distinction
+:class: important
+
+• In **one variable**, if the first nonzero derivative at a stationary point is of **odd order**, the point is an **inflection point**.
+
+• In **multiple variables**, if the Hessian is **indefinite** (determinant < 0), the stationary point is a **saddle point**.
+
+An inflection point concerns curvature along a single line. A saddle point concerns curvature across different directions.
+::::
+
+---
+
+## Sylvester’s Criterion (Practical Test)
+
+In practice, definiteness is checked using **principal minors** of the Hessian.
+
+### Bivariate Case ($n = 2$)
+
+Let
+
+:::{math}
+:enumerated: false
+H =
+\begin{bmatrix}
+f_{11} & f_{12} \\
+f_{21} & f_{22}
+\end{bmatrix}.
+:::
+
+Then:
+
+::::{admonition} Sylvester’s Criterion (2 variables)
+:class: tip
+
+* $H$ is **positive definite** if
+  $f_{11} > 0$ and $\det(H) > 0$.
+* $H$ is **negative definite** if
+  $f_{11} < 0$ and $\det(H) > 0$.
+* $H$ is **indefinite** if
+  $\det(H) < 0$.
+  ::::
+
+This criterion is widely used in economics because it avoids computing the quadratic form directly.
+
+---
+
+**Example**
+
+Consider the function
+
+:::{math}
+:enumerated: false
+y = -x_1^2 - 2x_2^2 + 4x_1 x_2.
+:::
+
+The Hessian matrix is
+
+:::{math}
+:enumerated: false
+H =
+\begin{bmatrix}
+-2 & 4 \\
+4 & -4
+\end{bmatrix}.
+:::
+
+Compute the determinant:
+
+:::{math}
+:enumerated: false
+\det(H) = (-2)(-4) - 16 = -8 < 0.
+:::
+
+Since the determinant is negative, the Hessian is **indefinite**, and the critical point is a **saddle point**.
+
+## Economic Interpretation
+
+* Concavity (negative definite Hessian) corresponds to **diminishing marginal returns** and guarantees interior maxima in optimization problems.
+* Convexity (positive definite Hessian) corresponds to **cost minimization** problems.
+* Indefiniteness indicates **instability** or saddle behavior, common in strategic or general equilibrium settings.
+
+::::{admonition} Key takeaway
+:class: important
+
+The second-order condition in multivariate optimization reduces to checking the **sign definiteness of the Hessian matrix**.
+Matrix algebra provides a compact and powerful way to characterize curvature, stability, and optimality in economic models.
+::::
+
+::::{dropdown} **Try these ^^**
+
+### Optimizing Multivariate Functions
+
+---
+
+**The Hessian Test Procedure**
+
+To classify a stationary point $(x, y)$ for a function $f(x, y)$:
+
+1. **Find Stationary Points:** Set first partial derivatives to zero: $f_x = 0$ and $f_y = 0$.
+2. **Calculate the Hessian Matrix ($H$):**
+   $$H = \begin{bmatrix} f_{xx} & f_{xy} \\ f_{yx} & f_{yy} \end{bmatrix}$$
+3. **Evaluate the Determinant ($D$):** $$D = f_{xx} f_{yy} - (f_{xy})^2$$
+4. **Classification Rules:**
+   * If $D > 0$ and $f_{xx} > 0$: **Local Minimum**
+   * If $D > 0$ and $f_{xx} < 0$: **Local Maximum**
+   * If $D < 0$: **Saddle Point**
+   * If $D = 0$: **Inconclusive**
+
+---
+
+**Worked Solutions**
+
+#### i. $f(x,y) = 3x^2 - xy + 2y^2 - 4x - 7y + 12$
+
+**a. Find Stationary Points**
+* $f_x = 6x - y - 4 = 0$
+* $f_y = -x + 4y - 7 = 0$
+
+Solving the system:
+From $f_y$, $x = 4y - 7$. Substitute into $f_x$:
+$6(4y - 7) - y - 4 = 0$
+$24y - 42 - y - 4 = 0 \implies 23y = 46 \implies \mathbf{y = 2}$
+Substituting back: $x = 4(2) - 7 \implies \mathbf{x = 1}$
+
+Note that you can actually use $x=A^{-1}b$, which is recommended for more complex system of equations.
+
+**b. Hessian Classification**
+* $f_{xx} = 6$
+* $f_{yy} = 4$
+* $f_{xy} = -1$
+* $D = (6)(4) - (-1)^2 = 23$
+
+**Conclusion:** Since $D > 0$ and $f_{xx} > 0$, the point **$(1, 2)$ is a minimum**.
+
+---
+
+#### ii. $f(x, y) = 60x + 34y - 4xy - 6x^2 - 3y^2 + 5$
+
+**a. Find Stationary Points**
+* $f_x = 60 - 4y - 12x = 0 \implies 3x + y = 15$
+* $f_y = 34 - 4x - 6y = 0 \implies 2x + 3y = 17$
+
+Solving the system:
+Multiply first equation by 3: $9x + 3y = 45$.
+Subtract second equation: $(9x - 2x) = 45 - 17 \implies 7x = 28 \implies \mathbf{x = 4}$.
+Then $3(4) + y = 15 \implies \mathbf{y = 3}$.
+
+**b. Hessian Classification**
+* $f_{xx} = -12$
+* $f_{yy} = -6$
+* $f_{xy} = -4$
+* $D = (-12)(-6) - (-4)^2 = 72 - 16 = 56$
+
+**Conclusion:** Since $D > 0$ and $f_{xx} < 0$, the point **$(4, 3)$ is a maximum**.
+
+---
+
+#### iii. $f(x,y) = 48y - 3x^2 - 6xy - 2y^2 + 72x$
+
+**a. Find Stationary Points**
+* $f_x = -6x - 6y + 72 = 0 \implies x + y = 12$
+* $f_y = 48 - 6x - 4y = 0 \implies 3x + 2y = 24$
+
+Solving the system:
+From first eq, $x = 12 - y$. Substitute into second:
+$3(12 - y) + 2y = 24 \implies 36 - 3y + 2y = 24 \implies -y = -12 \implies \mathbf{y = 12}$.
+Then $\mathbf{x = 0}$.
+
+**b. Hessian Classification**
+* $f_{xx} = -6$
+* $f_{yy} = -4$
+* $f_{xy} = -6$
+* $D = (-6)(-4) - (-6)^2 = 24 - 36 = -12$
+
+**Conclusion:** Since $D < 0$, the point **$(0, 12)$ is a saddle point**.
+
+---
+
+#### iv. $f(x, y) = 5x^2 - 3y^2 - 30x + 7y + 4xy$
+
+**a. Find Stationary Points**
+* $f_x = 10x - 30 + 4y = 0$
+* $f_y = -6y + 7 + 4x = 0$
+
+Hence, $x = 2, y = 2.5$
+
+**b. Hessian Classification**
+* $f_{xx} = 10$
+* $f_{yy} = -6$
+* $f_{xy} = 4$
+* $D = (10)(-6) - (4)^2 = -60 - 16 = -76$
+
+**Conclusion:** Since $D < 0$, this function results in a **saddle point**.
+
+---
+
+#### v. $f(x,y) = x^3 - 3x + y^2 - 4y$
+
+**a. Find Stationary Points**
+
+Compute the partial derivatives.
+
+* $f_{x} = 3x^2 - 3$
+* $f_{y} = 2y - 4$
+
+Set both equal to zero.
+
+**From $f_{x}=0$:**
+
+:::{math}
+:enumerated: false
+3x^2 - 3 = 0
+\quad\Rightarrow\quad
+x^2 = 1
+\quad\Rightarrow\quad
+x = \pm 1.
+:::
+
+**From $f_{x_2}=0$:**
+
+:::{math}
+:enumerated: false
+2y - 4 = 0
+\quad\Rightarrow\quad
+y = 2.
+:::
+
+We therefore have two critical points:
+
+:::{math}
+:enumerated: false
+(1,2)
+\quad\text{and}\quad
+(-1,2).
+:::
+
+Both are integers — nice and clean.
+
+**b. Hessian Classification**
+
+Compute the second partial derivatives.
+
+* $f_{xx} = 6x$
+* $f_{yy} = 2$
+* $f_{xy} = f_{yx} = 0$
+
+The Hessian matrix is
+
+:::{math}
+:enumerated: false
+H =
+\begin{bmatrix}
+6x & 0 \\
+0 & 2
+\end{bmatrix}.
+:::
+
+Note that the determinant is
+
+:::{math}
+:enumerated: false
+|H| = (6x)(2) - 0 = 12x.
+:::
+
+**Classification**
+
+At $(1,2)$
+
+:::{math}
+:enumerated: false
+|H_1| = 6 > 0 //
+|H_2| = |H| = 12(1) = 12 > 0
+:::
+
+So the Hessian is **positive definite**.
+
+:::{math}
+:enumerated: false
+\Rightarrow
+\textbf{Local minimum at } (1,2).
+:::
+
+At $(-1,2)$
+
+:::{math}
+:enumerated: false
+|H_2| = 12(-1) = -12 < 0.
+:::
+
+Since the determinant is negative, the Hessian is sign **indefinite**.
+
+[
+\Rightarrow
+\textbf{Saddle point at } (-1,2).
+]
+
+**Final Answer**
+
+* $(1,2)$ → **local minimum**
+* $(-1,2)$ → **saddle point**
+
+::::

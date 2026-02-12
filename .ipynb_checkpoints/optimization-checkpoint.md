@@ -1009,10 +1009,10 @@ At $(1,2)$
 
 So the Hessian is **positive definite**.
 
-[
+$
 \Rightarrow
 \textbf{Local minimum at } (1,2).
-]
+$
 
 At $(-1,2)$
 
@@ -1023,10 +1023,10 @@ At $(-1,2)$
 
 Since the determinant is negative, the Hessian is sign **indefinite**.
 
-[
+$
 \Rightarrow
 \textbf{Saddle point at } (-1,2).
-]
+$
 
 **Final Answer**
 
