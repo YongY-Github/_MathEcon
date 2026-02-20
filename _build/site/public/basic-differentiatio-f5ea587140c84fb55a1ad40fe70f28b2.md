@@ -720,16 +720,16 @@ j(x)
 * **2nd Derivative:** $f''(x) = 18x + 8 \implies f''(0) = 8$
 * **3rd Derivative:** $f'''(x) = 18 \implies f'''(0) = 18$
 
-#### a. Linear Approximation ($n = 1$)
+#### 1. Linear Approximation ($n = 1$)
 The linear Taylor polynomial is $P_1(x) = f(0) + f'(0)x$:
 **$$P_1(x) = 1 - 2x$$**
 
-#### b. Quadratic Approximation ($n = 2$)
+#### 2. Quadratic Approximation ($n = 2$)
 The quadratic Taylor polynomial adds the $\frac{f''(0)}{2!}x^2$ term:
 $$P_2(x) = 1 - 2x + \frac{8}{2}x^2$$
 **$$P_2(x) = 4x^2 - 2x + 1$$**
 
-#### c. Cubic Approximation ($n = 3$)
+#### 3. Cubic Approximation ($n = 3$)
 The cubic Taylor polynomial adds the $\frac{f'''(0)}{3!}x^3$ term:
 $$P_3(x) = 1 - 2x + 4x^2 + \frac{18}{6}x^3$$
 **$$P_3(x) = 3x^3 + 4x^2 - 2x + 1$$**
@@ -748,17 +748,17 @@ First, we find the derivatives and evaluate them at $x = 1$:
 * **2nd Derivative:** $f''(x) = -x^{-2} = -\frac{1}{x^2} \implies f''(1) = -1$
 * **3rd Derivative:** $f'''(x) = 2x^{-3} = \frac{2}{x^3} \implies f'''(1) = 2$
 
-#### a. Linear Approximation ($n = 1$)
+#### 1. Linear Approximation ($n = 1$)
 Using $P_1(x) = f(1) + f'(1)(x - 1)$:
 $$P_1(x) = 0 + 1(x - 1)$$
 **$$P_1(x) = x - 1$$**
 
-#### b. Quadratic Approximation ($n = 2$)
+#### 2. Quadratic Approximation ($n = 2$)
 Adding the second-order term $\frac{f''(1)}{2!}(x - 1)^2$:
 $$P_2(x) = (x - 1) + \frac{-1}{2}(x - 1)^2$$
 **$$P_2(x) = (x - 1) - \frac{1}{2}(x - 1)^2$$**
 
-#### c. Cubic Approximation ($n = 3$)
+#### 3. Cubic Approximation ($n = 3$)
 Adding the third-order term $\frac{f'''(1)}{3!}(x - 1)^3$:
 $$P_3(x) = (x - 1) - \frac{1}{2}(x - 1)^2 + \frac{2}{6}(x - 1)^3$$
 **$$P_3(x) = (x - 1) - \frac{1}{2}(x - 1)^2 + \frac{1}{3}(x - 1)^3$$**

@@ -1393,6 +1393,7 @@ Which of the following functions are homogeneous? If homogeneous, what are their
 **1.** $f(x,y) = x^2y + \frac{x^4}{\sqrt{x^2 + y^2}}$
 **2.** $f(x,y) = \frac{x}{y} + 5 + e^{x^2/y^2}$
 **3.** $f(x,y) = x^2 + x \sin y$
+:::
 
 ---
 
@@ -1465,7 +1466,7 @@ If $y = f(x_1, \ldots, x_n)$ is homogeneous of degree $k$, then
 :::{math}
 :enumerated: false
 k y
-=
+==
 x_1 f_1(x_1, \ldots, x_n)
 +
 \cdots

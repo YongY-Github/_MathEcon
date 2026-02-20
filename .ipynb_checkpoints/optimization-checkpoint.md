@@ -1033,4 +1033,83 @@ $
 * $(1,2)$ → **local minimum**
 * $(-1,2)$ → **saddle point**
 
+---
+
+A monopolist sells two competitive products, A and B, with demand equations:
+
+:::{math}
+:enumerated: false
+p_A = 35 - 2q_A^2 + q_B, \quad \text{and} \quad 
+p_B = 20 - q_B + q_A
+:::
+
+The joint-cost function is:
+
+:::{math}
+:enumerated: false
+c = -8 - 2q_A^3 + 3q_A q_B + 30q_A + 12q_B + \frac{1}{2}q_A^2
+:::
+
+Find
+
+**(a)** Quantity for Maximum Profit
+**(b)** Selling Prices and Max Profit
+
+---
+
+**Solution**
+
+First, we define the Profit function $\pi = \text{Revenue} - \text{Cost}$ or $\pi = (p_A q_A + p_B q_B) - c$
+
+:::{math}
+:enumerated: false
+\begin{aligned}
+\pi = \;&[(35 - 2q_A^2 + q_B)q_A + (20 - q_B + q_A)q_B] \\
+&- (-8 - 2q_A^3 + 3q_A q_B + 30q_A + 12q_B + \frac{1}{2}q_A^2)
+\end{aligned}
+:::
+
+Simplified:
+
+:::{math}
+:enumerated: false
+\pi = -0.5q_A^2 - q_A q_B + 5q_A - q_B^2 + 8q_B + 8
+:::
+
+Find Critical Points: 
+
+:::{math}
+:enumerated: false
+\frac{\partial \pi}{\partial q_A} = -q_A - q_B + 5 = 0 \implies q_A + q_B = 5
+:::
+
+:::{math}
+:enumerated: false
+\frac{\partial \pi}{\partial q_B} = -q_A - 2q_B + 8 = 0 \implies q_A + 2q_B = 8
+:::
+
+Solving the system gives $q_A = 2$ and $q_B = 3$.
+
+Second, we perform the derivative test:
+
+:::{math}
+:enumerated: false
+H = \begin{bmatrix} 
+f_{AA} & f_{AB} \\ 
+f_{BA} & f_{BB} 
+\end{bmatrix} = \begin{bmatrix} 
+-1 & -1 \\ 
+-1 & -2 
+\end{bmatrix}
+:::
+
+Since $|H| = (-1)(-2) - (-1)^2 = 1 > 0$ and $f_{AA} < 0$, we have a negative definite Hessiand ans hence a relative maximum at $(2, 3)$.
+
+
+(b) Substitute $q_A = 2$ and $q_B = 3$ back into the equations:
+
+Price A: $p_A = 35 - 2(2)^2 + 3 = \mathbf{30}$  
+Price B: $p_B = 20 - 3 + 2 = \mathbf{19}$  
+Max Profit: $\pi(2, 3) = -0.5(2)^2 - (2)(3) + 5(2) - (3)^2 + 8(3) + 8 = \mathbf{25}$
+
 ::::

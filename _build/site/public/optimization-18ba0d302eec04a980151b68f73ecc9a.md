@@ -1059,7 +1059,12 @@ Find
 
 **Solution**
 
-First, we define the Profit function $\pi = \text{Revenue} - \text{Cost}$ or $\pi = (p_A q_A + p_B q_B) - c$
+First, we define the Profit function $\pi = \text{Revenue} - \text{Cost}$
+
+:::{math}
+:enumerated: false
+\pi = (p_A q_A + p_B q_B) - c
+:::
 
 :::{math}
 :enumerated: false

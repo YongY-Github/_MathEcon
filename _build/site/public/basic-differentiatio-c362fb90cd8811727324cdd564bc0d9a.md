@@ -705,40 +705,43 @@ j(x)
 
 **Question**
 
-**1.** Given the function $f(x) = 3x^3 + 4x^2 - 2x + 1$, find the **linear**, **quadratic**, and **cubic** Taylor series approximations centered at $a = 0$.
-
-**2.** Given the function $f(x) = \ln(x)$, find the **linear**, **quadratic**, and **cubic** Taylor series approximations centered at **$a = 1$**.
-
----
+Given the function $f(x) = 3x^3 + 4x^2 - 2x + 1$, find the **linear**, **quadratic**, and **cubic** Taylor series approximations centered at $a = 0$.
 
 **Solution**
 
-**1.** To find the approximations, we first calculate the value of the function and its derivatives at the center point $a = 0$:
+To find the approximations, we first calculate the value of the function and its derivatives at the center point $a = 0$:
 
 * **Function:** $f(x) = 3x^3 + 4x^2 - 2x + 1 \implies f(0) = 1$
 * **1st Derivative:** $f'(x) = 9x^2 + 8x - 2 \implies f'(0) = -2$
 * **2nd Derivative:** $f''(x) = 18x + 8 \implies f''(0) = 8$
 * **3rd Derivative:** $f'''(x) = 18 \implies f'''(0) = 18$
 
-#### a. Linear Approximation ($n = 1$)
+#### 1. Linear Approximation ($n = 1$)
 The linear Taylor polynomial is $P_1(x) = f(0) + f'(0)x$:
 **$$P_1(x) = 1 - 2x$$**
 
-#### b. Quadratic Approximation ($n = 2$)
+#### 2. Quadratic Approximation ($n = 2$)
 The quadratic Taylor polynomial adds the $\frac{f''(0)}{2!}x^2$ term:
 $$P_2(x) = 1 - 2x + \frac{8}{2}x^2$$
 **$$P_2(x) = 4x^2 - 2x + 1$$**
 
-#### c. Cubic Approximation ($n = 3$)
+#### 3. Cubic Approximation ($n = 3$)
 The cubic Taylor polynomial adds the $\frac{f'''(0)}{3!}x^3$ term:
 $$P_3(x) = 1 - 2x + 4x^2 + \frac{18}{6}x^3$$
 **$$P_3(x) = 3x^3 + 4x^2 - 2x + 1$$**
 
 > **Note:** Because the original function is a cubic polynomial, the 3rd-degree Taylor approximation is identical to the original function.
 
----
+## Taylor Series Exercise: Transcendental Functions
 
-**2.** For a Taylor series centered at $a = 1$, the formula is:
+::: {.callout-important icon=false}
+### Question
+Given the function $f(x) = \ln(x)$, find the **linear**, **quadratic**, and **cubic** Taylor series approximations centered at **$a = 1$**.
+:::
+
+### Solution
+
+For a Taylor series centered at $a = 1$, the formula is:
 $$P_n(x) = \sum_{k=0}^n \frac{f^{(k)}(1)}{k!} (x - 1)^k$$
 
 First, we find the derivatives and evaluate them at $x = 1$:
@@ -748,23 +751,26 @@ First, we find the derivatives and evaluate them at $x = 1$:
 * **2nd Derivative:** $f''(x) = -x^{-2} = -\frac{1}{x^2} \implies f''(1) = -1$
 * **3rd Derivative:** $f'''(x) = 2x^{-3} = \frac{2}{x^3} \implies f'''(1) = 2$
 
-#### a. Linear Approximation ($n = 1$)
+---
+
+
+
+#### 1. Linear Approximation ($n = 1$)
 Using $P_1(x) = f(1) + f'(1)(x - 1)$:
 $$P_1(x) = 0 + 1(x - 1)$$
 **$$P_1(x) = x - 1$$**
 
-#### b. Quadratic Approximation ($n = 2$)
+#### 2. Quadratic Approximation ($n = 2$)
 Adding the second-order term $\frac{f''(1)}{2!}(x - 1)^2$:
 $$P_2(x) = (x - 1) + \frac{-1}{2}(x - 1)^2$$
 **$$P_2(x) = (x - 1) - \frac{1}{2}(x - 1)^2$$**
 
-#### c. Cubic Approximation ($n = 3$)
+#### 3. Cubic Approximation ($n = 3$)
 Adding the third-order term $\frac{f'''(1)}{3!}(x - 1)^3$:
 $$P_3(x) = (x - 1) - \frac{1}{2}(x - 1)^2 + \frac{2}{6}(x - 1)^3$$
 **$$P_3(x) = (x - 1) - \frac{1}{2}(x - 1)^2 + \frac{1}{3}(x - 1)^3$$**
 
 > **Insight:** Unlike the previous polynomial example, this series is infinite. As you add more terms, the approximation becomes more accurate, but only within the **interval of convergence** (which for $\ln(x)$ at $a=1$ is $0 < x \le 2$).
-
 ::::
 
 ## Implicit Differentiation

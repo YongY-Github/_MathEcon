@@ -1465,7 +1465,7 @@ If $y = f(x_1, \ldots, x_n)$ is homogeneous of degree $k$, then
 :::{math}
 :enumerated: false
 k y
-=
+==
 x_1 f_1(x_1, \ldots, x_n)
 +
 \cdots

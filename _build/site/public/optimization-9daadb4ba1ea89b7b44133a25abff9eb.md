@@ -1059,14 +1059,16 @@ Find
 
 **Solution**
 
-First, we define the Profit function $\pi = \text{Revenue} - \text{Cost}$ or $\pi = (p_A q_A + p_B q_B) - c$
+First, we define the Profit function $\pi = \text{Revenue} - \text{Cost}$
 
 :::{math}
 :enumerated: false
-\begin{aligned}
-\pi = \;&[(35 - 2q_A^2 + q_B)q_A + (20 - q_B + q_A)q_B] \\
-&- (-8 - 2q_A^3 + 3q_A q_B + 30q_A + 12q_B + \frac{1}{2}q_A^2)
-\end{aligned}
+\pi = (p_A q_A + p_B q_B) - c
+:::
+
+:::{math}
+:enumerated: false
+\pi = [(35 - 2q_A^2 + q_B)q_A + (20 - q_B + q_A)q_B] - (-8 - 2q_A^3 + 3q_A q_B + 30q_A + 12q_B + \frac{1}{2}q_A^2)
 :::
 
 Simplified:
@@ -1094,13 +1096,13 @@ Second, we perform the derivative test:
 
 :::{math}
 :enumerated: false
-H = \begin{bmatrix} 
+H = \begin{pmatrix} 
 f_{AA} & f_{AB} \\ 
 f_{BA} & f_{BB} 
-\end{bmatrix} = \begin{bmatrix} 
+\end{pmatrix} = \begin{pmatrix} 
 -1 & -1 \\ 
 -1 & -2 
-\end{bmatrix}
+\end{pmatrix}
 :::
 
 Since $|H| = (-1)(-2) - (-1)^2 = 1 > 0$ and $f_{AA} < 0$, we have a negative definite Hessiand ans hence a relative maximum at $(2, 3)$.
