@@ -3,7 +3,7 @@ version: 1
 project:
   title: Math Econ
   authors:
-    - name: YY
+    - name: -YY-
   bibliography:
     - references.bib
 
@@ -29,5 +29,5 @@ project:
 site:
   template: book-theme
   options:
-    logo_text: "Math Econ II"
+    logo_text: Math Econ II
     outline_maxdepth: 1
