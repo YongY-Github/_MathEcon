@@ -14,6 +14,7 @@ project:
     - file: basic-differentiation.md
     - file: multivariate-calculus.md
     - file: optimization.md
+    - file: constrained-optimization.md
 
   exports:
     - format: pdf
@@ -25,6 +26,7 @@ project:
         - basic-differentiation.md
         - multivariate-calculus.md
         - optimization.md
+        - constrained-optimization
 
 site:
   template: book-theme

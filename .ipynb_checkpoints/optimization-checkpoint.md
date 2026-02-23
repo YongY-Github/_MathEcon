@@ -2,7 +2,8 @@
 
 Finding the “best” way to do a specific task in economics often involves what is called an **optimization problem**.
 
-## Univariate Optimization
+
+## I — Univariate Optimization
 
 ## Stationary Points
 
@@ -349,7 +350,7 @@ The first nonzero derivative is of **even order** and it's value is positive, he
 
 ---
 
-## Multivariate Optimization
+## II — Multivariate Optimization
 
 We now generalize the univariate techniques to multivariate optimization. 
 
@@ -543,7 +544,6 @@ f_{11} f_{22} > (f_{12})^2,
 
 then the function reaches a **minimum**.
 
-
 ::::{admonition} Special Cases
 :class: important
 
@@ -717,7 +717,7 @@ Let $H$ be a symmetric matrix.
 * $H$ is **negative definite** if
   $dx' H dx < 0$ for all nonzero $dx$.
 * $H$ is **indefinite** if the quadratic form takes both positive and negative values.
-  ::::
+::::
 
 These cases correspond to the curvature of the function at a critical point.
 

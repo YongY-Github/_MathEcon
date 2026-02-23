@@ -3,7 +3,7 @@ version: 1
 project:
   title: Math Econ
   authors:
-    - name: YY
+    - name: -YY-
   bibliography:
     - references.bib
 
@@ -13,6 +13,8 @@ project:
     - file: linear-algebra-special.md
     - file: basic-differentiation.md
     - file: multivariate-calculus.md
+    - file: optimization.md
+    - file: constrained-optimization.md
 
   exports:
     - format: pdf
@@ -23,9 +25,11 @@ project:
         - linear-algebra-special.md
         - basic-differentiation.md
         - multivariate-calculus.md
+        - optimization.md
+        - constrained-optimization
 
 site:
   template: book-theme
   options:
-    logo_text: "Math Econ II"
+    logo_text: Math Econ II
     outline_maxdepth: 1
