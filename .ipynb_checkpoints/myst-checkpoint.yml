@@ -26,7 +26,7 @@ project:
         - basic-differentiation.md
         - multivariate-calculus.md
         - optimization.md
-        - constrained-optimization
+        - constrained-optimization.md
 
 site:
   template: book-theme

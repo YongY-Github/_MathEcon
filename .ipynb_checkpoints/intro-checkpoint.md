@@ -1,11 +1,11 @@
-# Math Notes
+# Math Econ II Notes
 
 These notes build intuition for core tools used in economics, data science, and optimization.
 
 **Topics (in progress)**
 
-- Linear Algebra
-- Calculus
+- Constrained Optimization
+- Integration
 - Difference & Differential Equations
 
 ```{note}

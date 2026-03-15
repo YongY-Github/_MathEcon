@@ -2,7 +2,6 @@
 
 Finding the “best” way to do a specific task in economics often involves what is called an **optimization problem**.
 
-
 ## I — Univariate Optimization
 
 ## Stationary Points
