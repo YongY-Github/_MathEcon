@@ -118,6 +118,42 @@ Objective value:
 
 ---
 
+::::{dropdown} **Try these ^^**
+
+**Constrained Optimization and Second-Order Conditions**
+
+Using the substitution method, solve each constrained optimization problem. Determine the optimal values and use the second-order condition to verify whether you have a maximum or a minimum.
+
+**(i)** $f(x,y) = x^2 + 2xy + 4y^2$ subject to $x + y = 8$
+
+**(ii)** $f(x,y) = 3x^2 + y^2 - 2xy$ subject to $x + y = 1$
+
+**(iii)** $f(x,y) = 10x + 40y$ subject to $x^{1/2}y^{1/2} = 2$
+
+**(iv)** $f(x,y) = \ln x + 2\ln y$ subject to $y = 16 - 4x$
+
+**(v)** $f(x,y) = 2x^{1/2}y^{1/2}$ subject to $x + y = 1$
+
+**(vi)** $f(x,y) = 2x^2 - 4xy + 9y^2 - 8y + 36$ subject to $x + y = 12$
+
+**(vii)** $f(x,y,z) = 2x^2 + 5xy - y^2 - 3xz$ subject to $x + y + z = 14$
+
+---
+
+**Answers**
+
+**(i)** $(x, y) = (8, 0)$, minimum  
+**(ii)** $(x, y) = \left(\frac{1}{3}, \frac{2}{3}\right)$, minimum  
+**(iii)** $(x, y) = (4, 1)$, minimum  
+**(iv)** $(x, y) = \left(\frac{4}{3}, \frac{32}{3}\right)$, maximum  
+**(v)** $(x, y) = \left(\frac{1}{2}, \frac{1}{2}\right)$, maximum  
+**(vi)** [Solution omitted in original, usually solved as $(x,y) = (8, 4)$ minimum]  
+**(vii)** $(x, y, z) = (1, 4, 9)$, a saddle point
+
+::::
+
+---
+
 #### Limitation of Substitution
 
 ::::{admonition} Why This Method Is Limited
@@ -280,6 +316,33 @@ It is the **shadow value** of the constraint.
 
 ---
 
+::::{dropdown} **Try these ^^**
+
+**Lagrangian Method and Lagrange Multipliers**
+
+Use the Lagrangian method to find the optimal values for each constrained optimization problem. Solve also for the Lagrange multiplier, $\lambda$.
+
+**(i)** $f(x,y) = x^2 + 2x + 3y^2 - 6y + xy$ subject to $2x + 2y = 32$
+
+**(ii)** $f(a,b,c) = \frac{1}{2}a^2 + 4b^2 - 4a + 8c^2$ subject to $\frac{1}{2}a + 3b + c = 25$
+
+**(iii)** $f(x,y) = x^3y^4$ subject to $\frac{x}{50} + y = 34$
+
+**(iv)** $f(x,y) = \ln(x + y)$ subject to $xy = 16$
+
+---
+
+**Answers**
+
+**(i)** $(x, y, \lambda) = (12, 4, 15)$  
+**(ii)** $(a, b, c, \lambda) = (12, 6, 1, 16)$  
+**(iii)** $(x, y, \lambda) = \left(\frac{5100}{7}, \frac{136}{7}, \frac{4(5100)^3(136)^3}{7^6}\right)$  
+**(iv)** $(x, y, \lambda) = \left(4, 4, \frac{1}{32}\right)$
+
+::::
+
+---
+
 ### 8.4 Second-Order Condition: Bordered Hessian
 
 For the constrained problem, we cannot simply examine the Hessian of $f$.
@@ -334,33 +397,31 @@ For one constraint in the bivariate case:
 
 ### 8.5 General Case (n variables, m = 1)
 
-More generally, for the case of more than 2 arguments ($n > 2$) and one constraint ($m = 1$), we have a
-sufficient condition for a **maximum** if the determinant of the largest bordered Hessian of that Lagrangian function
-evaluated at the stationary point has the same sign as $(-1)^n$ and the next largest $n-1$ leading principal minors
-alternate in sign (i.e. the quadratic form is **negative definite** on the constraint).
+More generally, for the case of $n$ arguments and $m$ constraints, we have a sufficient condition for a maximum if the determinant of the bordered Hessian ($|\bar{\mathbf{H}}_{n+m}|$) has the same sign as $(-1)^n$, and the largest $n-m$ leading principal minors alternate in sign. In this case, the quadratic form is negative definite subject to the constraint.
 
-Alternatively, if all the largest $n -1$ leading principal minors of the bordered Hessian evaluated at the stationary point are
-negative (as well as the determinant of bordered Hessian itself), then the quadratic form is **positive** definite
-on the constraint, and the stationary point represent a **minimum**.
+Alternatively, if the largest $n-m$ leading principal minors of the bordered Hessian (including the determinant of the bordered Hessian itself) all have the same sign as $(-1)^m$, then the quadratic form is positive definite subject to the constraint, and the stationary point represents a minimum.
 
-As a rule, we need essentially to evaluate the determinants of the largest $m-n$ principal minors of the borderned Hessians.
+As a rule, we essentially need to evaluate the determinants of the largest $n-m$ leading principal minors of the bordered Hessian.
 
-::::{admonition} Sufficient Conditon for Maximum (n > 2, m = 1)
+:::{admonition} Sufficient Condition for Constrained Extrema
 :class: tip
 
-The sufficient condition for a maximum with at least two argiuments and one constraint is:
+For a Lagrangian with $n$ variables and $m$ constraints:
 
-* Determinant of bordered Hessian has same sign as $(-1)^n$
-* Largest $n-1$ leading principal minors alternate in sign
+For a Local Maximum:
 
-Alternatively:
+* The last $n-m$ leading principal minors of the bordered Hessian must alternate in sign.
+* The sign of the full determinant $|\mathbf{\bar{H}}|$ must be the same as the sign of $(-1)^n$.
 
-* If all largest $n-1$ minors and determinant are negative → minimum
+For a Local Minimum:
 
-If neither holds → saddle point.
+* The sign of the full determinant and all relevant leading principal minors must match the sign of $(-1)^m$.
 
-> And as a rule, we need to evaluate the determinants of the largest $m-n$ leading principal minors of the borderned Hessians!
-::::
+General Rule:
+
+We must evaluate the determinants of the largest $n-m$ leading principal minors of the bordered Hessian. If the signs do not follow either pattern above, the stationary point is typically a saddle point.
+:::
+
 
 Also it is important to note is that the Lagrangian method generates a variable not obtained with the
 substitution method i.e., the Lagrangian multiplier λ, which represents the effect of a small
@@ -368,6 +429,104 @@ change in the constraint on the optimal value of the objective function.
 
 Although we have seen just a simple case, optimization of a bivariate function subject to one constraint, the
 Lagrangian method is powerful enough to deal with multivariate functions and multiple constraints
+
+---
+
+::::{dropdown} **Try these ^^**
+Use the sufficient condition to determine whether the stationary points identified in (i), (ii), and (iv) of previous questions above represent a maximum, minimum, or saddle point.
+
+**Answers**
+
+**(i)**
+:::{math}
+:enumerated: false
+\bar{\mathbf{H}} = \begin{bmatrix} 0 & 2 & 2 \\ 2 & 1 & 1 \\ 2 & 1 & 6 \end{bmatrix}
+:::
+
+which has the determinant $-24$. Since $m=1$, the sign of a minimum must be $(-1)^1 = -1$. Thus, the stationary point is a **minimum**.
+
+**(ii)**
+:::{math}
+:enumerated: false
+\bar{\mathbf{H}} = \begin{bmatrix} 0 & 1/2 & 3 & 1 \\ 1/2 & 1 & 0 & 0 \\ 3 & 0 & 8 & 0 \\ 1 & 0 & 0 & 16 \end{bmatrix}
+:::
+
+The determinant of the leading principal minor $|\bar{\mathbf{H}}_3|$ is $-11$ and the full determinant $|\bar{\mathbf{H}}_4|$ is $-184$. Since $m=1$, all minors must have the sign $(-1)^1 = -1$ for a minimum. Hence, we have a **minimum**.
+
+**(iv)**
+:::{math}
+:enumerated: false
+\bar{\mathbf{H}} = \begin{bmatrix} 0 & 4 & 4 \\ 4 & \frac{1}{64} & \frac{1}{64} - \lambda \\ 4 & \frac{1}{64} - \lambda & \frac{1}{64} \end{bmatrix}
+:::
+
+With $\lambda = 1/32$, the determinant is $1$. Since $n=2$ and $m=1$, the sign for a maximum must be $(-1)^n = (-1)^2 = +1$. Thus, we have a **maximum**.
+
+### Worked Example: 
+
+#### Second-Order Analysis of (vii) from Problem Set 1
+
+We consider the function $f(x, y, z) = 2x^2 + 5xy - y^2 - 3xz$ subject to the constraint $x + y + z = 14$.
+
+##### 1. The Bordered Hessian Matrix
+
+The bordered Hessian $\mathbf{\bar{H}}$ for $n=3$ variables and $m=1$ constraint is a $4 \times 4$ matrix. The border consists of the first derivatives of the constraint $g(x,y,z) = x+y+z-14$, which are $g_x=1, g_y=1, g_z=1$. Evaluating the second-order partial derivatives, we obtain:
+
+:::{math}
+:enumerated: false
+\mathbf{\bar{H}} =
+\begin{vmatrix}
+0 & 1 & 1 & 1 \\
+1 & 4 & 5 & -3 \\
+1 & 5 & -2 & 0 \\
+1 & -3 & 0 & 0
+\end{vmatrix}
+:::
+
+##### 2. Checking the Minors ($n-m = 2$ minors)
+
+Since we have one constraint ($m=1$), we will check  $n-m = 2$ princpal minors starting from the largest one and working backwards.
+
+**Minor 1: $|\mathbf{\bar{H}}_3|$ (The full $4 \times 4$ determinant)**
+
+Expanding along the last row to simplify calculations:
+
+:::{math}
+:enumerated: false
+|\mathbf{\bar{H}}_3| = -(-3) \begin{vmatrix} 0 & 1 & 1 \\ 1 & 5 & -3 \\ 1 & -2 & 0 \end{vmatrix} - (0) + (0) - (0) 
+:::
+
+Evaluating the $3 \times 3$ sub-determinant:
+:::{math}
+:enumerated: false
+\begin{vmatrix} 0 & 1 & 1 \\ 1 & 5 & -3 \\ 1 & -2 & 0 \end{vmatrix} = -1(0 - (-3)) + 1(-2 - 5) = -3 - 7 = -10
+:::
+
+**Total:** $3 \times (-10) = -30$.
+* **Result:** $|\mathbf{\bar{H}}_3| < 0$.
+
+**Minor 2: $|\mathbf{\bar{H}}_2|$ (The $3 \times 3$ upper-left block)**
+
+:::{math}
+:enumerated: false
+|\mathbf{\bar{H}}_2| =
+\begin{vmatrix}
+0 & 1 & 1 \\
+1 & 4 & 5 \\
+1 & 5 & -2
+\end{vmatrix}
+= -1 \begin{vmatrix} 1 & 5 \\ 1 & -2 \end{vmatrix} + 1 \begin{vmatrix} 1 & 4 \\ 1 & 5 \end{vmatrix} = -1(-7) + 1(1) = 8
+:::
+
+* **Result:** $|\mathbf{\bar{H}}_2| > 0$.
+* 
+##### 3. Conclusion
+
+For a system with $m=1$ constraint:
+* **Local Maximum:** Pattern must be $(+, -)$ starting from $|\mathbf{\bar{H}}_2|$.
+* **Local Minimum:** Pattern must be $(-, -)$ starting from $|\mathbf{\bar{H}}_2|$.
+
+In this case, our signs are $(+, -)$. This matches the alternating pattern required for a **local maximum**. 
+::::
 
 ---
 
@@ -684,9 +843,109 @@ which matches the sign of $(-1)^n$ where in this case $n=3$, i.e., both are nega
 
 Hence the stationary point $S^* = 8$, $V^* = 5 \frac{1}{3}$, and $J^* = 16$ represent a maximum.
 
-But we have to evaluete the mdeterminant of the $n-1$ largest bordered Hessian as well? No, because we have to evaluate the $n-m = 3-2 = 1$ largest Hessians. 
+But don't we have to evaluete the determinant other principal minors of the bordered Hessian as well? No, because in this case, we have to evaluate only $n-m = 3-2 = 1$ largest Hessians. 
 
-For the case of $n$ arguments and $m$ constraints, we have a sufficient condition for a **maximum** if the determinant of the bordered Hessian of that Lagrangian function evaluated at the stationary point has the same sign as $(-1)^n$ and the largest $n - m$ leading principal minors alternate in sign (i.e. the quadratic form is negative definite on the constraint). Alternatively, if all the largest $n - m$ leading principal minors of the bordered Hessian evaluated at the stationary point have the sign $(-1)^m$ (as well as the determinant of bordered Hessian itself), then the quadratic form is positive definite on the constraint, and the stationary point represent a **minimum**. Otherwise, we have neither a maximum nor a minimum.
+In general, for the case of $n$ arguments and $m$ constraints, we have a sufficient condition for a **maximum** if the largest $n - m$ leading principal minors of the bordered Hessian alternate in sign, with the sign of the full determinant ($| \mathbf{\bar{H}}|$) being the same as $(-1)^n$.
+
+Alternatively, we have a sufficient condition for a **minimum** if the largest $n - m$ leading principal minors of the bordered Hessian all have the same sign, which must be the same as the sign of $(-1)^m$. If the minors do not follow either of these patterns, the second-order condition for a local extremum is not satisfied.
+
+::::{admonition} Common Pitfall: Parity of n and m
+:class: warning
+
+One might be tempted to say that for a minimum, the sign of the determinant must be "different" from the sign required for a maximum $(-1)^n$. This is not always true.
+
+The relationship between the signs depends on whether the difference between the number of variables $n$ and constraints $m$ is odd or even:
+
+* When $n - m$ is odd: The signs for a maximum $(-1)^n$ and a minimum $(-1)^m$ will be different.
+* When $n - m$ is even: The signs for a maximum and a minimum will be the same.
+
+**Rule of Thumb:** Always use the number of constraints $m$ to determine the sign for a minimum $(-1)^m$ and the number of variables $n$ to determine the final sign for a maximum $(-1)^n$.
+::::
+
+---
+
+::::{dropdown} **Try these ^^**
+
+**Lagrange Method with Multiple Constraints**
+
+Use the Lagrange method to determine the optimal values for the choice variables in the following problem involving multiple constraints.
+
+**Problem:**
+Find the stationary point for the function:
+:::{math}
+:enumerated: false
+z = x^2 + 2xy + w^2
+:::
+
+subject to the constraints:
+:::{math}
+:enumerated: false
+2x + y + 3w = 24 \quad \text{and} \quad x + w = 8
+:::
+
+---
+
+**Answer**
+
+$(w, x, y) = (2, 2, 6)$
+
+**Worked Solution:**
+
+* **Set up the Lagrangian:**
+
+We introduce two Lagrange multipliers, $\lambda_1$ and $\lambda_2$, for the two constraints:
+
+:::{math}
+:enumerated: false
+\mathcal{L} = x^2 + 2xy + w^2 - \lambda_1(2x + y + 3w - 24) - \lambda_2(x + w - 8)
+:::
+
+* **First-Order Conditions (F.O.C.s):**
+   * $\frac{\partial \mathcal{L}}{\partial x} = 2x + 2y - 2\lambda_1 - \lambda_2 = 0$
+   * $\frac{\partial \mathcal{L}}{\partial y} = 2x - \lambda_1 = 0 \implies \lambda_1 = 2x$
+   * $\frac{\partial \mathcal{L}}{\partial w} = 2w - 3\lambda_1 - \lambda_2 = 0$
+   * $\frac{\partial \mathcal{L}}{\partial \lambda_1} = 2x + y + 3w - 24 = 0$
+   * $\frac{\partial \mathcal{L}}{\partial \lambda_2} = x + w - 8 = 0$
+
+* **Solving the System:**
+   * From the second F.O.C., we have $\lambda_1 = 2x$.
+   * Substitute $\lambda_1$ into the third F.O.C.: $2w - 3(2x) - \lambda_2 = 0 \implies \lambda_2 = 2w - 6x$.
+   * Substitute both $\lambda_1$ and $\lambda_2$ into the first F.O.C.:
+
+:::{math}
+:enumerated: false
+2x + 2y - 2(2x) - (2w - 6x) = 0
+:::
+
+:::{math}
+:enumerated: false
+\begin{aligned}
+2x + 2y - 4x - 2w + 6x = 0 &\implies 4x + 2y - 2w = 0 \\
+&\implies 2x + y - w = 0
+\end{aligned}
+:::
+
+   * Now use the constraints: From $x + w = 8$, we have $w = 8 - x$.
+   * Substitute $w$ into our derived equation: $2x + y - (8 - x) = 0 \implies 3x + y = 8 \implies y = 8 - 3x$.
+   * Substitute $w = 8 - x$ and $y = 8 - 3x$ into the first constraint:
+
+:::{math}
+:enumerated: false
+2x + (8 - 3x) + 3(8 - x) = 24
+:::
+
+:::{math}
+:enumerated: false
+2x + 8 - 3x + 24 - 3x = 24
+:::
+
+:::{math}
+:enumerated: false
+-4x = -8 \implies \mathbf{x = 2}
+:::
+
+   * Then, $\mathbf{w = 8 - 2 = 6}$ and $\mathbf{y = 8 - 3(2) = 2}$.
+::::
 
 ---
 
@@ -821,7 +1080,7 @@ The Lagrangian is:
 
 :::{math}
 :enumerated: false
-L = x_1 - \frac{x_1^2}{2} + x_2^2 - \lambda_1 \left( \frac{x_1^2}{2} + x_2^2 - \frac{9}{8} \right) - \lambda_2(-x_2)
+\mathcal{L} = x_1 - \frac{x_1^2}{2} + x_2^2 - \lambda_1 \left( \frac{x_1^2}{2} + x_2^2 - \frac{9}{8} \right) - \lambda_2(-x_2)
 :::
 
 The optimal choice of $x_1$ and $x_2$ satisfies the Kuhn–Tucker conditions
@@ -829,8 +1088,8 @@ The optimal choice of $x_1$ and $x_2$ satisfies the Kuhn–Tucker conditions
 :::{math}
 :enumerated: false
 \begin{aligned}
-\frac{\partial L}{\partial x_1} &= 1 - x_1 - \lambda_1 x_1 = 0 \\[10pt]
-\frac{\partial L}{\partial x_2} &= 2x_2 - 2\lambda_1 x_2 + \lambda_2 = 0 \\[10pt]
+\frac{\partial \mathcal{L}}{\partial x_1} &= 1 - x_1 - \lambda_1 x_1 = 0 \\[10pt]
+\frac{\partial \mathcal{L}}{\partial x_2} &= 2x_2 - 2\lambda_1 x_2 + \lambda_2 = 0 \\[10pt]
 \frac{x_1^2}{2} + x_2^2 &\le \frac{9}{8} \\
 -x_2 &\le 0 \\
 \lambda_1 &\ge 0 \\
@@ -967,3 +1226,133 @@ To minimize $h(x)$, maximize $-h(x)$.
   * Inequalities may bind or not bind.
 ::::
 
+
+::::{dropdown} **Try these ^^**
+
+#### Inequality Constraint Problems
+
+Solve the following problems involving inequality constraints.
+
+**i. Find the maximum value of the function**
+
+:::{math}
+:enumerated: false
+h(x, y) = 2x^2 - y^2
+:::
+
+subject to
+
+:::{math}
+:enumerated: false
+x^2 + y^2 = 1
+:::
+
+and the constraints that $x$ and $y$ are nonnegative.
+
+**ii. Find the maximum value of the function**
+
+:::{math}
+:enumerated: false
+r(a, b) = 2a^2 + b^2
+:::
+
+subject to
+
+:::{math}
+:enumerated: false
+2a + b \le 9 \text{ and } a^2 + b^2 \ge 16
+:::
+
+**iii. Consider the three-item breakfast problem with the utility function**
+
+:::{math}
+:enumerated: false
+U(S, V, J) = \frac{1}{3}\ln S + \frac{1}{3}\ln V + \frac{1}{3}\ln J
+:::
+
+subject to
+
+:::{math}
+:enumerated: false
+\frac{S}{4} + \frac{V}{2} + \frac{J}{12} \le 6 \text{ and } S + J \le 40
+:::
+
+---
+
+#### Answers
+
+**(i)** The Lagrangian function for this problem is:
+
+:::{math}
+:enumerated: false
+\mathcal{L} = 2x^2 - y^2 - \lambda_1(x^2 + y^2 - 1) + \lambda_2 x + \lambda_3 y
+:::
+
+The solution that provides the maximum value must satisfy the following first-order and complementary slackness conditions:
+
+:::{math}
+:enumerated: false
+\begin{aligned}
+\frac{\partial \mathcal{L}}{\partial x} &= 4x - 2\lambda_1 x + \lambda_2 = 0 \\
+\frac{\partial \mathcal{L}}{\partial y} &= -2y - 2\lambda_1 y + \lambda_3 = 0 \\
+\lambda_1(x^2 + y^2 - 1) &= 0 \\
+\lambda_2 x &= 0 \\
+\lambda_3 y &= 0 \\
+\lambda_2 \ge 0, & \quad \lambda_3 \ge 0 \\
+x^2 + y^2 &= 1
+\end{aligned}
+:::
+
+The optimal solution is **$x = 1, y = 0$**, which implies that $\lambda_2 = 0$ (via complementary slackness). At this point, the objective function reaches its maximum value of $h(1, 0) = 2$.
+
+**(ii)** The Lagrangian function is:
+
+:::{math}
+:enumerated: false
+\mathcal{L} = 2a^2 + b^2 - \lambda_1(2a + b - 9) - \lambda_2(a^2 + b^2 - 16)
+:::
+
+The solution that provides the maximum value must satisfy:
+
+:::{math}
+:enumerated: false
+\begin{aligned}
+\frac{\partial \mathcal{L}}{\partial a} &= 4a - 2\lambda_1 - 2a\lambda_2 = 0 \\
+\frac{\partial \mathcal{L}}{\partial b} &= 2b - \lambda_1 - 2b\lambda_2 = 0 \\
+\lambda_1(2a + b - 9) &= 0 \\
+\lambda_2(a^2 + b^2 - 16) &= 0 \\
+\lambda_1 \ge 0, & \quad \lambda_2 \ge 0 \\
+16 \le a^2 + b^2, & \quad 2a + b \le 9
+\end{aligned}
+:::
+
+The optimal solution has **$\lambda_1 \neq 0$ and $\lambda_2 = 0$**, with **$a = b = 3$**. At this point, the objective function reaches its maximum value of $r(3, 3) = 27$.
+
+**(iii)**
+
+The Lagrangian function for this problem is:
+
+:::{math}
+:enumerated: false
+\mathcal{L} = \frac{1}{3}\ln S + \frac{1}{3}\ln V + \frac{1}{3}\ln J - \lambda_1\left(\frac{S}{4} + \frac{V}{2} + \frac{J}{12} - 6\right) - \lambda_2(S + J - 40)
+:::
+
+The solution that provides the maximum value must satisfy the following first-order and complementary slackness conditions:
+
+:::{math}
+:enumerated: false
+\begin{aligned}
+\frac{\partial \mathcal{L}}{\partial S} &= \frac{1}{3S} - \frac{\lambda_1}{4} - \lambda_2 = 0 \\
+\frac{\partial \mathcal{L}}{\partial V} &= \frac{1}{3V} - \frac{\lambda_1}{2} = 0 \\
+\frac{\partial \mathcal{L}}{\partial J} &= \frac{1}{3J} - \frac{\lambda_1}{12} - \lambda_2 = 0 \\
+\lambda_1 \left( \frac{S}{4} + \frac{V}{2} + \frac{J}{12} - 6 \right) &= 0 \\
+\lambda_2(S + J - 40) &= 0 \\
+\lambda_1 \ge 0, & \quad \lambda_2 \ge 0 \\
+\frac{S}{4} + \frac{V}{2} + \frac{J}{12} \le 6, & \quad S + J \le 40
+\end{aligned}
+:::
+
+The optimal solution has **$\lambda_1 \neq 0$ and $\lambda_2 = 0$**, which implies the first constraint is binding. Solving the system yields:
+**$S = 8, V = 4, \text{ and } J = 24$**.
+
+::::
