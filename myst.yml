@@ -15,6 +15,7 @@ project:
     - file: multivariate-calculus.md
     - file: optimization.md
     - file: constrained-optimization.md
+    - file: integration.md
 
   exports:
     - format: pdf
@@ -27,6 +28,7 @@ project:
         - multivariate-calculus.md
         - optimization.md
         - constrained-optimization.md
+        - integration.md
 
 site:
   template: book-theme
