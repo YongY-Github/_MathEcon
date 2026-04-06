@@ -249,8 +249,10 @@ So we can write:
 
 :::{math}
 :enumerated: false
-\int (x^2 + 4)^3 2x dx &= \int u^3 du \quad \text{since } du = 2x dx \\
-&= \frac{u^4}{4} + c = \frac{(x^2 + 4)^4}{4} + c
+\int (x^2 + 4)^3 \cdot 2x \, dx 
+= \int u^3 \, du \quad \text{since } u = x^2 + 4, \; du = 2x \, dx \\
+= \frac{u^4}{4} + C 
+= \frac{(x^2 + 4)^4}{4} + C
 :::
 
 A slightly more **difficult example:**
@@ -449,9 +451,12 @@ $$\int f(x)g'(x) dx = f(x)g(x) - \int f'(x)g(x) dx$$
 
 :::{math}
 :enumerated: false
-\int x \ln x dx &= (\ln x)\frac{x^2}{2} - \int \frac{1}{x} \frac{x^2}{2} dx \\
-&= \frac{x^2}{2} \ln x - \int \frac{x}{2} dx \\
-&= \frac{x^2}{2} \ln x - \frac{x^2}{4} + c 
+\begin{aligned}
+\int x \ln x \, dx 
+&= (\ln x)\frac{x^2}{2} - \int \frac{1}{x} \cdot \frac{x^2}{2} \, dx \\
+&= \frac{x^2}{2} \ln x - \int \frac{x}{2} \, dx \\
+&= \frac{x^2}{2} \ln x - \frac{x^2}{4} + C
+\end{aligned}
 :::
 
 ---
@@ -534,9 +539,13 @@ $$\int_{a}^{b} f(x) dx = F(x) \Big|_{a}^{b} = F(b) - F(a)$$
 
 :::{math}
 :enumerated: false
-\int_{1}^{3} (4x^3 + 6x) dx &= (x^4 + 3x^2) \Big|_{1}^{3} \\
-&= [ (3^4) + 3(3^2) ] - [ (1^4) + 3(1^2) ] \\
-&= 108 - 4 = 104
+\begin{aligned}
+\int_{1}^{3} (4x^3 + 6x) \, dx 
+&= \big(x^4 + 3x^2\big) \Big|_{1}^{3} \\
+&= \big[ (3^4) + 3(3^2) \big] - \big[ (1^4) + 3(1^2) \big] \\
+&= 108 - 4 \\
+&= 104
+\end{aligned}
 :::
 
 This represents the **area under the curve** $f(x) = 4x^3 + 6x$ between $x=1$ and $x=3$.

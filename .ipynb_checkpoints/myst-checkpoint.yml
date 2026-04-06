@@ -16,6 +16,7 @@ project:
     - file: optimization.md
     - file: constrained-optimization.md
     - file: integration.md
+    - file: difference-equations.ipynb
 
   exports:
     - format: pdf
@@ -29,6 +30,7 @@ project:
         - optimization.md
         - constrained-optimization.md
         - integration.md
+        - difference-equations.ipynb
 
 site:
   template: book-theme
