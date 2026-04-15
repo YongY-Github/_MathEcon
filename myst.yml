@@ -17,6 +17,7 @@ project:
     - file: constrained-optimization.md
     - file: integration.md
     - file: difference-equations.ipynb
+    - file: differential_equations.md
 
   exports:
     - format: pdf
