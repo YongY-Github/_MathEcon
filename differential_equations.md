@@ -1395,7 +1395,9 @@ Find the characteristic roots and determine stability:
 :enumerated: false
 \ddot{z}(t) = 2\dot{z}(t) - \frac{5}{4}z(t) + 1
 :::
-<!---
+
+---
+
 ## System of Linear Differential Equations
 
 A linear system of two autonomous differential equations may be expressed as

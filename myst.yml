@@ -16,8 +16,8 @@ project:
     - file: optimization.md
     - file: constrained-optimization.md
     - file: integration.md
-    - file: difference-equations.ipynb
-    - file: differential_equations.md
+    - file: difference-equations-xtension.ipynb
+    - file: differential-equations.ipynb
 
   exports:
     - format: pdf
@@ -32,6 +32,7 @@ project:
         - constrained-optimization.md
         - integration.md
         - difference-equations.ipynb
+        - differential-equations.ipynb
 
 site:
   template: book-theme
